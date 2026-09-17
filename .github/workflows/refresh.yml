@@ -4,6 +4,17 @@ name: Refresh site
 # flat files. Nothing serves requests.
 
 on:
+  # Redeploy when the site's own code changes, otherwise a fix sits unpublished until
+  # the next scheduled run. Commits made by this workflow use GITHUB_TOKEN, which by
+  # design does not re-trigger workflows, so the bot's own refresh cannot loop here.
+  push:
+    branches: [main]
+    paths:
+      - "site/**"
+      - "tools/**"
+      - "engine/**"
+      - "config.yaml"
+      - ".github/workflows/refresh.yml"
   schedule:
     # 12:00 UTC = 17:30 IST, Mon-Fri. NSE closes 15:30 IST; this leaves two hours for
     # the vendor's end-of-day data to settle. GitHub's scheduler can lag under load,
