@@ -20,6 +20,7 @@ import hashlib
 import json
 import logging
 import math
+import re
 import sys
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
@@ -73,6 +74,43 @@ def rules_hash(cfg: dict) -> str:
     return hashlib.sha256(blob.encode()).hexdigest()[:12]
 
 
+def stamp_assets(site: Path) -> None:
+    """Rewrite index.html asset references to app.js?v=<content hash>.
+
+    GitHub Pages serves assets with max-age=600, so after a deploy a visitor keeps
+    running the previous JS for up to ten minutes and a fix appears to have silently
+    not worked. Hashing the content into the URL makes a changed file a different URL,
+    so the new version is fetched at once while an unchanged one still caches.
+
+    Plain string replacement, not a regex: an earlier regex attempt consumed the
+    filename itself and emitted href="?v=..." , which would have shipped a page with
+    no stylesheet and no script.
+    """
+    html = site / "index.html"
+    if not html.exists():
+        return
+    text = original = html.read_text(encoding="utf-8")
+    for name in ("app.js", "styles.css"):
+        f = site / name
+        if not f.exists():
+            continue
+        digest = hashlib.sha256(f.read_bytes()).hexdigest()[:8]
+        for quote in ('"', "'"):
+            base = f"{quote}{name}{quote}"
+            if base in text:
+                text = text.replace(base, f"{quote}{name}?v={digest}{quote}")
+                continue
+            # already stamped: swap the existing version for the current one
+            i = text.find(f"{quote}{name}?v=")
+            while i != -1:
+                j = text.find(quote, i + 1)
+                text = text[:i] + f"{quote}{name}?v={digest}" + text[j:]
+                i = text.find(f"{quote}{name}?v=", i + 1)
+    if text != original:
+        html.write_text(text, encoding="utf-8")
+        log.info("stamped asset versions into index.html")
+
+
 def write(path: Path, payload: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(clean(payload), indent=1, allow_nan=False), encoding="utf-8")
@@ -121,6 +159,7 @@ def main() -> None:
     picks = bt.scan_latest(panel, universe, cfg, prep)
     regime_row = prep["regime"].iloc[-1]
 
+    stamp_assets(site)
     uni_meta = archive_universe(universe_file, site, as_of)
 
     # Persist today's list before anything else reads it back. Forward tracking is the only
