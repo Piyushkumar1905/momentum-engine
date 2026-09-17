@@ -14,3 +14,4 @@ output/demo/
 output/*.log
 output/analysis/_preview/
 output/analysis/_charts/
+config_research.yaml

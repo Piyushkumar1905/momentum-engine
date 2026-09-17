@@ -15,7 +15,7 @@ import logging
 import numpy as np
 import pandas as pd
 
-from . import rules
+from . import factor_model, rules
 from .data import Panel
 from .features import compute_features, market_regime
 
@@ -37,9 +37,24 @@ def prepare(panel: Panel, universe: pd.DataFrame, cfg: dict) -> dict:
     if cfg["reversal"].get("enabled", True):
         scores["reversal"], _, used["reversal"] = rules.reversal_model(F, regime, cfg, base)
     scores["control_naive_low"] = rules.naive_low_control(F, cfg, base)
+
+    # The validated factor strategy, scored from its spec file so the published picks
+    # come from the same code path the research validated.
+    spec = None
+    spec_path = cfg["run"].get("strategy_spec")
+    if spec_path:
+        try:
+            spec = factor_model.load_spec(spec_path)
+        except Exception as e:                       # a bad spec must not break the scan
+            log.warning("strategy spec %s ignored: %s", spec_path, e)
+            spec = None
+    if spec:
+        scores[spec["name"]] = factor_model.score_frame(spec, panel, F, base)
+        log.info("factor strategy '%s' scored from %s", spec["name"], spec_path)
+
     log.info("Weights actually used (fundamentals/catalyst re-distributed): %s", used)
     return {"F": F, "regime": regime, "base": base, "scores": scores, "weights_used": used,
-            "industry": industry}
+            "industry": industry, "spec": spec}
 
 
 def _top(score_row: np.ndarray, n: int) -> np.ndarray:
@@ -236,24 +251,36 @@ def scan_latest(panel: Panel, universe: pd.DataFrame, cfg: dict, prep: dict | No
     F, regime, scores = prep["F"], prep["regime"], prep["scores"]
     i = len(panel.dates) - 1
     reg = regime["regime"].iloc[i]
+    spec = prep.get("spec")
     rows = []
-    for model in ("momentum", "reversal"):
-        if model not in scores:
-            continue
+    for model in [m for m in scores if m != "control_naive_low"]:
         S = scores[model].iloc[i].to_numpy(float)
         for rank, j in enumerate(_top(S, int(cfg["backtest"]["top_n"])), start=1):
             sym = panel.symbols[j]
             x = {k: float(F[k].iat[i, j]) for k in ROW_KEYS}
-            stop = rules.stop_price(model, x, cfg)
+            if spec and model == spec["name"]:
+                x["dma200"] = float(F["dma200"].iat[i, j])
+                x["vol_ann"] = float(F["vol_ann"].iat[i, j])
+                c = panel.close.iloc[:, j]
+                x["mom_12m"] = (float(c.iloc[i - 21] / c.iloc[i - 252] - 1)
+                                if i >= 252 and c.iloc[i - 252] > 0 else None)
+                stop, tgt = factor_model.stop_and_target(spec, x)
+                why, flags = factor_model.explain(spec, x)
+                rr = (spec.get("exit") or {}).get("target_r") or "trail"
+            else:
+                stop = rules.stop_price(model, x, cfg)
+                tgt = x["close"] + rules.target_r(model, cfg) * (x["close"] - stop)
+                why, flags = rules.explain(model, x, reg)
+                rr = rules.target_r(model, cfg)
             risk = x["close"] - stop
-            tgt = x["close"] + rules.target_r(model, cfg) * risk
-            why, flags = rules.explain(model, x, reg)
             rows.append({"as_of": panel.dates[i].date(), "model": model, "rank": rank, "symbol": sym,
                          "industry": prep["industry"].get(sym, "Unknown"), "score": round(S[j], 3),
-                         "setup": rules.momentum_setup(x) if model == "momentum" else "Confirmed reversal",
+                         "setup": (rules.momentum_setup(x) if model == "momentum"
+                                   else "Confirmed reversal" if model == "reversal"
+                                   else "Factor strategy"),
                          "last_close": round(x["close"], 2), "stop_ref": round(stop, 2),
                          "risk_pct": round(risk / x["close"], 4), "target_ref": round(tgt, 2),
-                         "reward_to_risk": rules.target_r(model, cfg), "why": why, "risk_flags": flags,
+                         "reward_to_risk": rr, "why": why, "risk_flags": flags,
                          "regime": reg, "breadth_50dma": round(float(regime["breadth_50dma"].iloc[i]), 3),
                          "median_value_cr": round(x["med_value_cr"], 1)})
     return pd.DataFrame(rows)

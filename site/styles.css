@@ -140,6 +140,7 @@ section{margin:0 0 38px}
 .pill{font-size:.72rem;font-family:var(--mono);padding:2px 8px;border-radius:99px;font-weight:700}
 .pill-mom{background:var(--accent-soft);color:var(--mom)}
 .pill-rev{background:var(--accent-soft);color:var(--rev)}
+.pill-fac{background:var(--pass-bg);color:var(--pass)}
 .hint{font-weight:400;color:var(--ink-3);font-size:.79rem}
 
 .tscroll{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}

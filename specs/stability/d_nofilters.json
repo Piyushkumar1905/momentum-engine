@@ -1,0 +1,2 @@
+{"name":"d_nofilters","factors":{"mom_12m_skip1":1.0},"filters":{},"top_n":20,
+ "exit":{"stop_atr":2.5,"target_r":null,"max_hold":60,"trail_atr":3.5}}

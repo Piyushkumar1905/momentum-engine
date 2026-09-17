@@ -134,7 +134,8 @@ def main() -> None:
         log.info("saved %s (%d rows)", picks_csv.name, len(picks))
 
     # ---- latest.json : Tier 2, refreshed every trading day
-    by_model = {m: records(picks[picks["model"] == m][PICK_FIELDS]) for m in ("momentum", "reversal")}
+    models = [m for m in picks["model"].unique()] if len(picks) else []
+    by_model = {m: records(picks[picks["model"] == m][PICK_FIELDS]) for m in models}
     write(out / "latest.json", {
         "generated_at": datetime.now(IST).isoformat(timespec="seconds"),
         "as_of": as_of,
@@ -145,6 +146,8 @@ def main() -> None:
                    "breadth_50dma": float(regime_row["breadth_50dma"]),
                    "nifty": float(regime_row["nifty"])},
         "counts": {m: int(prep["scores"][m].iloc[-1].notna().sum()) for m in prep["scores"]},
+        "strategy": ({"name": prep["spec"]["name"], "spec": prep["spec"]}
+                     if prep.get("spec") else None),
         "picks": by_model,
     })
 

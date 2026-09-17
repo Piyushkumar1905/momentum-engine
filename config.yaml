@@ -1,82 +1,81 @@
-# Momentum & Reversal Discovery Engine - v1 configuration
-# Every threshold below is a STARTING ASSUMPTION to be tested, not a proven value.
-
 run:
-  data_source: yahoo            # yahoo | csv | synthetic
-  csv_dir: data/csv             # for csv: one file per symbol (Date,Open,High,Low,Close,Volume) + _BENCHMARK.csv
+  data_source: yahoo
+  csv_dir: data/csv
   cache_dir: data/cache
   output_dir: output
-  benchmark: "^NSEI"            # Nifty 50 on Yahoo
-  universe_file: universe/ind_nifty500list.csv   # constituent CSV from niftyindices.com
-  max_symbols: null             # e.g. 60 for a quick trial run
-
+  benchmark: ^NSEI
+  universe_file: universe/ind_nifty500list.csv
+  max_symbols: null
+  strategy_spec: specs/RECOMMENDED.json
 backtest:
-  start: "2021-01-01"
-  end: null                     # null = latest available date
-  warmup_days: 420              # calendar days loaded before start (252D features need it)
-  rebalance_every: 5            # trading days between scans (5 = weekly)
-  top_n: 20                     # picks per model per scan
-  horizons: [5, 10, 20]         # forward windows (trading days) for upside / downside measurement
-  max_hold_days: 20             # trade simulation: time exit
-  cost_pct: 0.0025              # round-trip cost incl. brokerage, STT, slippage (fraction)
-  skip_if_open: true            # do not re-enter a stock already in an open simulated trade
-  periods:                      # report splits; keep the later period untouched while tuning
-    - {name: "2021-2023 in-sample", start: "2021-01-01", end: "2023-12-31"}
-    - {name: "2024-now out-of-sample", start: "2024-01-01", end: null}
-
-filters:                        # universe hygiene, applied to both models
+  start: '2021-01-01'
+  end: null
+  warmup_days: 420
+  rebalance_every: 5
+  top_n: 20
+  horizons:
+  - 5
+  - 10
+  - 20
+  max_hold_days: 20
+  cost_pct: 0.0025
+  skip_if_open: true
+  periods:
+  - name: 2021-2023 in-sample
+    start: '2021-01-01'
+    end: '2023-12-31'
+  - name: 2024-now out-of-sample
+    start: '2024-01-01'
+    end: null
+filters:
   min_history_days: 252
-  min_median_value_cr: 10       # 20-day median traded value, Rs crore
+  min_median_value_cr: 10
   min_price: 50
-
 regime:
-  mode: tighten                 # tighten = stricter rules in bear regime | block = no longs in bear | ignore
-
+  mode: tighten
 momentum:
   enabled: true
-  min_dist_52w_high: 0.85       # close / 52W high
+  min_dist_52w_high: 0.85
   min_atr_pct: 0.015
   max_atr_pct: 0.06
-  max_ext_atr: 3.0              # (close - 20DMA) / ATR14
-  max_ext_50dma: 0.20           # close / 50DMA - 1
-  min_rs_63: 0.0                # 63D change of the stock/Nifty ratio
-  require_ma_alignment: true    # close > 50DMA > 200DMA and 200DMA rising
-  bear_overrides:               # used when regime = bear and mode = tighten
-    min_dist_52w_high: 0.90
+  max_ext_atr: 3.0
+  max_ext_50dma: 0.2
+  min_rs_63: 0.0
+  require_ma_alignment: true
+  bear_overrides:
+    min_dist_52w_high: 0.9
     min_rs_63: 0.05
-  stop_atr: 1.5                 # stop = entry - 1.5 x ATR
-  target_r: 2.0                 # target = entry + 2 x risk
+  stop_atr: 1.5
+  target_r: 2.0
   weights:
-    price_momentum: 0.20
+    price_momentum: 0.2
     relative_strength: 0.15
     volume: 0.15
     structure: 0.15
-    breakout: 0.10
-    sector: 0.10
-    fundamentals: 0.10          # not computable from price data -> weight re-distributed in v1
-    catalyst: 0.05              # not computable from price data -> weight re-distributed in v1
-
+    breakout: 0.1
+    sector: 0.1
+    fundamentals: 0.1
+    catalyst: 0.05
 reversal:
   enabled: true
-  min_drawdown: 0.30            # fell >= 30% from a high made before the low
-  low_age_min: 20               # 52W low made 20-60 sessions ago
+  min_drawdown: 0.3
+  low_age_min: 20
   low_age_max: 60
-  higher_low_atr: 1.0           # last 15 sessions stayed >= 1 ATR above the low
-  min_support_days: 3           # prior sessions (61-250 days back) that traded within the support band
+  higher_low_atr: 1.0
+  min_support_days: 3
   support_band_atr: 1.0
-  require_reclaim: true         # close > 20DMA and > 50DMA, 20DMA rising
-  require_rs_divergence: true   # RS vs Nifty made a higher low while price based
-  stop_basis: higher_low        # higher_low = below the 15-session low | 52w_low = below the 52W low (wider)
-  stop_atr_below_low: 0.5       # stop = anchor - 0.5 x ATR
+  require_reclaim: true
+  require_rs_divergence: true
+  stop_basis: higher_low
+  stop_atr_below_low: 0.5
   target_r: 2.5
   bear_overrides: {}
   weights:
     rs_divergence: 0.25
-    reclaim: 0.20
-    accumulation: 0.20
+    reclaim: 0.2
+    accumulation: 0.2
     higher_low: 0.15
-    capitulation: 0.10
-    sector: 0.10
-
+    capitulation: 0.1
+    sector: 0.1
 controls:
-  naive_low_within: 0.05        # control group: liquid stocks within 5% of their 52W low
+  naive_low_within: 0.05

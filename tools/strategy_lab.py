@@ -155,14 +155,19 @@ def run(spec: dict, ctx: dict) -> dict:
     return out
 
 
-def load_context(config: str) -> dict:
+def load_context(config: str, start: str | None = None, end: str | None = None) -> dict:
+    """Load panel + features once. `start`/`end` widen the analysis range beyond the
+    default 2021 window - used by the long-history walk-forward, which needs every
+    session back to 2007 rather than the site's reporting window."""
     cfg = yaml.safe_load(open(config))
-    cfg["backtest"]["start"] = FULL_START
+    cfg["backtest"]["start"] = start or FULL_START
     uni = data.load_universe(cfg["run"]["universe_file"], cfg["run"].get("max_symbols"))
     panel = data.load_panel(cfg, uni)
     prep = bt.prepare(panel, uni, cfg)
     dates = panel.dates
-    idxs = np.where((dates >= pd.Timestamp(FULL_START)) & (dates <= pd.Timestamp(FULL_END)))[0][::5]
+    lo = pd.Timestamp(start or FULL_START)
+    hi = pd.Timestamp(end or FULL_END)
+    idxs = np.where((dates >= lo) & (dates <= hi))[0][::5]
     return {"panel": panel, "F": prep["F"], "base": prep["base"].to_numpy(bool),
             "regime": prep["regime"]["regime"].to_numpy(), "dates": dates, "idxs": idxs,
             "O": panel.open.to_numpy(float), "H": panel.high.to_numpy(float),

@@ -216,7 +216,8 @@ function pickCell(k, p) {
 
 function renderPicks() {
   const L = state.latest, q = state.q.toLowerCase();
-  const wanted = state.model === 'all' ? ['momentum', 'reversal'] : [state.model];
+  const models = Object.keys(L.picks || {});
+  const wanted = state.model === 'all' ? models : [state.model];
   let shown = 0;
 
   const html = wanted.map(m => {
@@ -232,7 +233,7 @@ function renderPicks() {
     if (!rows.length) return `<div class="mblock">${head}
         <div class="empty">${all.length
           ? 'No pick matches that filter.'
-          : `No stock satisfied every <strong>${m}</strong> rule at this close. That is a result, not a failure — in this regime the filter is doing its job by returning nothing.`}</div></div>`;
+          : `No stock satisfied every <strong>${m.replace(/_/g, ' ')}</strong> rule at this close. That is a result, not a failure — in this regime the filter is doing its job by returning nothing.`}</div></div>`;
 
     return `<div class="mblock">${head}
       <div class="tscroll"><table>
@@ -400,6 +401,12 @@ async function init() {
     renderPicks(); renderEvidence(); renderTracking(); renderTiers();
 
     $('#q').addEventListener('input', e => { state.q = e.target.value; renderPicks(); });
+    const seg = $('.seg');
+    if (seg && latest.picks) {
+      const ms = Object.keys(latest.picks);
+      seg.innerHTML = `<button class="on" data-model="all">All</button>` +
+        ms.map(m => `<button data-model="${m}">${m.replace(/_/g, ' ')}</button>`).join('');
+    }
     $$('.seg button').forEach(b => b.addEventListener('click', () => {
       $$('.seg button').forEach(x => x.classList.toggle('on', x === b));
       state.model = b.dataset.model; renderPicks();

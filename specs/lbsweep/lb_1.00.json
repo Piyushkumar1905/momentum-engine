@@ -1,0 +1,2 @@
+{"name":"lb_w1.00","factors":{"mom_12m_skip1":1.0,"low_beta":1.00},"filters":{},"top_n":20,
+ "exit":{"stop_atr":2.5,"target_r":null,"max_hold":60,"trail_atr":3.5}}

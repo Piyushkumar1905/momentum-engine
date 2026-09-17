@@ -1,0 +1,68 @@
+[
+ {
+  "name": "mom12_lowbeta_h60",
+  "spec": {
+   "name": "mom12_lowbeta_h60",
+   "factors": {
+    "mom_12m_skip1": 1.0,
+    "low_beta": 0.25
+   },
+   "filters": {},
+   "top_n": 20,
+   "exit": {
+    "stop_atr": 2.5,
+    "target_r": null,
+    "max_hold": 60,
+    "trail_atr": 3.5
+   }
+  },
+  "stats": {
+   "train": {
+    "scan_dates": 149,
+    "mean_edge": 0.01838,
+    "median_edge": 0.00639,
+    "share_positive": 0.57,
+    "naive_t": 4.88,
+    "newey_west_t": 2.54,
+    "independent_cohorts": 13,
+    "cohort_mean_edge": 0.02065,
+    "cohort_share_positive": 0.615,
+    "strategy_mean": 0.05236,
+    "universe_mean": 0.03399
+   },
+   "validate": {
+    "scan_dates": 73,
+    "mean_edge": 0.00658,
+    "median_edge": 0.00582,
+    "share_positive": 0.534,
+    "naive_t": 1.56,
+    "newey_west_t": 1.01,
+    "independent_cohorts": 7,
+    "cohort_mean_edge": 0.01315,
+    "cohort_share_positive": 0.714,
+    "strategy_mean": 0.01006,
+    "universe_mean": 0.00349
+   },
+   "holdout": {
+    "scan_dates": 48,
+    "mean_edge": 0.01311,
+    "median_edge": 0.00459,
+    "share_positive": 0.667,
+    "naive_t": 3.52,
+    "newey_west_t": 1.78,
+    "independent_cohorts": 4,
+    "cohort_mean_edge": 0.02169,
+    "cohort_share_positive": 1.0,
+    "strategy_mean": 0.01542,
+    "universe_mean": 0.00232
+   },
+   "full": {
+    "scan_dates": 270,
+    "mean_edge": 0.01425,
+    "newey_west_t": 3.05,
+    "share_positive": 0.578
+   },
+   "overlap_lag": 12
+  }
+ }
+]
