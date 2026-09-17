@@ -46,6 +46,7 @@ function fmtCell(k, v) {
   if (k === 'horizon_days') return v + 'd';
   if (k === 'avg_hold_days') return num(v, 1) + 'd';
   if (k === 'entry') return inr(v);
+  if (k === 'year') return String(v);          // a year is a label, not a quantity: 2021, not 2,021
   if (RAW.has(k)) return Number.isInteger(v) ? v.toLocaleString('en-IN') : num(v, 3);
   return pct(v, 1);
 }
