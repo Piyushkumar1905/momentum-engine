@@ -12,3 +12,5 @@ output/signals_*.csv
 output/trades_*.csv
 output/demo/
 output/*.log
+output/analysis/_preview/
+output/analysis/_charts/

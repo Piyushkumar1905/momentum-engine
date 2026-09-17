@@ -267,3 +267,46 @@ def test_post_ipo_listings_are_not_refetched_every_run(tmp_path, monkeypatch):
     calls.clear()
     data.fetch_yahoo(syms, "2023-01-01", "2023-06-30", tmp_path)
     assert calls == [], f"re-downloaded an up-to-date cache: {calls}"
+
+
+def test_demerger_gap_is_flagged_and_trade_excluded():
+    """An unadjusted demerger prints a catastrophic loss the holder never took.
+
+    Vedanta's 2026 demerger gapped -63% overnight with no retrace; booked naively it
+    is a -10R trade that never happened. The gap must be flagged and any trade
+    spanning it dropped, rather than recorded as a real loss.
+    """
+    idx = pd.bdate_range("2024-01-01", periods=40)
+    n = len(idx)
+    close = np.full(n, 100.0)
+    close[25:] = 37.0                      # value leaves for the demerged entity
+    op = close.copy()
+    df = pd.DataFrame({"Open": op, "High": close * 1.01, "Low": close * 0.99,
+                       "Close": close, "Volume": 1e6}, index=idx)
+    bench = pd.Series(np.full(n, 20000.0), index=idx)
+
+    p = data.build_panel({"AAA": df}, bench, source="test")
+    assert p.corp_action is not None
+    assert bool(p.corp_action["AAA"].any()), "rebasing gap was not flagged"
+    assert int(p.corp_action.to_numpy().sum()) == 1
+
+    O, H, L, C = (x.to_numpy(float) for x in (p.open, p.high, p.low, p.close))
+    CA = p.corp_action.to_numpy(bool)
+    # entering before the gap, with the gap inside the holding window
+    assert bt._simulate(20, 0, 95.0, 2.0, O, H, L, C, 10, 0.0, CA) is None
+    # without the guard the same trade books a huge phantom loss
+    naive = bt._simulate(20, 0, 95.0, 2.0, O, H, L, C, 10, 0.0, None)
+    assert naive is not None and naive["ret"] < -0.5
+
+
+def test_ordinary_crash_is_not_mistaken_for_a_corporate_action():
+    """A real gap-down that partly retraces is a genuine loss and must still count."""
+    idx = pd.bdate_range("2024-01-01", periods=40)
+    n = len(idx)
+    close = np.full(n, 100.0)
+    close[25] = 65.0
+    close[26:] = 88.0                      # retraces most of the fall -> a real move
+    df = pd.DataFrame({"Open": close, "High": close * 1.01, "Low": close * 0.99,
+                       "Close": close, "Volume": 1e6}, index=idx)
+    p = data.build_panel({"AAA": df}, pd.Series(np.full(n, 20000.0), index=idx), source="test")
+    assert not bool(p.corp_action["AAA"].any()), "a recovering crash was wrongly flagged"

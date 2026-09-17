@@ -42,20 +42,39 @@ def _combine(components: dict, weights: dict) -> tuple[pd.DataFrame, dict]:
 
 
 # --------------------------------------------------------------------------- Model A
-def momentum_model(F: dict, regime: pd.DataFrame, cfg: dict, base: pd.DataFrame):
+def momentum_conditions(F: dict, regime: pd.DataFrame, cfg: dict) -> dict[str, pd.DataFrame]:
+    """Each momentum rule as its own named mask.
+
+    Kept separate from `momentum_model` so that attribution analysis ("which single
+    rule rejected this stock?") reads the same definitions the screen actually uses,
+    rather than a re-implementation that can drift out of step with it.
+    """
     m, mode = cfg["momentum"], cfg["regime"]["mode"]
     reg = regime["regime"]
     th = lambda k: _threshold(m, k, reg, mode)
-    elig = (base
-            & F["dist_high"].ge(th("min_dist_52w_high"), axis=0)
-            & (F["atr_pct"] >= m["min_atr_pct"]) & (F["atr_pct"] <= m["max_atr_pct"])
-            & (F["ext_atr"] <= m["max_ext_atr"])
-            & (F["ext_50"] <= m["max_ext_50dma"])
-            & F["rs_63"].ge(th("min_rs_63"), axis=0))
+    c = {
+        "near_52w_high": F["dist_high"].ge(th("min_dist_52w_high"), axis=0),
+        "atr_floor": F["atr_pct"] >= m["min_atr_pct"],
+        "atr_ceiling": F["atr_pct"] <= m["max_atr_pct"],
+        "not_extended_atr": F["ext_atr"] <= m["max_ext_atr"],
+        "not_extended_50dma": F["ext_50"] <= m["max_ext_50dma"],
+        "rs_positive": F["rs_63"].ge(th("min_rs_63"), axis=0),
+    }
     if m.get("require_ma_alignment", True):
-        elig &= F["ma_aligned"]
+        c["ma_aligned"] = F["ma_aligned"].astype(bool)
     if mode == "block":
-        elig = elig.mul((reg != "bear").astype(bool), axis=0).astype(bool)
+        c["regime_not_bear"] = pd.DataFrame(
+            np.repeat((reg != "bear").to_numpy()[:, None], F["close"].shape[1], axis=1),
+            index=F["close"].index, columns=F["close"].columns)
+    return {k: v.fillna(False).astype(bool) for k, v in c.items()}
+
+
+def momentum_model(F: dict, regime: pd.DataFrame, cfg: dict, base: pd.DataFrame):
+    m, mode = cfg["momentum"], cfg["regime"]["mode"]
+    reg = regime["regime"]
+    elig = base.copy()
+    for cond in momentum_conditions(F, regime, cfg).values():
+        elig &= cond
 
     R = lambda x: _rank(x, base)
     brk_quality = (F["brk_recent"].fillna(0)

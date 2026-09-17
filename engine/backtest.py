@@ -64,9 +64,14 @@ def _forward(panel: Panel, horizons) -> dict:
     return {"stock": out, "nifty": nifty}
 
 
-def _simulate(i, j, stop, tgt_r, O, Hh, L, C, max_hold, cost):
+def _simulate(i, j, stop, tgt_r, O, Hh, L, C, max_hold, cost, ca=None):
     T = O.shape[0]
     if i + 1 >= T or np.isnan(O[i + 1, j]):
+        return None
+    # A demerger or unadjusted rebasing inside the holding window makes the price
+    # series incomparable across the gap. Excluding the trade is the honest choice:
+    # booking the printed drop would record a loss the holder never took.
+    if ca is not None and ca[i + 1:min(i + 1 + max_hold, T), j].any():
         return None
     entry = O[i + 1, j]
     risk = entry - stop
@@ -119,6 +124,7 @@ def run_backtest(panel: Panel, universe: pd.DataFrame, cfg: dict, prep: dict | N
     A = {k: F[k].to_numpy(dtype=float) for k in ROW_KEYS}
     B = base.to_numpy(dtype=bool)
     O, Hh, L, C = (x.to_numpy(float) for x in (panel.open, panel.high, panel.low, panel.close))
+    CA = panel.corp_action.to_numpy(bool) if panel.corp_action is not None else None
     start = pd.Timestamp(bt["start"])
     end = pd.Timestamp(bt["end"]) if bt.get("end") else dates[-1]
     idxs = np.where((dates >= start) & (dates <= end))[0][::int(bt["rebalance_every"])]
@@ -153,7 +159,7 @@ def run_backtest(panel: Panel, universe: pd.DataFrame, cfg: dict, prep: dict | N
                 if bt.get("skip_if_open", True) and open_until.get((model, j), -1) >= i + 1:
                     continue
                 t = _simulate(i, j, rules.stop_price(model, x, cfg), rules.target_r(model, cfg),
-                              O, Hh, L, C, int(bt["max_hold_days"]), float(bt["cost_pct"]))
+                              O, Hh, L, C, int(bt["max_hold_days"]), float(bt["cost_pct"]), CA)
                 if t:
                     open_until[(model, j)] = t.pop("exit_idx")
                     trades.append({"date": dates[i], "model": model, "symbol": syms[j],

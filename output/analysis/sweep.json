@@ -1,0 +1,157 @@
+{
+ "model": "momentum",
+ "start": "2024-09-01",
+ "split": "2025-09-01",
+ "variants": [
+  {
+   "variant": "baseline",
+   "patch": "-",
+   "in_sample": {
+    "trades": 613,
+    "win_rate": 0.3491,
+    "expectancy": -0.00552,
+    "profit_factor": 0.842,
+    "avg_R": -0.078
+   },
+   "out_of_sample": {
+    "trades": 606,
+    "win_rate": 0.3647,
+    "expectancy": 0.00093,
+    "profit_factor": 1.033,
+    "avg_R": 0.02
+   },
+   "full": {
+    "trades": 1219,
+    "win_rate": 0.3568,
+    "expectancy": -0.00231,
+    "profit_factor": 0.927,
+    "avg_R": -0.029
+   }
+  },
+  {
+   "variant": "relax_ext_50dma",
+   "patch": "{\"momentum.max_ext_50dma\": 0.35}",
+   "in_sample": {
+    "trades": 615,
+    "win_rate": 0.3431,
+    "expectancy": -0.0061,
+    "profit_factor": 0.83,
+    "avg_R": -0.094
+   },
+   "out_of_sample": {
+    "trades": 618,
+    "win_rate": 0.3592,
+    "expectancy": -0.0007,
+    "profit_factor": 0.976,
+    "avg_R": 0.005
+   },
+   "full": {
+    "trades": 1233,
+    "win_rate": 0.3512,
+    "expectancy": -0.00339,
+    "profit_factor": 0.896,
+    "avg_R": -0.045
+   }
+  },
+  {
+   "variant": "relax_52w_high",
+   "patch": "{\"momentum.min_dist_52w_high\": 0.75}",
+   "in_sample": {
+    "trades": 618,
+    "win_rate": 0.343,
+    "expectancy": -0.00675,
+    "profit_factor": 0.811,
+    "avg_R": -0.095
+   },
+   "out_of_sample": {
+    "trades": 605,
+    "win_rate": 0.3669,
+    "expectancy": 0.00131,
+    "profit_factor": 1.046,
+    "avg_R": 0.026
+   },
+   "full": {
+    "trades": 1223,
+    "win_rate": 0.3549,
+    "expectancy": -0.00276,
+    "profit_factor": 0.914,
+    "avg_R": -0.035
+   }
+  },
+  {
+   "variant": "relax_both",
+   "patch": "{\"momentum.max_ext_50dma\": 0.35, \"momentum.min_dist_52w_high\": 0.75}",
+   "in_sample": {
+    "trades": 620,
+    "win_rate": 0.3403,
+    "expectancy": -0.00683,
+    "profit_factor": 0.813,
+    "avg_R": -0.105
+   },
+   "out_of_sample": {
+    "trades": 618,
+    "win_rate": 0.3608,
+    "expectancy": -0.00039,
+    "profit_factor": 0.987,
+    "avg_R": 0.009
+   },
+   "full": {
+    "trades": 1238,
+    "win_rate": 0.3506,
+    "expectancy": -0.00361,
+    "profit_factor": 0.89,
+    "avg_R": -0.048
+   }
+  },
+  {
+   "variant": "drop_ext_50dma",
+   "patch": "{\"momentum.max_ext_50dma\": 99.0}",
+   "in_sample": {
+    "trades": 615,
+    "win_rate": 0.3431,
+    "expectancy": -0.00606,
+    "profit_factor": 0.832,
+    "avg_R": -0.094
+   },
+   "out_of_sample": {
+    "trades": 618,
+    "win_rate": 0.3608,
+    "expectancy": -0.0004,
+    "profit_factor": 0.987,
+    "avg_R": 0.009
+   },
+   "full": {
+    "trades": 1233,
+    "win_rate": 0.352,
+    "expectancy": -0.00322,
+    "profit_factor": 0.902,
+    "avg_R": -0.042
+   }
+  },
+  {
+   "variant": "tighten_rs",
+   "patch": "{\"momentum.min_rs_63\": 0.05}",
+   "in_sample": {
+    "trades": 613,
+    "win_rate": 0.3458,
+    "expectancy": -0.00613,
+    "profit_factor": 0.826,
+    "avg_R": -0.089
+   },
+   "out_of_sample": {
+    "trades": 602,
+    "win_rate": 0.3654,
+    "expectancy": 0.00124,
+    "profit_factor": 1.044,
+    "avg_R": 0.024
+   },
+   "full": {
+    "trades": 1215,
+    "win_rate": 0.3556,
+    "expectancy": -0.00248,
+    "profit_factor": 0.922,
+    "avg_R": -0.033
+   }
+  }
+ ]
+}

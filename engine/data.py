@@ -51,6 +51,7 @@ class Panel:
     volume: pd.DataFrame
     bench: pd.Series          # benchmark close
     source: str = "unknown"
+    corp_action: pd.DataFrame | None = None   # True where the price series is discontinuous
 
     @property
     def dates(self) -> pd.DatetimeIndex:
@@ -63,8 +64,45 @@ class Panel:
     def truncate(self, end) -> "Panel":
         """Copy of the panel with data only up to `end` (used by look-ahead tests)."""
         sl = slice(None, pd.Timestamp(end))
+        ca = self.corp_action.loc[sl] if self.corp_action is not None else None
         return Panel(self.open.loc[sl], self.high.loc[sl], self.low.loc[sl],
-                     self.close.loc[sl], self.volume.loc[sl], self.bench.loc[sl], self.source)
+                     self.close.loc[sl], self.volume.loc[sl], self.bench.loc[sl], self.source, ca)
+
+
+def detect_corporate_actions(op: pd.DataFrame, close: pd.DataFrame,
+                             drop: float = -0.30, recovery: float = 0.5) -> pd.DataFrame:
+    """Flag overnight gaps that are price rebasings, not market moves.
+
+    `auto_adjust` handles splits and dividends but NOT demergers, where value leaves
+    the listed entity for a separately-listed one. The price series then shows a
+    catastrophic loss the shareholder never took - Vedanta's 2026 demerger prints as
+    -63% overnight, and a backtest books it as a real -10R trade.
+
+    Adjusting the history would mean inventing prices; the demerged entity's value is
+    simply not in this series. So these bars are flagged and the affected trades are
+    excluded instead, which neither invents a gain nor books a phantom loss.
+
+    A genuine crash usually retraces some of the fall; a rebasing never does. That is
+    the test used to separate them.
+    """
+    gap = op / close.shift(1) - 1
+    suspect = gap <= drop
+    flags = pd.DataFrame(False, index=op.index, columns=op.columns)
+    if not suspect.any().any():
+        return flags
+    for sym in op.columns[suspect.any()]:
+        prev = close[sym].shift(1)
+        for dt in op.index[suspect[sym].fillna(False)]:
+            fwd = close[sym].loc[dt:].head(11)
+            if not len(fwd) or not np.isfinite(prev.loc[dt]):
+                continue
+            retrace = fwd.max() / prev.loc[dt] - 1
+            if retrace < drop * recovery:        # never came back -> rebasing
+                flags.loc[dt, sym] = True
+                log.warning("%s: %.0f%% gap on %s looks like a corporate action; "
+                            "trades spanning it are excluded", sym, gap.loc[dt, sym] * 100,
+                            dt.date())
+    return flags
 
 
 def build_panel(per_symbol: dict[str, pd.DataFrame], bench: pd.Series, source: str,
@@ -98,7 +136,12 @@ def build_panel(per_symbol: dict[str, pd.DataFrame], bench: pd.Series, source: s
     mk = {f: pd.DataFrame(frames[f], index=idx) for f in FIELDS}
     if mk["Close"].empty:
         raise RuntimeError("No price data loaded - check symbols / data source")
-    return Panel(mk["Open"], mk["High"], mk["Low"], mk["Close"], mk["Volume"], bench, source)
+    ca = detect_corporate_actions(mk["Open"], mk["Close"])
+    n = int(ca.to_numpy().sum())
+    if n:
+        log.warning("Flagged %d corporate-action discontinuities across %d symbols",
+                    n, int(ca.any().sum()))
+    return Panel(mk["Open"], mk["High"], mk["Low"], mk["Close"], mk["Volume"], bench, source, ca)
 
 
 # --------------------------------------------------------------------------- sources
