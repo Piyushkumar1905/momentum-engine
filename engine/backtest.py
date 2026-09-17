@@ -94,6 +94,7 @@ def _simulate(i, j, stop, tgt_r, O, Hh, L, C, max_hold, cost, ca=None, trail_atr
         return None
     # tgt_r None means no profit target: the trail or the clock decides the exit.
     target = entry + tgt_r * risk if tgt_r else np.inf
+    initial_stop = stop          # position size is set by the risk taken AT ENTRY
     peak = entry
     last = i + max_hold
     if last >= T:
@@ -117,9 +118,13 @@ def _simulate(i, j, stop, tgt_r, O, Hh, L, C, max_hold, cost, ca=None, trail_atr
         k, px, reason = last, C[last, j], "time"
         if np.isnan(px):
             return None
-    return {"entry": entry, "stop": stop, "target": target, "exit": px, "exit_reason": reason,
-            "hold_days": k - i, "exit_idx": k, "ret": px / entry - 1 - cost,
-            "r_multiple": (px - entry) / risk}
+    # "stop" is the INITIAL stop. A trailing stop ratchets upward, and returning the
+    # final value made entry-minus-stop negative on every winner - which a position
+    # sizer reads as "no risk to size against" and skips. That silently removed every
+    # profitable trade from portfolio simulation while signal-level stats looked fine.
+    return {"entry": entry, "stop": initial_stop, "final_stop": stop, "target": target,
+            "exit": px, "exit_reason": reason, "hold_days": k - i, "exit_idx": k,
+            "ret": px / entry - 1 - cost, "r_multiple": (px - entry) / risk}
 
 
 def trade_stats(r: pd.Series) -> dict:

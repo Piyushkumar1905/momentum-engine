@@ -310,3 +310,24 @@ def test_ordinary_crash_is_not_mistaken_for_a_corporate_action():
                        "Close": close, "Volume": 1e6}, index=idx)
     p = data.build_panel({"AAA": df}, pd.Series(np.full(n, 20000.0), index=idx), source="test")
     assert not bool(p.corp_action["AAA"].any()), "a recovering crash was wrongly flagged"
+
+
+def test_trailing_stop_reports_the_entry_risk_not_the_trailed_stop():
+    """Position sizing needs the stop as it stood AT ENTRY.
+
+    A trailing stop ratchets upward, so on a winning trade the final stop sits above
+    entry. Reporting that as "stop" makes entry-minus-stop negative, and a risk-based
+    sizer skips the trade as unsizeable - silently removing every winner from the
+    portfolio while signal-level statistics still look healthy.
+    """
+    n = 30
+    close = np.linspace(100, 160, n)                 # a steady winner
+    O, H, L, C = (close.reshape(-1, 1), (close * 1.01).reshape(-1, 1),
+                  (close * 0.99).reshape(-1, 1), close.reshape(-1, 1))
+    t = bt._simulate(0, 0, 95.0, None, O, H, L, C, max_hold=20, cost=0.0,
+                     ca=None, trail_atr=2.0, atr=3.0)
+    assert t is not None
+    assert t["stop"] == 95.0, "reported stop must be the entry stop"
+    assert t["entry"] - t["stop"] > 0, "risk at entry must be positive and sizeable"
+    assert t["final_stop"] > t["stop"], "the trail should have ratcheted upward"
+    assert t["ret"] > 0

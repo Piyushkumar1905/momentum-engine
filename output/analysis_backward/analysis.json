@@ -1,0 +1,7909 @@
+{
+ "generated_at": "2026-09-17T18:22:48+05:30",
+ "window": {
+  "start": "2009-01-01",
+  "end": "2020-03-01",
+  "scan_dates": 546,
+  "trading_days": 2726
+ },
+ "assumptions": {
+  "capital": 1000000.0,
+  "risk_pct": 0.01,
+  "max_positions": 10,
+  "max_weight": 0.2,
+  "cost_pct": 0.0025,
+  "entry": "next session open",
+  "sizing": "risk-based on stop distance"
+ },
+ "benchmark": {
+  "nifty_return_pct": 2.6766,
+  "nifty_cagr_pct": 0.1238,
+  "years": 11.15
+ },
+ "by_model": {
+  "control_naive_low": {
+   "trades": 1513,
+   "win_rate": 0.382,
+   "avg_return_pct": -0.0006,
+   "median_return_pct": -0.0387,
+   "avg_win_pct": 0.0885,
+   "avg_loss_pct": -0.0557,
+   "expectancy_pct": -0.0006,
+   "profit_factor": 0.983,
+   "avg_R": -0.003,
+   "avg_win_R": 1.525,
+   "avg_loss_R": -0.947,
+   "realised_reward_risk": 1.61,
+   "avg_hold_days": 10.09,
+   "median_hold_days": 8.0,
+   "avg_hold_days_winners": 14.07,
+   "avg_hold_days_losers": 7.63,
+   "best_trade": {
+    "symbol": "WOCKPHARMA",
+    "date": "2013-08-07",
+    "return_pct": 0.3603,
+    "R": 2.07,
+    "hold_days": 6,
+    "exit": "target"
+   },
+   "worst_trade": {
+    "symbol": "GLENMARK",
+    "date": "2009-01-27",
+    "return_pct": -0.1882,
+    "R": -1.0,
+    "hold_days": 1,
+    "exit": "stop"
+   },
+   "exit_mix": {
+    "stop": 0.5618,
+    "target": 0.228,
+    "time": 0.2102
+   },
+   "longest_win_streak": 19,
+   "longest_loss_streak": 51
+  },
+  "momentum": {
+   "trades": 4755,
+   "win_rate": 0.4011,
+   "avg_return_pct": 0.0002,
+   "median_return_pct": -0.0341,
+   "avg_win_pct": 0.0758,
+   "avg_loss_pct": -0.0504,
+   "expectancy_pct": 0.0002,
+   "profit_factor": 1.008,
+   "avg_R": 0.072,
+   "avg_win_R": 1.603,
+   "avg_loss_R": -0.953,
+   "realised_reward_risk": 1.68,
+   "avg_hold_days": 10.41,
+   "median_hold_days": 9.0,
+   "avg_hold_days_winners": 13.44,
+   "avg_hold_days_losers": 8.38,
+   "best_trade": {
+    "symbol": "UNITDSPR",
+    "date": "2009-11-03",
+    "return_pct": 0.2114,
+    "R": 2.0,
+    "hold_days": 19,
+    "exit": "target"
+   },
+   "worst_trade": {
+    "symbol": "RADICO",
+    "date": "2016-11-04",
+    "return_pct": -0.2126,
+    "R": -2.21,
+    "hold_days": 3,
+    "exit": "stop"
+   },
+   "exit_mix": {
+    "stop": 0.5413,
+    "target": 0.2658,
+    "time": 0.1928
+   },
+   "longest_win_streak": 19,
+   "longest_loss_streak": 45
+  },
+  "reversal": {
+   "trades": 143,
+   "win_rate": 0.4196,
+   "avg_return_pct": -0.0012,
+   "median_return_pct": -0.018,
+   "avg_win_pct": 0.1029,
+   "avg_loss_pct": -0.0765,
+   "expectancy_pct": -0.0012,
+   "profit_factor": 0.973,
+   "avg_R": -0.095,
+   "avg_win_R": 0.653,
+   "avg_loss_R": -0.636,
+   "realised_reward_risk": 1.03,
+   "avg_hold_days": 16.93,
+   "median_hold_days": 20.0,
+   "avg_hold_days_winners": 19.62,
+   "avg_hold_days_losers": 14.99,
+   "best_trade": {
+    "symbol": "SUZLON",
+    "date": "2009-05-11",
+    "return_pct": 0.9071,
+    "R": 2.5,
+    "hold_days": 19,
+    "exit": "target"
+   },
+   "worst_trade": {
+    "symbol": "JINDALSTEL",
+    "date": "2015-03-09",
+    "return_pct": -0.2835,
+    "R": -1.0,
+    "hold_days": 10,
+    "exit": "stop"
+   },
+   "exit_mix": {
+    "time": 0.6923,
+    "stop": 0.2797,
+    "target": 0.028
+   },
+   "longest_win_streak": 9,
+   "longest_loss_streak": 11
+  },
+  "trend_lowbeta": {
+   "trades": 2344,
+   "win_rate": 0.4322,
+   "avg_return_pct": 0.0207,
+   "median_return_pct": -0.0272,
+   "avg_win_pct": 0.1525,
+   "avg_loss_pct": -0.0796,
+   "expectancy_pct": 0.0207,
+   "profit_factor": 1.457,
+   "avg_R": 0.229,
+   "avg_win_R": 1.556,
+   "avg_loss_R": -0.781,
+   "realised_reward_risk": 1.99,
+   "avg_hold_days": 33.03,
+   "median_hold_days": 31.0,
+   "avg_hold_days_winners": 48.52,
+   "avg_hold_days_losers": 21.24,
+   "best_trade": {
+    "symbol": "M&M",
+    "date": "2009-02-17",
+    "return_pct": 1.1809,
+    "R": 7.64,
+    "hold_days": 60,
+    "exit": "time"
+   },
+   "worst_trade": {
+    "symbol": "FORTIS",
+    "date": "2009-06-15",
+    "return_pct": -0.2356,
+    "R": -1.0,
+    "hold_days": 20,
+    "exit": "stop"
+   },
+   "exit_mix": {
+    "stop": 0.7679,
+    "time": 0.2321
+   },
+   "longest_win_streak": 13,
+   "longest_loss_streak": 30
+  }
+ },
+ "all_signals": {
+  "trades": 2344,
+  "win_rate": 0.4322,
+  "avg_return_pct": 0.0207,
+  "median_return_pct": -0.0272,
+  "avg_win_pct": 0.1525,
+  "avg_loss_pct": -0.0796,
+  "expectancy_pct": 0.0207,
+  "profit_factor": 1.457,
+  "avg_R": 0.229,
+  "avg_win_R": 1.556,
+  "avg_loss_R": -0.781,
+  "realised_reward_risk": 1.99,
+  "avg_hold_days": 33.03,
+  "median_hold_days": 31.0,
+  "avg_hold_days_winners": 48.52,
+  "avg_hold_days_losers": 21.24,
+  "best_trade": {
+   "symbol": "M&M",
+   "date": "2009-02-17",
+   "return_pct": 1.1809,
+   "R": 7.64,
+   "hold_days": 60,
+   "exit": "time"
+  },
+  "worst_trade": {
+   "symbol": "FORTIS",
+   "date": "2009-06-15",
+   "return_pct": -0.2356,
+   "R": -1.0,
+   "hold_days": 20,
+   "exit": "stop"
+  },
+  "exit_mix": {
+   "stop": 0.7679,
+   "time": 0.2321
+  },
+  "longest_win_streak": 13,
+  "longest_loss_streak": 30
+ },
+ "portfolio": {
+  "starting_capital": 1000000.0,
+  "ending_equity": 3877946.44,
+  "net_pnl": 2877946.44,
+  "total_return_pct": 2.8779,
+  "total_deployed": 173812623.96,
+  "turnover_x": 173.81,
+  "positions_taken": 730,
+  "skipped_no_slot": 915,
+  "skipped_no_cash": 699,
+  "max_drawdown_pct": -0.303,
+  "peak_equity": 4658754.72,
+  "avg_position_value": 238099.48,
+  "curve": [
+   {
+    "date": "2009-01-02",
+    "equity": 1000000.0,
+    "open_positions": 10,
+    "exposure": 813759.99
+   },
+   {
+    "date": "2009-01-07",
+    "equity": 989842.44,
+    "open_positions": 9,
+    "exposure": 740832.71
+   },
+   {
+    "date": "2009-01-09",
+    "equity": 978820.21,
+    "open_positions": 8,
+    "exposure": 676142.12
+   },
+   {
+    "date": "2009-01-12",
+    "equity": 978820.21,
+    "open_positions": 10,
+    "exposure": 816657.87
+   },
+   {
+    "date": "2009-01-13",
+    "equity": 968665.35,
+    "open_positions": 9,
+    "exposure": 748272.7
+   },
+   {
+    "date": "2009-01-15",
+    "equity": 958255.57,
+    "open_positions": 8,
+    "exposure": 672690.9
+   },
+   {
+    "date": "2009-01-16",
+    "equity": 958255.57,
+    "open_positions": 8,
+    "exposure": 672690.9
+   },
+   {
+    "date": "2009-01-19",
+    "equity": 958255.57,
+    "open_positions": 10,
+    "exposure": 800067.86
+   },
+   {
+    "date": "2009-01-21",
+    "equity": 958255.57,
+    "open_positions": 10,
+    "exposure": 800067.86
+   },
+   {
+    "date": "2009-01-22",
+    "equity": 958255.57,
+    "open_positions": 10,
+    "exposure": 800067.86
+   },
+   {
+    "date": "2009-01-23",
+    "equity": 958255.57,
+    "open_positions": 10,
+    "exposure": 800067.86
+   },
+   {
+    "date": "2009-01-27",
+    "equity": 958255.57,
+    "open_positions": 10,
+    "exposure": 800067.86
+   },
+   {
+    "date": "2009-01-28",
+    "equity": 958255.57,
+    "open_positions": 10,
+    "exposure": 800067.86
+   },
+   {
+    "date": "2009-01-30",
+    "equity": 947980.85,
+    "open_positions": 9,
+    "exposure": 739130.49
+   },
+   {
+    "date": "2009-02-03",
+    "equity": 947980.85,
+    "open_positions": 10,
+    "exposure": 794293.72
+   },
+   {
+    "date": "2009-02-10",
+    "equity": 947980.85,
+    "open_positions": 10,
+    "exposure": 794293.72
+   },
+   {
+    "date": "2009-02-16",
+    "equity": 937811.22,
+    "open_positions": 9,
+    "exposure": 722449.78
+   },
+   {
+    "date": "2009-02-17",
+    "equity": 937811.22,
+    "open_positions": 10,
+    "exposure": 805749.71
+   },
+   {
+    "date": "2009-02-18",
+    "equity": 928084.96,
+    "open_positions": 9,
+    "exposure": 739310.11
+   },
+   {
+    "date": "2009-02-25",
+    "equity": 928084.96,
+    "open_positions": 10,
+    "exposure": 814275.97
+   },
+   {
+    "date": "2009-02-26",
+    "equity": 918469.11,
+    "open_positions": 9,
+    "exposure": 759112.75
+   },
+   {
+    "date": "2009-03-02",
+    "equity": 912794.99,
+    "open_positions": 8,
+    "exposure": 679607.0
+   },
+   {
+    "date": "2009-03-04",
+    "equity": 908426.56,
+    "open_positions": 10,
+    "exposure": 835077.37
+   },
+   {
+    "date": "2009-03-05",
+    "equity": 899058.54,
+    "open_positions": 9,
+    "exposure": 720623.59
+   },
+   {
+    "date": "2009-03-06",
+    "equity": 889593.16,
+    "open_positions": 8,
+    "exposure": 645657.74
+   },
+   {
+    "date": "2009-03-13",
+    "equity": 889593.16,
+    "open_positions": 10,
+    "exposure": 782790.16
+   },
+   {
+    "date": "2009-03-27",
+    "equity": 889593.16,
+    "open_positions": 10,
+    "exposure": 782790.16
+   },
+   {
+    "date": "2009-04-06",
+    "equity": 948649.46,
+    "open_positions": 10,
+    "exposure": 947368.2
+   },
+   {
+    "date": "2009-04-16",
+    "equity": 953487.68,
+    "open_positions": 10,
+    "exposure": 940689.35
+   },
+   {
+    "date": "2009-04-20",
+    "equity": 952706.6,
+    "open_positions": 9,
+    "exposure": 785313.16
+   },
+   {
+    "date": "2009-04-23",
+    "equity": 952706.6,
+    "open_positions": 10,
+    "exposure": 851193.35
+   },
+   {
+    "date": "2009-05-04",
+    "equity": 952706.6,
+    "open_positions": 10,
+    "exposure": 851193.35
+   },
+   {
+    "date": "2009-05-06",
+    "equity": 952706.6,
+    "open_positions": 10,
+    "exposure": 851193.35
+   },
+   {
+    "date": "2009-05-11",
+    "equity": 955050.39,
+    "open_positions": 10,
+    "exposure": 824061.08
+   },
+   {
+    "date": "2009-05-18",
+    "equity": 955050.39,
+    "open_positions": 10,
+    "exposure": 824061.08
+   },
+   {
+    "date": "2009-05-19",
+    "equity": 1028135.23,
+    "open_positions": 7,
+    "exposure": 531680.0
+   },
+   {
+    "date": "2009-05-20",
+    "equity": 1028135.23,
+    "open_positions": 7,
+    "exposure": 531680.0
+   },
+   {
+    "date": "2009-05-22",
+    "equity": 1028135.23,
+    "open_positions": 7,
+    "exposure": 531680.0
+   },
+   {
+    "date": "2009-05-25",
+    "equity": 1080976.99,
+    "open_positions": 10,
+    "exposure": 729631.92
+   },
+   {
+    "date": "2009-05-27",
+    "equity": 1080976.99,
+    "open_positions": 10,
+    "exposure": 729631.92
+   },
+   {
+    "date": "2009-06-01",
+    "equity": 1080976.99,
+    "open_positions": 10,
+    "exposure": 729631.92
+   },
+   {
+    "date": "2009-06-08",
+    "equity": 1125986.4,
+    "open_positions": 10,
+    "exposure": 775120.38
+   },
+   {
+    "date": "2009-06-09",
+    "equity": 1164427.35,
+    "open_positions": 9,
+    "exposure": 725845.68
+   },
+   {
+    "date": "2009-06-15",
+    "equity": 1176889.77,
+    "open_positions": 10,
+    "exposure": 773448.48
+   },
+   {
+    "date": "2009-06-18",
+    "equity": 1212735.07,
+    "open_positions": 8,
+    "exposure": 593942.06
+   },
+   {
+    "date": "2009-06-22",
+    "equity": 1212735.07,
+    "open_positions": 10,
+    "exposure": 798116.46
+   },
+   {
+    "date": "2009-06-23",
+    "equity": 1245469.49,
+    "open_positions": 9,
+    "exposure": 739861.37
+   },
+   {
+    "date": "2009-06-26",
+    "equity": 1234508.98,
+    "open_positions": 8,
+    "exposure": 672803.59
+   },
+   {
+    "date": "2009-06-29",
+    "equity": 1234508.98,
+    "open_positions": 10,
+    "exposure": 801236.52
+   },
+   {
+    "date": "2009-07-06",
+    "equity": 1234508.98,
+    "open_positions": 10,
+    "exposure": 801236.52
+   },
+   {
+    "date": "2009-07-07",
+    "equity": 1234508.98,
+    "open_positions": 10,
+    "exposure": 801236.52
+   },
+   {
+    "date": "2009-07-08",
+    "equity": 1234508.98,
+    "open_positions": 10,
+    "exposure": 801236.52
+   },
+   {
+    "date": "2009-07-09",
+    "equity": 1222018.05,
+    "open_positions": 9,
+    "exposure": 737513.97
+   },
+   {
+    "date": "2009-07-10",
+    "equity": 1222018.05,
+    "open_positions": 9,
+    "exposure": 737513.97
+   },
+   {
+    "date": "2009-07-13",
+    "equity": 1222018.05,
+    "open_positions": 10,
+    "exposure": 809300.32
+   },
+   {
+    "date": "2009-07-20",
+    "equity": 1222018.05,
+    "open_positions": 10,
+    "exposure": 809300.32
+   },
+   {
+    "date": "2009-07-27",
+    "equity": 1222018.05,
+    "open_positions": 10,
+    "exposure": 809300.32
+   },
+   {
+    "date": "2009-07-29",
+    "equity": 1222018.05,
+    "open_positions": 10,
+    "exposure": 809300.32
+   },
+   {
+    "date": "2009-08-03",
+    "equity": 1222018.05,
+    "open_positions": 10,
+    "exposure": 809300.32
+   },
+   {
+    "date": "2009-08-07",
+    "equity": 1228700.86,
+    "open_positions": 9,
+    "exposure": 738732.21
+   },
+   {
+    "date": "2009-08-10",
+    "equity": 1237617.61,
+    "open_positions": 10,
+    "exposure": 827446.58
+   },
+   {
+    "date": "2009-08-12",
+    "equity": 1232940.09,
+    "open_positions": 9,
+    "exposure": 755660.23
+   },
+   {
+    "date": "2009-08-17",
+    "equity": 1262329.11,
+    "open_positions": 10,
+    "exposure": 934748.86
+   },
+   {
+    "date": "2009-08-19",
+    "equity": 1262329.11,
+    "open_positions": 10,
+    "exposure": 934748.86
+   },
+   {
+    "date": "2009-08-21",
+    "equity": 1262329.11,
+    "open_positions": 10,
+    "exposure": 934748.86
+   },
+   {
+    "date": "2009-08-24",
+    "equity": 1262329.11,
+    "open_positions": 10,
+    "exposure": 934748.86
+   },
+   {
+    "date": "2009-08-31",
+    "equity": 1295637.01,
+    "open_positions": 10,
+    "exposure": 922770.82
+   },
+   {
+    "date": "2009-09-07",
+    "equity": 1288041.54,
+    "open_positions": 10,
+    "exposure": 1075810.37
+   },
+   {
+    "date": "2009-09-14",
+    "equity": 1321958.23,
+    "open_positions": 10,
+    "exposure": 1125580.66
+   },
+   {
+    "date": "2009-09-22",
+    "equity": 1327647.55,
+    "open_positions": 10,
+    "exposure": 1276383.96
+   },
+   {
+    "date": "2009-09-30",
+    "equity": 1327647.55,
+    "open_positions": 10,
+    "exposure": 1276383.96
+   },
+   {
+    "date": "2009-10-06",
+    "equity": 1327647.55,
+    "open_positions": 10,
+    "exposure": 1276383.96
+   },
+   {
+    "date": "2009-10-07",
+    "equity": 1327647.55,
+    "open_positions": 10,
+    "exposure": 1276383.96
+   },
+   {
+    "date": "2009-10-08",
+    "equity": 1327647.55,
+    "open_positions": 10,
+    "exposure": 1276383.96
+   },
+   {
+    "date": "2009-10-12",
+    "equity": 1327647.55,
+    "open_positions": 10,
+    "exposure": 1276383.96
+   },
+   {
+    "date": "2009-10-16",
+    "equity": 1327647.55,
+    "open_positions": 10,
+    "exposure": 1276383.96
+   },
+   {
+    "date": "2009-10-22",
+    "equity": 1348305.13,
+    "open_positions": 9,
+    "exposure": 1122900.32
+   },
+   {
+    "date": "2009-10-26",
+    "equity": 1348305.13,
+    "open_positions": 10,
+    "exposure": 1268360.19
+   },
+   {
+    "date": "2009-10-27",
+    "equity": 1419997.76,
+    "open_positions": 8,
+    "exposure": 903167.0
+   },
+   {
+    "date": "2009-10-28",
+    "equity": 1419997.76,
+    "open_positions": 8,
+    "exposure": 903167.0
+   },
+   {
+    "date": "2009-10-29",
+    "equity": 1450729.25,
+    "open_positions": 6,
+    "exposure": 727038.65
+   },
+   {
+    "date": "2009-11-03",
+    "equity": 1457363.39,
+    "open_positions": 10,
+    "exposure": 1156267.27
+   },
+   {
+    "date": "2009-11-04",
+    "equity": 1447736.53,
+    "open_positions": 9,
+    "exposure": 940753.58
+   },
+   {
+    "date": "2009-11-05",
+    "equity": 1458000.11,
+    "open_positions": 8,
+    "exposure": 855710.88
+   },
+   {
+    "date": "2009-11-10",
+    "equity": 1463461.07,
+    "open_positions": 10,
+    "exposure": 1130365.67
+   },
+   {
+    "date": "2009-11-17",
+    "equity": 1478646.44,
+    "open_positions": 10,
+    "exposure": 1174897.82
+   },
+   {
+    "date": "2009-11-20",
+    "equity": 1478646.44,
+    "open_positions": 10,
+    "exposure": 1174897.82
+   },
+   {
+    "date": "2009-11-24",
+    "equity": 1478646.44,
+    "open_positions": 10,
+    "exposure": 1174897.82
+   },
+   {
+    "date": "2009-11-25",
+    "equity": 1478418.08,
+    "open_positions": 9,
+    "exposure": 1029437.95
+   },
+   {
+    "date": "2009-12-01",
+    "equity": 1478418.08,
+    "open_positions": 10,
+    "exposure": 1148711.27
+   },
+   {
+    "date": "2009-12-08",
+    "equity": 1478418.08,
+    "open_positions": 10,
+    "exposure": 1148711.27
+   },
+   {
+    "date": "2009-12-11",
+    "equity": 1472827.18,
+    "open_positions": 9,
+    "exposure": 1036401.76
+   },
+   {
+    "date": "2009-12-15",
+    "equity": 1472827.18,
+    "open_positions": 10,
+    "exposure": 1143761.89
+   },
+   {
+    "date": "2009-12-16",
+    "equity": 1472827.18,
+    "open_positions": 10,
+    "exposure": 1143761.89
+   },
+   {
+    "date": "2009-12-22",
+    "equity": 1472827.18,
+    "open_positions": 10,
+    "exposure": 1143761.89
+   },
+   {
+    "date": "2009-12-31",
+    "equity": 1472827.18,
+    "open_positions": 10,
+    "exposure": 1143761.89
+   },
+   {
+    "date": "2010-01-08",
+    "equity": 1473728.47,
+    "open_positions": 10,
+    "exposure": 1183538.3
+   },
+   {
+    "date": "2010-01-15",
+    "equity": 1473728.47,
+    "open_positions": 10,
+    "exposure": 1183538.3
+   },
+   {
+    "date": "2010-01-22",
+    "equity": 1511306.3,
+    "open_positions": 10,
+    "exposure": 1228880.82
+   },
+   {
+    "date": "2010-01-25",
+    "equity": 1497965.6,
+    "open_positions": 9,
+    "exposure": 1121520.68
+   },
+   {
+    "date": "2010-01-27",
+    "equity": 1486095.38,
+    "open_positions": 7,
+    "exposure": 849704.95
+   },
+   {
+    "date": "2010-01-29",
+    "equity": 1491427.78,
+    "open_positions": 5,
+    "exposure": 646801.3
+   },
+   {
+    "date": "2010-02-01",
+    "equity": 1510700.42,
+    "open_positions": 10,
+    "exposure": 1317923.0
+   },
+   {
+    "date": "2010-02-05",
+    "equity": 1495579.13,
+    "open_positions": 9,
+    "exposure": 1136458.04
+   },
+   {
+    "date": "2010-02-08",
+    "equity": 1495533.53,
+    "open_positions": 10,
+    "exposure": 1321427.11
+   },
+   {
+    "date": "2010-02-16",
+    "equity": 1523001.16,
+    "open_positions": 10,
+    "exposure": 1361038.66
+   },
+   {
+    "date": "2010-02-23",
+    "equity": 1523001.16,
+    "open_positions": 10,
+    "exposure": 1361038.66
+   },
+   {
+    "date": "2010-02-25",
+    "equity": 1523001.16,
+    "open_positions": 10,
+    "exposure": 1361038.66
+   },
+   {
+    "date": "2010-03-03",
+    "equity": 1522767.32,
+    "open_positions": 10,
+    "exposure": 1397122.19
+   },
+   {
+    "date": "2010-03-10",
+    "equity": 1522767.32,
+    "open_positions": 10,
+    "exposure": 1397122.19
+   },
+   {
+    "date": "2010-03-16",
+    "equity": 1522767.32,
+    "open_positions": 10,
+    "exposure": 1397122.19
+   },
+   {
+    "date": "2010-03-17",
+    "equity": 1522767.32,
+    "open_positions": 10,
+    "exposure": 1397122.19
+   },
+   {
+    "date": "2010-03-22",
+    "equity": 1522767.32,
+    "open_positions": 10,
+    "exposure": 1397122.19
+   },
+   {
+    "date": "2010-03-25",
+    "equity": 1522767.32,
+    "open_positions": 10,
+    "exposure": 1397122.19
+   },
+   {
+    "date": "2010-03-31",
+    "equity": 1522767.32,
+    "open_positions": 10,
+    "exposure": 1397122.19
+   },
+   {
+    "date": "2010-04-01",
+    "equity": 1507398.52,
+    "open_positions": 10,
+    "exposure": 1431538.66
+   },
+   {
+    "date": "2010-04-09",
+    "equity": 1507398.52,
+    "open_positions": 10,
+    "exposure": 1431538.66
+   },
+   {
+    "date": "2010-04-12",
+    "equity": 1502428.09,
+    "open_positions": 9,
+    "exposure": 1274470.54
+   },
+   {
+    "date": "2010-04-19",
+    "equity": 1502428.09,
+    "open_positions": 10,
+    "exposure": 1414418.19
+   },
+   {
+    "date": "2010-04-22",
+    "equity": 1502428.09,
+    "open_positions": 10,
+    "exposure": 1414418.19
+   },
+   {
+    "date": "2010-04-23",
+    "equity": 1480031.72,
+    "open_positions": 9,
+    "exposure": 1274470.54
+   },
+   {
+    "date": "2010-04-26",
+    "equity": 1480031.72,
+    "open_positions": 10,
+    "exposure": 1402341.02
+   },
+   {
+    "date": "2010-04-27",
+    "equity": 1499272.53,
+    "open_positions": 9,
+    "exposure": 1284142.89
+   },
+   {
+    "date": "2010-04-28",
+    "equity": 1514574.59,
+    "open_positions": 8,
+    "exposure": 1144593.6
+   },
+   {
+    "date": "2010-04-29",
+    "equity": 1514574.59,
+    "open_positions": 8,
+    "exposure": 1144593.6
+   },
+   {
+    "date": "2010-05-03",
+    "equity": 1557093.51,
+    "open_positions": 9,
+    "exposure": 1450354.18
+   },
+   {
+    "date": "2010-05-05",
+    "equity": 1524545.79,
+    "open_positions": 7,
+    "exposure": 1063535.93
+   },
+   {
+    "date": "2010-05-07",
+    "equity": 1511867.55,
+    "open_positions": 6,
+    "exposure": 895203.98
+   },
+   {
+    "date": "2010-05-10",
+    "equity": 1541867.24,
+    "open_positions": 10,
+    "exposure": 1477501.03
+   },
+   {
+    "date": "2010-05-12",
+    "equity": 1567491.51,
+    "open_positions": 9,
+    "exposure": 1337131.6
+   },
+   {
+    "date": "2010-05-17",
+    "equity": 1535693.64,
+    "open_positions": 10,
+    "exposure": 1401236.43
+   },
+   {
+    "date": "2010-05-19",
+    "equity": 1488466.29,
+    "open_positions": 7,
+    "exposure": 959485.97
+   },
+   {
+    "date": "2010-05-21",
+    "equity": 1426525.4,
+    "open_positions": 3,
+    "exposure": 450893.62
+   },
+   {
+    "date": "2010-05-24",
+    "equity": 1426525.4,
+    "open_positions": 10,
+    "exposure": 1361198.71
+   },
+   {
+    "date": "2010-05-25",
+    "equity": 1414973.12,
+    "open_positions": 9,
+    "exposure": 1176122.82
+   },
+   {
+    "date": "2010-05-27",
+    "equity": 1414973.12,
+    "open_positions": 9,
+    "exposure": 1176122.82
+   },
+   {
+    "date": "2010-05-28",
+    "equity": 1400281.94,
+    "open_positions": 8,
+    "exposure": 994452.8
+   },
+   {
+    "date": "2010-05-31",
+    "equity": 1400281.94,
+    "open_positions": 10,
+    "exposure": 1243453.91
+   },
+   {
+    "date": "2010-06-07",
+    "equity": 1400281.94,
+    "open_positions": 10,
+    "exposure": 1243453.91
+   },
+   {
+    "date": "2010-06-14",
+    "equity": 1400281.94,
+    "open_positions": 10,
+    "exposure": 1243453.91
+   },
+   {
+    "date": "2010-06-21",
+    "equity": 1400281.94,
+    "open_positions": 10,
+    "exposure": 1243453.91
+   },
+   {
+    "date": "2010-06-28",
+    "equity": 1400281.94,
+    "open_positions": 10,
+    "exposure": 1243453.91
+   },
+   {
+    "date": "2010-06-30",
+    "equity": 1400281.94,
+    "open_positions": 10,
+    "exposure": 1243453.91
+   },
+   {
+    "date": "2010-07-05",
+    "equity": 1400281.94,
+    "open_positions": 10,
+    "exposure": 1243453.91
+   },
+   {
+    "date": "2010-07-12",
+    "equity": 1400281.94,
+    "open_positions": 10,
+    "exposure": 1243453.91
+   },
+   {
+    "date": "2010-07-15",
+    "equity": 1400281.94,
+    "open_positions": 10,
+    "exposure": 1243453.91
+   },
+   {
+    "date": "2010-07-19",
+    "equity": 1400281.94,
+    "open_positions": 10,
+    "exposure": 1243453.91
+   },
+   {
+    "date": "2010-07-23",
+    "equity": 1400281.94,
+    "open_positions": 10,
+    "exposure": 1243453.91
+   },
+   {
+    "date": "2010-07-26",
+    "equity": 1400281.94,
+    "open_positions": 10,
+    "exposure": 1243453.91
+   },
+   {
+    "date": "2010-08-02",
+    "equity": 1395485.58,
+    "open_positions": 10,
+    "exposure": 1288182.39
+   },
+   {
+    "date": "2010-08-09",
+    "equity": 1390790.68,
+    "open_positions": 10,
+    "exposure": 1330091.57
+   },
+   {
+    "date": "2010-08-12",
+    "equity": 1390790.68,
+    "open_positions": 10,
+    "exposure": 1330091.57
+   },
+   {
+    "date": "2010-08-16",
+    "equity": 1498825.11,
+    "open_positions": 9,
+    "exposure": 1469777.81
+   },
+   {
+    "date": "2010-08-18",
+    "equity": 1498825.11,
+    "open_positions": 9,
+    "exposure": 1469777.81
+   },
+   {
+    "date": "2010-08-23",
+    "equity": 1526361.27,
+    "open_positions": 8,
+    "exposure": 1463651.57
+   },
+   {
+    "date": "2010-08-25",
+    "equity": 1511944.62,
+    "open_positions": 7,
+    "exposure": 1259356.78
+   },
+   {
+    "date": "2010-08-27",
+    "equity": 1511944.62,
+    "open_positions": 7,
+    "exposure": 1259356.78
+   },
+   {
+    "date": "2010-08-30",
+    "equity": 1511944.62,
+    "open_positions": 8,
+    "exposure": 1443201.95
+   },
+   {
+    "date": "2010-08-31",
+    "equity": 1506480.94,
+    "open_positions": 6,
+    "exposure": 1044308.24
+   },
+   {
+    "date": "2010-09-06",
+    "equity": 1506480.94,
+    "open_positions": 9,
+    "exposure": 1501628.79
+   },
+   {
+    "date": "2010-09-14",
+    "equity": 1506480.94,
+    "open_positions": 9,
+    "exposure": 1501628.79
+   },
+   {
+    "date": "2010-09-20",
+    "equity": 1506434.66,
+    "open_positions": 8,
+    "exposure": 1317783.63
+   },
+   {
+    "date": "2010-09-21",
+    "equity": 1506434.66,
+    "open_positions": 9,
+    "exposure": 1467797.98
+   },
+   {
+    "date": "2010-09-24",
+    "equity": 1506434.66,
+    "open_positions": 9,
+    "exposure": 1467797.98
+   },
+   {
+    "date": "2010-09-28",
+    "equity": 1506434.66,
+    "open_positions": 9,
+    "exposure": 1467797.98
+   },
+   {
+    "date": "2010-10-05",
+    "equity": 1506434.66,
+    "open_positions": 9,
+    "exposure": 1467797.98
+   },
+   {
+    "date": "2010-10-08",
+    "equity": 1506434.66,
+    "open_positions": 9,
+    "exposure": 1467797.98
+   },
+   {
+    "date": "2010-10-12",
+    "equity": 1506434.66,
+    "open_positions": 9,
+    "exposure": 1467797.98
+   },
+   {
+    "date": "2010-10-13",
+    "equity": 1506434.66,
+    "open_positions": 9,
+    "exposure": 1467797.98
+   },
+   {
+    "date": "2010-10-15",
+    "equity": 1506434.66,
+    "open_positions": 9,
+    "exposure": 1467797.98
+   },
+   {
+    "date": "2010-10-18",
+    "equity": 1530503.57,
+    "open_positions": 7,
+    "exposure": 1023196.64
+   },
+   {
+    "date": "2010-10-19",
+    "equity": 1530503.57,
+    "open_positions": 9,
+    "exposure": 1446999.2
+   },
+   {
+    "date": "2010-10-26",
+    "equity": 1530503.57,
+    "open_positions": 9,
+    "exposure": 1446999.2
+   },
+   {
+    "date": "2010-10-29",
+    "equity": 1551552.33,
+    "open_positions": 8,
+    "exposure": 1257259.55
+   },
+   {
+    "date": "2010-11-02",
+    "equity": 1551552.33,
+    "open_positions": 10,
+    "exposure": 1534925.67
+   },
+   {
+    "date": "2010-11-08",
+    "equity": 1536247.04,
+    "open_positions": 9,
+    "exposure": 1435387.41
+   },
+   {
+    "date": "2010-11-10",
+    "equity": 1604219.85,
+    "open_positions": 9,
+    "exposure": 1494724.9
+   },
+   {
+    "date": "2010-11-11",
+    "equity": 1604219.85,
+    "open_positions": 9,
+    "exposure": 1494724.9
+   },
+   {
+    "date": "2010-11-12",
+    "equity": 1604219.85,
+    "open_positions": 9,
+    "exposure": 1494724.9
+   },
+   {
+    "date": "2010-11-15",
+    "equity": 1634412.39,
+    "open_positions": 7,
+    "exposure": 1100322.82
+   },
+   {
+    "date": "2010-11-16",
+    "equity": 1617899.86,
+    "open_positions": 6,
+    "exposure": 907399.94
+   },
+   {
+    "date": "2010-11-18",
+    "equity": 1617899.86,
+    "open_positions": 10,
+    "exposure": 1591870.89
+   },
+   {
+    "date": "2010-11-19",
+    "equity": 1617899.86,
+    "open_positions": 10,
+    "exposure": 1591870.89
+   },
+   {
+    "date": "2010-11-22",
+    "equity": 1612762.05,
+    "open_positions": 8,
+    "exposure": 1308170.5
+   },
+   {
+    "date": "2010-11-23",
+    "equity": 1612762.05,
+    "open_positions": 8,
+    "exposure": 1308170.5
+   },
+   {
+    "date": "2010-11-24",
+    "equity": 1596211.17,
+    "open_positions": 7,
+    "exposure": 1156763.56
+   },
+   {
+    "date": "2010-11-25",
+    "equity": 1579529.84,
+    "open_positions": 10,
+    "exposure": 1503429.03
+   },
+   {
+    "date": "2010-11-26",
+    "equity": 1542024.48,
+    "open_positions": 6,
+    "exposure": 947467.16
+   },
+   {
+    "date": "2010-12-02",
+    "equity": 1542024.48,
+    "open_positions": 10,
+    "exposure": 1386825.06
+   },
+   {
+    "date": "2010-12-08",
+    "equity": 1519981.28,
+    "open_positions": 8,
+    "exposure": 1125485.44
+   },
+   {
+    "date": "2010-12-09",
+    "equity": 1472179.89,
+    "open_positions": 10,
+    "exposure": 1214079.36
+   },
+   {
+    "date": "2010-12-10",
+    "equity": 1451171.07,
+    "open_positions": 8,
+    "exposure": 918998.82
+   },
+   {
+    "date": "2010-12-15",
+    "equity": 1451171.07,
+    "open_positions": 8,
+    "exposure": 918998.82
+   },
+   {
+    "date": "2010-12-16",
+    "equity": 1451171.07,
+    "open_positions": 10,
+    "exposure": 1188764.43
+   },
+   {
+    "date": "2010-12-20",
+    "equity": 1451171.07,
+    "open_positions": 10,
+    "exposure": 1188764.43
+   },
+   {
+    "date": "2010-12-24",
+    "equity": 1451171.07,
+    "open_positions": 10,
+    "exposure": 1188764.43
+   },
+   {
+    "date": "2010-12-27",
+    "equity": 1451171.07,
+    "open_positions": 10,
+    "exposure": 1188764.43
+   },
+   {
+    "date": "2010-12-31",
+    "equity": 1451171.07,
+    "open_positions": 10,
+    "exposure": 1188764.43
+   },
+   {
+    "date": "2011-01-05",
+    "equity": 1441440.05,
+    "open_positions": 9,
+    "exposure": 1005626.64
+   },
+   {
+    "date": "2011-01-06",
+    "equity": 1430763.31,
+    "open_positions": 8,
+    "exposure": 860718.0
+   },
+   {
+    "date": "2011-01-07",
+    "equity": 1426733.82,
+    "open_positions": 10,
+    "exposure": 1146337.63
+   },
+   {
+    "date": "2011-01-10",
+    "equity": 1426733.82,
+    "open_positions": 10,
+    "exposure": 1146337.63
+   },
+   {
+    "date": "2011-01-11",
+    "equity": 1426733.82,
+    "open_positions": 10,
+    "exposure": 1146337.63
+   },
+   {
+    "date": "2011-01-12",
+    "equity": 1426733.82,
+    "open_positions": 10,
+    "exposure": 1146337.63
+   },
+   {
+    "date": "2011-01-14",
+    "equity": 1426733.82,
+    "open_positions": 10,
+    "exposure": 1146337.63
+   },
+   {
+    "date": "2011-01-17",
+    "equity": 1396757.77,
+    "open_positions": 8,
+    "exposure": 909200.46
+   },
+   {
+    "date": "2011-01-21",
+    "equity": 1396757.77,
+    "open_positions": 10,
+    "exposure": 1118043.74
+   },
+   {
+    "date": "2011-01-27",
+    "equity": 1396757.77,
+    "open_positions": 10,
+    "exposure": 1118043.74
+   },
+   {
+    "date": "2011-01-28",
+    "equity": 1367596.5,
+    "open_positions": 8,
+    "exposure": 918498.64
+   },
+   {
+    "date": "2011-01-31",
+    "equity": 1323177.74,
+    "open_positions": 10,
+    "exposure": 1179381.8
+   },
+   {
+    "date": "2011-02-01",
+    "equity": 1323177.74,
+    "open_positions": 10,
+    "exposure": 1179381.8
+   },
+   {
+    "date": "2011-02-07",
+    "equity": 1323177.74,
+    "open_positions": 10,
+    "exposure": 1179381.8
+   },
+   {
+    "date": "2011-02-09",
+    "equity": 1288144.3,
+    "open_positions": 7,
+    "exposure": 819958.8
+   },
+   {
+    "date": "2011-02-10",
+    "equity": 1288144.3,
+    "open_positions": 7,
+    "exposure": 819958.8
+   },
+   {
+    "date": "2011-02-14",
+    "equity": 1288144.3,
+    "open_positions": 10,
+    "exposure": 1183957.55
+   },
+   {
+    "date": "2011-02-21",
+    "equity": 1288144.3,
+    "open_positions": 10,
+    "exposure": 1183957.55
+   },
+   {
+    "date": "2011-02-23",
+    "equity": 1288144.3,
+    "open_positions": 10,
+    "exposure": 1183957.55
+   },
+   {
+    "date": "2011-02-24",
+    "equity": 1288144.3,
+    "open_positions": 10,
+    "exposure": 1183957.55
+   },
+   {
+    "date": "2011-02-25",
+    "equity": 1288144.3,
+    "open_positions": 10,
+    "exposure": 1183957.55
+   },
+   {
+    "date": "2011-02-28",
+    "equity": 1272811.38,
+    "open_positions": 10,
+    "exposure": 1144894.59
+   },
+   {
+    "date": "2011-03-08",
+    "equity": 1274148.16,
+    "open_positions": 10,
+    "exposure": 1191585.21
+   },
+   {
+    "date": "2011-03-14",
+    "equity": 1252883.25,
+    "open_positions": 8,
+    "exposure": 997047.85
+   },
+   {
+    "date": "2011-03-15",
+    "equity": 1252883.25,
+    "open_positions": 9,
+    "exposure": 1109113.48
+   },
+   {
+    "date": "2011-03-17",
+    "equity": 1239826.34,
+    "open_positions": 8,
+    "exposure": 978908.5
+   },
+   {
+    "date": "2011-03-21",
+    "equity": 1239826.34,
+    "open_positions": 8,
+    "exposure": 978908.5
+   },
+   {
+    "date": "2011-03-22",
+    "equity": 1239826.34,
+    "open_positions": 10,
+    "exposure": 1202036.7
+   },
+   {
+    "date": "2011-03-24",
+    "equity": 1227244.2,
+    "open_positions": 9,
+    "exposure": 1126231.95
+   },
+   {
+    "date": "2011-04-05",
+    "equity": 1248300.96,
+    "open_positions": 10,
+    "exposure": 1235065.39
+   },
+   {
+    "date": "2011-04-11",
+    "equity": 1248300.96,
+    "open_positions": 10,
+    "exposure": 1235065.39
+   },
+   {
+    "date": "2011-04-13",
+    "equity": 1248300.96,
+    "open_positions": 10,
+    "exposure": 1235065.39
+   },
+   {
+    "date": "2011-04-21",
+    "equity": 1248300.96,
+    "open_positions": 10,
+    "exposure": 1235065.39
+   },
+   {
+    "date": "2011-04-29",
+    "equity": 1300564.57,
+    "open_positions": 9,
+    "exposure": 1257012.46
+   },
+   {
+    "date": "2011-05-02",
+    "equity": 1279659.18,
+    "open_positions": 7,
+    "exposure": 932333.73
+   },
+   {
+    "date": "2011-05-03",
+    "equity": 1266166.64,
+    "open_positions": 6,
+    "exposure": 722523.93
+   },
+   {
+    "date": "2011-05-04",
+    "equity": 1266166.64,
+    "open_positions": 6,
+    "exposure": 722523.93
+   },
+   {
+    "date": "2011-05-05",
+    "equity": 1266166.64,
+    "open_positions": 6,
+    "exposure": 722523.93
+   },
+   {
+    "date": "2011-05-06",
+    "equity": 1266166.64,
+    "open_positions": 9,
+    "exposure": 1226597.57
+   },
+   {
+    "date": "2011-05-12",
+    "equity": 1266166.64,
+    "open_positions": 9,
+    "exposure": 1226597.57
+   },
+   {
+    "date": "2011-05-13",
+    "equity": 1275954.55,
+    "open_positions": 9,
+    "exposure": 1223174.71
+   },
+   {
+    "date": "2011-05-17",
+    "equity": 1275954.55,
+    "open_positions": 9,
+    "exposure": 1223174.71
+   },
+   {
+    "date": "2011-05-18",
+    "equity": 1275954.55,
+    "open_positions": 9,
+    "exposure": 1223174.71
+   },
+   {
+    "date": "2011-05-19",
+    "equity": 1262661.83,
+    "open_positions": 8,
+    "exposure": 1105661.73
+   },
+   {
+    "date": "2011-05-20",
+    "equity": 1262661.83,
+    "open_positions": 9,
+    "exposure": 1214786.84
+   },
+   {
+    "date": "2011-05-23",
+    "equity": 1262661.83,
+    "open_positions": 9,
+    "exposure": 1214786.84
+   },
+   {
+    "date": "2011-05-25",
+    "equity": 1262661.83,
+    "open_positions": 9,
+    "exposure": 1214786.84
+   },
+   {
+    "date": "2011-05-27",
+    "equity": 1296498.83,
+    "open_positions": 9,
+    "exposure": 1201237.12
+   },
+   {
+    "date": "2011-06-06",
+    "equity": 1296498.83,
+    "open_positions": 9,
+    "exposure": 1201237.12
+   },
+   {
+    "date": "2011-06-13",
+    "equity": 1336188.08,
+    "open_positions": 9,
+    "exposure": 1292036.44
+   },
+   {
+    "date": "2011-06-14",
+    "equity": 1322909.59,
+    "open_positions": 8,
+    "exposure": 1163030.45
+   },
+   {
+    "date": "2011-06-16",
+    "equity": 1309046.97,
+    "open_positions": 7,
+    "exposure": 960165.5
+   },
+   {
+    "date": "2011-06-17",
+    "equity": 1309046.97,
+    "open_positions": 7,
+    "exposure": 960165.5
+   },
+   {
+    "date": "2011-06-20",
+    "equity": 1298322.44,
+    "open_positions": 9,
+    "exposure": 1288679.23
+   },
+   {
+    "date": "2011-06-22",
+    "equity": 1284962.71,
+    "open_positions": 8,
+    "exposure": 1131556.37
+   },
+   {
+    "date": "2011-06-23",
+    "equity": 1284962.71,
+    "open_positions": 8,
+    "exposure": 1131556.37
+   },
+   {
+    "date": "2011-06-27",
+    "equity": 1284962.71,
+    "open_positions": 9,
+    "exposure": 1262816.11
+   },
+   {
+    "date": "2011-07-04",
+    "equity": 1282916.45,
+    "open_positions": 8,
+    "exposure": 1168515.71
+   },
+   {
+    "date": "2011-07-11",
+    "equity": 1282916.45,
+    "open_positions": 8,
+    "exposure": 1168515.71
+   },
+   {
+    "date": "2011-07-12",
+    "equity": 1282916.45,
+    "open_positions": 8,
+    "exposure": 1168515.71
+   },
+   {
+    "date": "2011-07-19",
+    "equity": 1282916.45,
+    "open_positions": 8,
+    "exposure": 1168515.71
+   },
+   {
+    "date": "2011-07-21",
+    "equity": 1282916.45,
+    "open_positions": 8,
+    "exposure": 1168515.71
+   },
+   {
+    "date": "2011-07-26",
+    "equity": 1282916.45,
+    "open_positions": 8,
+    "exposure": 1168515.71
+   },
+   {
+    "date": "2011-07-27",
+    "equity": 1282916.45,
+    "open_positions": 8,
+    "exposure": 1168515.71
+   },
+   {
+    "date": "2011-07-28",
+    "equity": 1282916.45,
+    "open_positions": 8,
+    "exposure": 1168515.71
+   },
+   {
+    "date": "2011-07-29",
+    "equity": 1282916.45,
+    "open_positions": 8,
+    "exposure": 1168515.71
+   },
+   {
+    "date": "2011-08-01",
+    "equity": 1270146.9,
+    "open_positions": 7,
+    "exposure": 1059390.6
+   },
+   {
+    "date": "2011-08-02",
+    "equity": 1317603.95,
+    "open_positions": 8,
+    "exposure": 1316789.6
+   },
+   {
+    "date": "2011-08-03",
+    "equity": 1321930.8,
+    "open_positions": 6,
+    "exposure": 1024099.3
+   },
+   {
+    "date": "2011-08-04",
+    "equity": 1311130.57,
+    "open_positions": 4,
+    "exposure": 715074.24
+   },
+   {
+    "date": "2011-08-05",
+    "equity": 1305619.3,
+    "open_positions": 2,
+    "exposure": 433165.94
+   },
+   {
+    "date": "2011-08-08",
+    "equity": 1305619.3,
+    "open_positions": 2,
+    "exposure": 433165.94
+   },
+   {
+    "date": "2011-08-09",
+    "equity": 1325008.75,
+    "open_positions": 8,
+    "exposure": 1289136.19
+   },
+   {
+    "date": "2011-08-11",
+    "equity": 1325008.75,
+    "open_positions": 8,
+    "exposure": 1289136.19
+   },
+   {
+    "date": "2011-08-12",
+    "equity": 1325008.75,
+    "open_positions": 8,
+    "exposure": 1289136.19
+   },
+   {
+    "date": "2011-08-16",
+    "equity": 1325008.75,
+    "open_positions": 8,
+    "exposure": 1289136.19
+   },
+   {
+    "date": "2011-08-17",
+    "equity": 1325008.75,
+    "open_positions": 8,
+    "exposure": 1289136.19
+   },
+   {
+    "date": "2011-08-19",
+    "equity": 1325008.75,
+    "open_positions": 8,
+    "exposure": 1289136.19
+   },
+   {
+    "date": "2011-08-24",
+    "equity": 1325008.75,
+    "open_positions": 8,
+    "exposure": 1289136.19
+   },
+   {
+    "date": "2011-09-02",
+    "equity": 1325008.75,
+    "open_positions": 8,
+    "exposure": 1289136.19
+   },
+   {
+    "date": "2011-09-09",
+    "equity": 1325008.75,
+    "open_positions": 8,
+    "exposure": 1289136.19
+   },
+   {
+    "date": "2011-09-12",
+    "equity": 1333875.32,
+    "open_positions": 7,
+    "exposure": 1202869.02
+   },
+   {
+    "date": "2011-09-14",
+    "equity": 1333875.32,
+    "open_positions": 7,
+    "exposure": 1202869.02
+   },
+   {
+    "date": "2011-09-16",
+    "equity": 1336941.24,
+    "open_positions": 8,
+    "exposure": 1257900.66
+   },
+   {
+    "date": "2011-09-23",
+    "equity": 1336941.24,
+    "open_positions": 8,
+    "exposure": 1257900.66
+   },
+   {
+    "date": "2011-09-26",
+    "equity": 1342299.54,
+    "open_positions": 6,
+    "exposure": 882543.56
+   },
+   {
+    "date": "2011-09-28",
+    "equity": 1328599.01,
+    "open_positions": 5,
+    "exposure": 695483.04
+   },
+   {
+    "date": "2011-09-29",
+    "equity": 1328599.01,
+    "open_positions": 5,
+    "exposure": 695483.04
+   },
+   {
+    "date": "2011-09-30",
+    "equity": 1314965.45,
+    "open_positions": 8,
+    "exposure": 1181210.59
+   },
+   {
+    "date": "2011-10-03",
+    "equity": 1304987.07,
+    "open_positions": 7,
+    "exposure": 1044181.26
+   },
+   {
+    "date": "2011-10-04",
+    "equity": 1291609.58,
+    "open_positions": 6,
+    "exposure": 952216.35
+   },
+   {
+    "date": "2011-10-07",
+    "equity": 1291609.58,
+    "open_positions": 6,
+    "exposure": 952216.35
+   },
+   {
+    "date": "2011-10-10",
+    "equity": 1291609.58,
+    "open_positions": 9,
+    "exposure": 1268665.3
+   },
+   {
+    "date": "2011-10-14",
+    "equity": 1281862.66,
+    "open_positions": 8,
+    "exposure": 1058250.9
+   },
+   {
+    "date": "2011-10-17",
+    "equity": 1281862.66,
+    "open_positions": 9,
+    "exposure": 1212309.3
+   },
+   {
+    "date": "2011-10-18",
+    "equity": 1281862.66,
+    "open_positions": 9,
+    "exposure": 1212309.3
+   },
+   {
+    "date": "2011-10-19",
+    "equity": 1269719.48,
+    "open_positions": 8,
+    "exposure": 1128927.9
+   },
+   {
+    "date": "2011-10-24",
+    "equity": 1269719.48,
+    "open_positions": 9,
+    "exposure": 1214283.41
+   },
+   {
+    "date": "2011-11-11",
+    "equity": 1277588.42,
+    "open_positions": 9,
+    "exposure": 1222046.71
+   },
+   {
+    "date": "2011-11-14",
+    "equity": 1264927.23,
+    "open_positions": 8,
+    "exposure": 1136691.2
+   },
+   {
+    "date": "2011-11-16",
+    "equity": 1258762.82,
+    "open_positions": 7,
+    "exposure": 1065055.77
+   },
+   {
+    "date": "2011-11-17",
+    "equity": 1238098.01,
+    "open_positions": 5,
+    "exposure": 759147.97
+   },
+   {
+    "date": "2011-11-18",
+    "equity": 1235912.22,
+    "open_positions": 7,
+    "exposure": 1145348.66
+   },
+   {
+    "date": "2011-11-21",
+    "equity": 1235912.22,
+    "open_positions": 7,
+    "exposure": 1145348.66
+   },
+   {
+    "date": "2011-11-22",
+    "equity": 1235912.22,
+    "open_positions": 7,
+    "exposure": 1145348.66
+   },
+   {
+    "date": "2011-11-23",
+    "equity": 1209791.96,
+    "open_positions": 5,
+    "exposure": 759425.06
+   },
+   {
+    "date": "2011-11-28",
+    "equity": 1209791.96,
+    "open_positions": 8,
+    "exposure": 1174759.22
+   },
+   {
+    "date": "2011-11-29",
+    "equity": 1209791.96,
+    "open_positions": 8,
+    "exposure": 1174759.22
+   },
+   {
+    "date": "2011-11-30",
+    "equity": 1209791.96,
+    "open_positions": 8,
+    "exposure": 1174759.22
+   },
+   {
+    "date": "2011-12-02",
+    "equity": 1209791.96,
+    "open_positions": 8,
+    "exposure": 1174759.22
+   },
+   {
+    "date": "2011-12-05",
+    "equity": 1209791.96,
+    "open_positions": 8,
+    "exposure": 1174759.22
+   },
+   {
+    "date": "2011-12-09",
+    "equity": 1199325.15,
+    "open_positions": 7,
+    "exposure": 1072622.63
+   },
+   {
+    "date": "2011-12-12",
+    "equity": 1186486.9,
+    "open_positions": 6,
+    "exposure": 875988.28
+   },
+   {
+    "date": "2011-12-13",
+    "equity": 1186486.9,
+    "open_positions": 8,
+    "exposure": 1117758.03
+   },
+   {
+    "date": "2011-12-15",
+    "equity": 1186486.9,
+    "open_positions": 8,
+    "exposure": 1117758.03
+   },
+   {
+    "date": "2011-12-16",
+    "equity": 1186486.9,
+    "open_positions": 8,
+    "exposure": 1117758.03
+   },
+   {
+    "date": "2011-12-19",
+    "equity": 1161952.7,
+    "open_positions": 6,
+    "exposure": 879797.38
+   },
+   {
+    "date": "2011-12-20",
+    "equity": 1139199.29,
+    "open_positions": 9,
+    "exposure": 1069789.4
+   },
+   {
+    "date": "2012-01-03",
+    "equity": 1139199.29,
+    "open_positions": 9,
+    "exposure": 1069789.4
+   },
+   {
+    "date": "2012-01-05",
+    "equity": 1178080.96,
+    "open_positions": 10,
+    "exposure": 1172838.64
+   },
+   {
+    "date": "2012-01-12",
+    "equity": 1193592.5,
+    "open_positions": 10,
+    "exposure": 1175719.36
+   },
+   {
+    "date": "2012-01-19",
+    "equity": 1193592.5,
+    "open_positions": 10,
+    "exposure": 1175719.36
+   },
+   {
+    "date": "2012-01-27",
+    "equity": 1193592.5,
+    "open_positions": 10,
+    "exposure": 1175719.36
+   },
+   {
+    "date": "2012-02-03",
+    "equity": 1193592.5,
+    "open_positions": 10,
+    "exposure": 1175719.36
+   },
+   {
+    "date": "2012-02-10",
+    "equity": 1193592.5,
+    "open_positions": 10,
+    "exposure": 1175719.36
+   },
+   {
+    "date": "2012-02-14",
+    "equity": 1193592.5,
+    "open_positions": 10,
+    "exposure": 1175719.36
+   },
+   {
+    "date": "2012-02-17",
+    "equity": 1193592.5,
+    "open_positions": 10,
+    "exposure": 1175719.36
+   },
+   {
+    "date": "2012-02-21",
+    "equity": 1193592.5,
+    "open_positions": 10,
+    "exposure": 1175719.36
+   },
+   {
+    "date": "2012-02-23",
+    "equity": 1193592.5,
+    "open_positions": 10,
+    "exposure": 1175719.36
+   },
+   {
+    "date": "2012-02-24",
+    "equity": 1206627.57,
+    "open_positions": 9,
+    "exposure": 1042496.27
+   },
+   {
+    "date": "2012-02-27",
+    "equity": 1223330.01,
+    "open_positions": 10,
+    "exposure": 1222895.63
+   },
+   {
+    "date": "2012-03-02",
+    "equity": 1212691.51,
+    "open_positions": 9,
+    "exposure": 978256.96
+   },
+   {
+    "date": "2012-03-05",
+    "equity": 1212691.51,
+    "open_positions": 10,
+    "exposure": 1119901.96
+   },
+   {
+    "date": "2012-03-07",
+    "equity": 1212691.51,
+    "open_positions": 10,
+    "exposure": 1119901.96
+   },
+   {
+    "date": "2012-03-09",
+    "equity": 1212691.51,
+    "open_positions": 10,
+    "exposure": 1119901.96
+   },
+   {
+    "date": "2012-03-13",
+    "equity": 1212691.51,
+    "open_positions": 10,
+    "exposure": 1119901.96
+   },
+   {
+    "date": "2012-03-14",
+    "equity": 1220473.64,
+    "open_positions": 9,
+    "exposure": 974344.3
+   },
+   {
+    "date": "2012-03-15",
+    "equity": 1220473.64,
+    "open_positions": 9,
+    "exposure": 974344.3
+   },
+   {
+    "date": "2012-03-16",
+    "equity": 1220473.64,
+    "open_positions": 9,
+    "exposure": 974344.3
+   },
+   {
+    "date": "2012-03-20",
+    "equity": 1289958.97,
+    "open_positions": 9,
+    "exposure": 1168513.76
+   },
+   {
+    "date": "2012-03-26",
+    "equity": 1289958.97,
+    "open_positions": 9,
+    "exposure": 1168513.76
+   },
+   {
+    "date": "2012-03-27",
+    "equity": 1289958.97,
+    "open_positions": 10,
+    "exposure": 1279878.52
+   },
+   {
+    "date": "2012-03-29",
+    "equity": 1305627.98,
+    "open_positions": 9,
+    "exposure": 1139879.31
+   },
+   {
+    "date": "2012-04-03",
+    "equity": 1309957.58,
+    "open_positions": 10,
+    "exposure": 1296920.08
+   },
+   {
+    "date": "2012-04-10",
+    "equity": 1302395.0,
+    "open_positions": 9,
+    "exposure": 1155275.09
+   },
+   {
+    "date": "2012-04-11",
+    "equity": 1302395.0,
+    "open_positions": 9,
+    "exposure": 1155275.09
+   },
+   {
+    "date": "2012-04-12",
+    "equity": 1302395.0,
+    "open_positions": 10,
+    "exposure": 1285877.26
+   },
+   {
+    "date": "2012-04-19",
+    "equity": 1302395.0,
+    "open_positions": 10,
+    "exposure": 1285877.26
+   },
+   {
+    "date": "2012-04-24",
+    "equity": 1302395.0,
+    "open_positions": 10,
+    "exposure": 1285877.26
+   },
+   {
+    "date": "2012-04-25",
+    "equity": 1289045.51,
+    "open_positions": 9,
+    "exposure": 1155275.09
+   },
+   {
+    "date": "2012-04-26",
+    "equity": 1289045.51,
+    "open_positions": 10,
+    "exposure": 1283294.19
+   },
+   {
+    "date": "2012-05-03",
+    "equity": 1289045.51,
+    "open_positions": 10,
+    "exposure": 1283294.19
+   },
+   {
+    "date": "2012-05-04",
+    "equity": 1289045.51,
+    "open_positions": 10,
+    "exposure": 1283294.19
+   },
+   {
+    "date": "2012-05-07",
+    "equity": 1288709.58,
+    "open_positions": 9,
+    "exposure": 1171879.95
+   },
+   {
+    "date": "2012-05-11",
+    "equity": 1287541.03,
+    "open_positions": 10,
+    "exposure": 1272251.2
+   },
+   {
+    "date": "2012-05-14",
+    "equity": 1274196.58,
+    "open_positions": 9,
+    "exposure": 1171123.5
+   },
+   {
+    "date": "2012-05-18",
+    "equity": 1274196.58,
+    "open_positions": 9,
+    "exposure": 1171123.5
+   },
+   {
+    "date": "2012-05-22",
+    "equity": 1291012.74,
+    "open_positions": 8,
+    "exposure": 1059758.75
+   },
+   {
+    "date": "2012-05-23",
+    "equity": 1277803.97,
+    "open_positions": 7,
+    "exposure": 931739.65
+   },
+   {
+    "date": "2012-05-28",
+    "equity": 1283215.7,
+    "open_positions": 8,
+    "exposure": 1169914.01
+   },
+   {
+    "date": "2012-06-04",
+    "equity": 1338107.96,
+    "open_positions": 9,
+    "exposure": 1264700.34
+   },
+   {
+    "date": "2012-06-11",
+    "equity": 1338107.96,
+    "open_positions": 9,
+    "exposure": 1264700.34
+   },
+   {
+    "date": "2012-06-12",
+    "equity": 1338107.96,
+    "open_positions": 9,
+    "exposure": 1264700.34
+   },
+   {
+    "date": "2012-06-18",
+    "equity": 1369252.91,
+    "open_positions": 9,
+    "exposure": 1292570.22
+   },
+   {
+    "date": "2012-06-19",
+    "equity": 1369252.91,
+    "open_positions": 9,
+    "exposure": 1292570.22
+   },
+   {
+    "date": "2012-06-25",
+    "equity": 1369252.91,
+    "open_positions": 9,
+    "exposure": 1292570.22
+   },
+   {
+    "date": "2012-07-02",
+    "equity": 1394474.93,
+    "open_positions": 9,
+    "exposure": 1321093.23
+   },
+   {
+    "date": "2012-07-11",
+    "equity": 1394474.93,
+    "open_positions": 9,
+    "exposure": 1321093.23
+   },
+   {
+    "date": "2012-07-17",
+    "equity": 1394474.93,
+    "open_positions": 9,
+    "exposure": 1321093.23
+   },
+   {
+    "date": "2012-07-23",
+    "equity": 1394474.93,
+    "open_positions": 9,
+    "exposure": 1321093.23
+   },
+   {
+    "date": "2012-07-24",
+    "equity": 1394474.93,
+    "open_positions": 9,
+    "exposure": 1321093.23
+   },
+   {
+    "date": "2012-07-25",
+    "equity": 1387285.46,
+    "open_positions": 8,
+    "exposure": 1177027.28
+   },
+   {
+    "date": "2012-07-26",
+    "equity": 1373343.82,
+    "open_positions": 7,
+    "exposure": 1069868.27
+   },
+   {
+    "date": "2012-07-27",
+    "equity": 1373343.82,
+    "open_positions": 7,
+    "exposure": 1069868.27
+   },
+   {
+    "date": "2012-07-30",
+    "equity": 1373343.82,
+    "open_positions": 8,
+    "exposure": 1283061.78
+   },
+   {
+    "date": "2012-08-06",
+    "equity": 1403672.3,
+    "open_positions": 7,
+    "exposure": 1294422.82
+   },
+   {
+    "date": "2012-08-13",
+    "equity": 1403672.3,
+    "open_positions": 7,
+    "exposure": 1294422.82
+   },
+   {
+    "date": "2012-08-16",
+    "equity": 1389107.29,
+    "open_positions": 6,
+    "exposure": 1069569.75
+   },
+   {
+    "date": "2012-08-22",
+    "equity": 1508057.12,
+    "open_positions": 8,
+    "exposure": 1473758.38
+   },
+   {
+    "date": "2012-08-24",
+    "equity": 1508057.12,
+    "open_positions": 8,
+    "exposure": 1473758.38
+   },
+   {
+    "date": "2012-08-29",
+    "equity": 1487115.37,
+    "open_positions": 7,
+    "exposure": 1318093.79
+   },
+   {
+    "date": "2012-08-30",
+    "equity": 1495149.62,
+    "open_positions": 8,
+    "exposure": 1438681.78
+   },
+   {
+    "date": "2012-08-31",
+    "equity": 1495149.62,
+    "open_positions": 8,
+    "exposure": 1438681.78
+   },
+   {
+    "date": "2012-09-03",
+    "equity": 1495149.62,
+    "open_positions": 8,
+    "exposure": 1438681.78
+   },
+   {
+    "date": "2012-09-04",
+    "equity": 1495149.62,
+    "open_positions": 8,
+    "exposure": 1438681.78
+   },
+   {
+    "date": "2012-09-06",
+    "equity": 1495149.62,
+    "open_positions": 8,
+    "exposure": 1438681.78
+   },
+   {
+    "date": "2012-09-13",
+    "equity": 1495149.62,
+    "open_positions": 8,
+    "exposure": 1438681.78
+   },
+   {
+    "date": "2012-09-14",
+    "equity": 1492702.5,
+    "open_positions": 7,
+    "exposure": 1218021.45
+   },
+   {
+    "date": "2012-09-17",
+    "equity": 1492702.5,
+    "open_positions": 7,
+    "exposure": 1218021.45
+   },
+   {
+    "date": "2012-09-18",
+    "equity": 1494512.38,
+    "open_positions": 6,
+    "exposure": 1062722.56
+   },
+   {
+    "date": "2012-09-21",
+    "equity": 1494512.38,
+    "open_positions": 8,
+    "exposure": 1355501.28
+   },
+   {
+    "date": "2012-09-24",
+    "equity": 1539521.64,
+    "open_positions": 7,
+    "exposure": 1081974.2
+   },
+   {
+    "date": "2012-09-28",
+    "equity": 1539521.64,
+    "open_positions": 9,
+    "exposure": 1516551.94
+   },
+   {
+    "date": "2012-10-05",
+    "equity": 1527863.15,
+    "open_positions": 7,
+    "exposure": 1045284.88
+   },
+   {
+    "date": "2012-10-08",
+    "equity": 1527863.15,
+    "open_positions": 9,
+    "exposure": 1383510.87
+   },
+   {
+    "date": "2012-10-11",
+    "equity": 1527863.15,
+    "open_positions": 9,
+    "exposure": 1383510.87
+   },
+   {
+    "date": "2012-10-15",
+    "equity": 1527863.15,
+    "open_positions": 10,
+    "exposure": 1520691.89
+   },
+   {
+    "date": "2012-10-16",
+    "equity": 1527863.15,
+    "open_positions": 10,
+    "exposure": 1520691.89
+   },
+   {
+    "date": "2012-10-22",
+    "equity": 1527863.15,
+    "open_positions": 10,
+    "exposure": 1520691.89
+   },
+   {
+    "date": "2012-10-25",
+    "equity": 1527863.15,
+    "open_positions": 10,
+    "exposure": 1520691.89
+   },
+   {
+    "date": "2012-10-29",
+    "equity": 1527863.15,
+    "open_positions": 10,
+    "exposure": 1520691.89
+   },
+   {
+    "date": "2012-10-31",
+    "equity": 1527863.15,
+    "open_positions": 10,
+    "exposure": 1520691.89
+   },
+   {
+    "date": "2012-11-07",
+    "equity": 1527863.15,
+    "open_positions": 10,
+    "exposure": 1520691.89
+   },
+   {
+    "date": "2012-11-08",
+    "equity": 1527863.15,
+    "open_positions": 10,
+    "exposure": 1520691.89
+   },
+   {
+    "date": "2012-11-15",
+    "equity": 1527863.15,
+    "open_positions": 10,
+    "exposure": 1520691.89
+   },
+   {
+    "date": "2012-11-16",
+    "equity": 1527863.15,
+    "open_positions": 10,
+    "exposure": 1520691.89
+   },
+   {
+    "date": "2012-11-19",
+    "equity": 1527863.15,
+    "open_positions": 10,
+    "exposure": 1520691.89
+   },
+   {
+    "date": "2012-11-20",
+    "equity": 1527863.15,
+    "open_positions": 10,
+    "exposure": 1520691.89
+   },
+   {
+    "date": "2012-11-23",
+    "equity": 1531014.55,
+    "open_positions": 10,
+    "exposure": 1424115.69
+   },
+   {
+    "date": "2012-11-26",
+    "equity": 1531014.55,
+    "open_positions": 10,
+    "exposure": 1424115.69
+   },
+   {
+    "date": "2012-12-03",
+    "equity": 1587281.23,
+    "open_positions": 10,
+    "exposure": 1523002.23
+   },
+   {
+    "date": "2012-12-06",
+    "equity": 1590017.37,
+    "open_positions": 9,
+    "exposure": 1388670.17
+   },
+   {
+    "date": "2012-12-07",
+    "equity": 1590017.37,
+    "open_positions": 9,
+    "exposure": 1388670.17
+   },
+   {
+    "date": "2012-12-10",
+    "equity": 1590017.37,
+    "open_positions": 10,
+    "exposure": 1489435.81
+   },
+   {
+    "date": "2012-12-13",
+    "equity": 1612266.16,
+    "open_positions": 9,
+    "exposure": 1388760.84
+   },
+   {
+    "date": "2012-12-17",
+    "equity": 1612266.16,
+    "open_positions": 10,
+    "exposure": 1523402.38
+   },
+   {
+    "date": "2012-12-21",
+    "equity": 1609759.22,
+    "open_positions": 9,
+    "exposure": 1346898.18
+   },
+   {
+    "date": "2012-12-24",
+    "equity": 1657651.22,
+    "open_positions": 10,
+    "exposure": 1462568.27
+   },
+   {
+    "date": "2013-01-02",
+    "equity": 1657651.22,
+    "open_positions": 10,
+    "exposure": 1462568.27
+   },
+   {
+    "date": "2013-01-09",
+    "equity": 1642877.43,
+    "open_positions": 10,
+    "exposure": 1583663.12
+   },
+   {
+    "date": "2013-01-11",
+    "equity": 1642877.43,
+    "open_positions": 10,
+    "exposure": 1583663.12
+   },
+   {
+    "date": "2013-01-14",
+    "equity": 1642877.43,
+    "open_positions": 10,
+    "exposure": 1583663.12
+   },
+   {
+    "date": "2013-01-15",
+    "equity": 1626792.24,
+    "open_positions": 9,
+    "exposure": 1482897.48
+   },
+   {
+    "date": "2013-01-16",
+    "equity": 1649468.66,
+    "open_positions": 10,
+    "exposure": 1636121.47
+   },
+   {
+    "date": "2013-01-17",
+    "equity": 1634583.1,
+    "open_positions": 9,
+    "exposure": 1447860.87
+   },
+   {
+    "date": "2013-01-18",
+    "equity": 1617788.88,
+    "open_positions": 8,
+    "exposure": 1323567.26
+   },
+   {
+    "date": "2013-01-22",
+    "equity": 1617788.88,
+    "open_positions": 8,
+    "exposure": 1323567.26
+   },
+   {
+    "date": "2013-01-23",
+    "equity": 1587787.34,
+    "open_positions": 9,
+    "exposure": 1467278.68
+   },
+   {
+    "date": "2013-01-24",
+    "equity": 1575666.15,
+    "open_positions": 8,
+    "exposure": 1347765.45
+   },
+   {
+    "date": "2013-01-30",
+    "equity": 1575666.15,
+    "open_positions": 9,
+    "exposure": 1489297.97
+   },
+   {
+    "date": "2013-01-31",
+    "equity": 1545589.33,
+    "open_positions": 7,
+    "exposure": 1113666.02
+   },
+   {
+    "date": "2013-02-01",
+    "equity": 1528617.33,
+    "open_positions": 6,
+    "exposure": 862470.87
+   },
+   {
+    "date": "2013-02-04",
+    "equity": 1528617.33,
+    "open_positions": 6,
+    "exposure": 862470.87
+   },
+   {
+    "date": "2013-02-05",
+    "equity": 1528617.33,
+    "open_positions": 6,
+    "exposure": 862470.87
+   },
+   {
+    "date": "2013-02-06",
+    "equity": 1528617.33,
+    "open_positions": 9,
+    "exposure": 1452894.79
+   },
+   {
+    "date": "2013-02-07",
+    "equity": 1528617.33,
+    "open_positions": 9,
+    "exposure": 1452894.79
+   },
+   {
+    "date": "2013-02-12",
+    "equity": 1528617.33,
+    "open_positions": 9,
+    "exposure": 1452894.79
+   },
+   {
+    "date": "2013-02-13",
+    "equity": 1512615.2,
+    "open_positions": 9,
+    "exposure": 1460039.3
+   },
+   {
+    "date": "2013-02-14",
+    "equity": 1512615.2,
+    "open_positions": 9,
+    "exposure": 1460039.3
+   },
+   {
+    "date": "2013-02-15",
+    "equity": 1512615.2,
+    "open_positions": 9,
+    "exposure": 1460039.3
+   },
+   {
+    "date": "2013-02-20",
+    "equity": 1512069.84,
+    "open_positions": 8,
+    "exposure": 1339853.76
+   },
+   {
+    "date": "2013-02-22",
+    "equity": 1512069.84,
+    "open_positions": 8,
+    "exposure": 1339853.76
+   },
+   {
+    "date": "2013-02-25",
+    "equity": 1495969.79,
+    "open_positions": 7,
+    "exposure": 1198321.24
+   },
+   {
+    "date": "2013-02-26",
+    "equity": 1480252.24,
+    "open_positions": 6,
+    "exposure": 1014379.4
+   },
+   {
+    "date": "2013-02-27",
+    "equity": 1476885.19,
+    "open_positions": 8,
+    "exposure": 1440169.57
+   },
+   {
+    "date": "2013-02-28",
+    "equity": 1461051.98,
+    "open_positions": 7,
+    "exposure": 1219878.6
+   },
+   {
+    "date": "2013-03-01",
+    "equity": 1461051.98,
+    "open_positions": 7,
+    "exposure": 1219878.6
+   },
+   {
+    "date": "2013-03-06",
+    "equity": 1461051.98,
+    "open_positions": 8,
+    "exposure": 1408107.15
+   },
+   {
+    "date": "2013-03-07",
+    "equity": 1461051.98,
+    "open_positions": 8,
+    "exposure": 1408107.15
+   },
+   {
+    "date": "2013-03-13",
+    "equity": 1461051.98,
+    "open_positions": 8,
+    "exposure": 1408107.15
+   },
+   {
+    "date": "2013-03-14",
+    "equity": 1445863.7,
+    "open_positions": 7,
+    "exposure": 1240335.68
+   },
+   {
+    "date": "2013-03-19",
+    "equity": 1445863.7,
+    "open_positions": 7,
+    "exposure": 1240335.68
+   },
+   {
+    "date": "2013-03-20",
+    "equity": 1445863.7,
+    "open_positions": 8,
+    "exposure": 1371375.89
+   },
+   {
+    "date": "2013-03-21",
+    "equity": 1445863.7,
+    "open_positions": 8,
+    "exposure": 1371375.89
+   },
+   {
+    "date": "2013-03-26",
+    "equity": 1445863.7,
+    "open_positions": 8,
+    "exposure": 1371375.89
+   },
+   {
+    "date": "2013-03-28",
+    "equity": 1445863.7,
+    "open_positions": 9,
+    "exposure": 1438840.21
+   },
+   {
+    "date": "2013-04-03",
+    "equity": 1430791.14,
+    "open_positions": 8,
+    "exposure": 1250611.66
+   },
+   {
+    "date": "2013-04-04",
+    "equity": 1415182.68,
+    "open_positions": 7,
+    "exposure": 1064420.55
+   },
+   {
+    "date": "2013-04-05",
+    "equity": 1404370.89,
+    "open_positions": 9,
+    "exposure": 1393769.45
+   },
+   {
+    "date": "2013-04-08",
+    "equity": 1404370.89,
+    "open_positions": 9,
+    "exposure": 1393769.45
+   },
+   {
+    "date": "2013-04-11",
+    "equity": 1404370.89,
+    "open_positions": 9,
+    "exposure": 1393769.45
+   },
+   {
+    "date": "2013-04-12",
+    "equity": 1396727.82,
+    "open_positions": 9,
+    "exposure": 1377676.29
+   },
+   {
+    "date": "2013-04-17",
+    "equity": 1383936.11,
+    "open_positions": 8,
+    "exposure": 1097161.88
+   },
+   {
+    "date": "2013-04-18",
+    "equity": 1383936.11,
+    "open_positions": 8,
+    "exposure": 1097161.88
+   },
+   {
+    "date": "2013-04-22",
+    "equity": 1383078.16,
+    "open_positions": 9,
+    "exposure": 1255364.16
+   },
+   {
+    "date": "2013-04-30",
+    "equity": 1383078.16,
+    "open_positions": 9,
+    "exposure": 1255364.16
+   },
+   {
+    "date": "2013-05-08",
+    "equity": 1383078.16,
+    "open_positions": 9,
+    "exposure": 1255364.16
+   },
+   {
+    "date": "2013-05-10",
+    "equity": 1375011.76,
+    "open_positions": 8,
+    "exposure": 1127281.73
+   },
+   {
+    "date": "2013-05-15",
+    "equity": 1397143.04,
+    "open_positions": 9,
+    "exposure": 1273560.91
+   },
+   {
+    "date": "2013-05-16",
+    "equity": 1397143.04,
+    "open_positions": 9,
+    "exposure": 1273560.91
+   },
+   {
+    "date": "2013-05-21",
+    "equity": 1397143.04,
+    "open_positions": 9,
+    "exposure": 1273560.91
+   },
+   {
+    "date": "2013-05-22",
+    "equity": 1397143.04,
+    "open_positions": 10,
+    "exposure": 1383940.48
+   },
+   {
+    "date": "2013-05-23",
+    "equity": 1382971.99,
+    "open_positions": 9,
+    "exposure": 1285440.44
+   },
+   {
+    "date": "2013-05-24",
+    "equity": 1387479.45,
+    "open_positions": 8,
+    "exposure": 1217976.12
+   },
+   {
+    "date": "2013-05-29",
+    "equity": 1387479.45,
+    "open_positions": 9,
+    "exposure": 1277056.89
+   },
+   {
+    "date": "2013-05-30",
+    "equity": 1387479.45,
+    "open_positions": 9,
+    "exposure": 1277056.89
+   },
+   {
+    "date": "2013-05-31",
+    "equity": 1387479.45,
+    "open_positions": 9,
+    "exposure": 1277056.89
+   },
+   {
+    "date": "2013-06-03",
+    "equity": 1395245.75,
+    "open_positions": 8,
+    "exposure": 1077852.42
+   },
+   {
+    "date": "2013-06-05",
+    "equity": 1395245.75,
+    "open_positions": 9,
+    "exposure": 1252703.83
+   },
+   {
+    "date": "2013-06-10",
+    "equity": 1380954.97,
+    "open_positions": 8,
+    "exposure": 1102121.23
+   },
+   {
+    "date": "2013-06-11",
+    "equity": 1366711.64,
+    "open_positions": 7,
+    "exposure": 991741.66
+   },
+   {
+    "date": "2013-06-12",
+    "equity": 1366711.64,
+    "open_positions": 9,
+    "exposure": 1366096.88
+   },
+   {
+    "date": "2013-06-13",
+    "equity": 1399930.22,
+    "open_positions": 6,
+    "exposure": 912716.55
+   },
+   {
+    "date": "2013-06-19",
+    "equity": 1399930.22,
+    "open_positions": 9,
+    "exposure": 1389556.99
+   },
+   {
+    "date": "2013-06-20",
+    "equity": 1399930.22,
+    "open_positions": 9,
+    "exposure": 1389556.99
+   },
+   {
+    "date": "2013-06-21",
+    "equity": 1420579.62,
+    "open_positions": 8,
+    "exposure": 1220125.45
+   },
+   {
+    "date": "2013-06-24",
+    "equity": 1420579.62,
+    "open_positions": 8,
+    "exposure": 1220125.45
+   },
+   {
+    "date": "2013-06-25",
+    "equity": 1391661.18,
+    "open_positions": 6,
+    "exposure": 840491.98
+   },
+   {
+    "date": "2013-06-26",
+    "equity": 1391661.18,
+    "open_positions": 10,
+    "exposure": 1306908.56
+   },
+   {
+    "date": "2013-06-28",
+    "equity": 1377445.67,
+    "open_positions": 9,
+    "exposure": 1172597.3
+   },
+   {
+    "date": "2013-07-03",
+    "equity": 1377571.41,
+    "open_positions": 10,
+    "exposure": 1243847.01
+   },
+   {
+    "date": "2013-07-10",
+    "equity": 1377571.41,
+    "open_positions": 10,
+    "exposure": 1243847.01
+   },
+   {
+    "date": "2013-07-11",
+    "equity": 1377571.41,
+    "open_positions": 10,
+    "exposure": 1243847.01
+   },
+   {
+    "date": "2013-07-16",
+    "equity": 1377571.41,
+    "open_positions": 10,
+    "exposure": 1243847.01
+   },
+   {
+    "date": "2013-07-17",
+    "equity": 1407953.3,
+    "open_positions": 10,
+    "exposure": 1322524.36
+   },
+   {
+    "date": "2013-07-18",
+    "equity": 1407953.3,
+    "open_positions": 10,
+    "exposure": 1322524.36
+   },
+   {
+    "date": "2013-07-22",
+    "equity": 1394116.16,
+    "open_positions": 9,
+    "exposure": 1263443.59
+   },
+   {
+    "date": "2013-07-24",
+    "equity": 1394116.16,
+    "open_positions": 10,
+    "exposure": 1372642.02
+   },
+   {
+    "date": "2013-07-25",
+    "equity": 1408125.55,
+    "open_positions": 9,
+    "exposure": 1271566.34
+   },
+   {
+    "date": "2013-07-26",
+    "equity": 1400446.62,
+    "open_positions": 8,
+    "exposure": 1185093.17
+   },
+   {
+    "date": "2013-07-29",
+    "equity": 1400446.62,
+    "open_positions": 8,
+    "exposure": 1185093.17
+   },
+   {
+    "date": "2013-07-30",
+    "equity": 1400446.62,
+    "open_positions": 8,
+    "exposure": 1185093.17
+   },
+   {
+    "date": "2013-07-31",
+    "equity": 1399101.73,
+    "open_positions": 10,
+    "exposure": 1225128.2
+   },
+   {
+    "date": "2013-08-02",
+    "equity": 1386322.51,
+    "open_positions": 8,
+    "exposure": 997079.35
+   },
+   {
+    "date": "2013-08-05",
+    "equity": 1386322.51,
+    "open_positions": 8,
+    "exposure": 997079.35
+   },
+   {
+    "date": "2013-08-07",
+    "equity": 1386322.51,
+    "open_positions": 10,
+    "exposure": 1291647.26
+   },
+   {
+    "date": "2013-08-08",
+    "equity": 1386322.51,
+    "open_positions": 10,
+    "exposure": 1291647.26
+   },
+   {
+    "date": "2013-08-16",
+    "equity": 1386322.51,
+    "open_positions": 10,
+    "exposure": 1291647.26
+   },
+   {
+    "date": "2013-08-19",
+    "equity": 1372006.04,
+    "open_positions": 9,
+    "exposure": 1145175.57
+   },
+   {
+    "date": "2013-08-20",
+    "equity": 1372006.04,
+    "open_positions": 9,
+    "exposure": 1145175.57
+   },
+   {
+    "date": "2013-08-21",
+    "equity": 1361738.31,
+    "open_positions": 8,
+    "exposure": 943494.23
+   },
+   {
+    "date": "2013-08-22",
+    "equity": 1361046.54,
+    "open_positions": 7,
+    "exposure": 716665.96
+   },
+   {
+    "date": "2013-08-23",
+    "equity": 1361046.54,
+    "open_positions": 10,
+    "exposure": 1093256.06
+   },
+   {
+    "date": "2013-08-28",
+    "equity": 1354261.92,
+    "open_positions": 9,
+    "exposure": 1000369.49
+   },
+   {
+    "date": "2013-08-30",
+    "equity": 1354261.92,
+    "open_positions": 10,
+    "exposure": 1102524.48
+   },
+   {
+    "date": "2013-09-16",
+    "equity": 1391830.56,
+    "open_positions": 10,
+    "exposure": 1134193.82
+   },
+   {
+    "date": "2013-09-23",
+    "equity": 1405603.35,
+    "open_positions": 9,
+    "exposure": 1012549.8
+   },
+   {
+    "date": "2013-10-11",
+    "equity": 1405603.35,
+    "open_positions": 9,
+    "exposure": 1012549.8
+   },
+   {
+    "date": "2013-10-14",
+    "equity": 1399469.44,
+    "open_positions": 8,
+    "exposure": 903314.17
+   },
+   {
+    "date": "2013-10-15",
+    "equity": 1399469.44,
+    "open_positions": 10,
+    "exposure": 1285614.37
+   },
+   {
+    "date": "2013-10-21",
+    "equity": 1420593.13,
+    "open_positions": 9,
+    "exposure": 1105843.32
+   },
+   {
+    "date": "2013-10-23",
+    "equity": 1420593.13,
+    "open_positions": 10,
+    "exposure": 1281739.22
+   },
+   {
+    "date": "2013-10-24",
+    "equity": 1420593.13,
+    "open_positions": 10,
+    "exposure": 1281739.22
+   },
+   {
+    "date": "2013-10-30",
+    "equity": 1477281.6,
+    "open_positions": 10,
+    "exposure": 1461139.26
+   },
+   {
+    "date": "2013-11-07",
+    "equity": 1477281.6,
+    "open_positions": 10,
+    "exposure": 1461139.26
+   },
+   {
+    "date": "2013-11-12",
+    "equity": 1477281.6,
+    "open_positions": 10,
+    "exposure": 1461139.26
+   },
+   {
+    "date": "2013-11-14",
+    "equity": 1477281.6,
+    "open_positions": 10,
+    "exposure": 1461139.26
+   },
+   {
+    "date": "2013-11-18",
+    "equity": 1471881.21,
+    "open_positions": 9,
+    "exposure": 1356440.7
+   },
+   {
+    "date": "2013-11-20",
+    "equity": 1457379.93,
+    "open_positions": 8,
+    "exposure": 1145107.02
+   },
+   {
+    "date": "2013-11-22",
+    "equity": 1482158.86,
+    "open_positions": 9,
+    "exposure": 1458444.07
+   },
+   {
+    "date": "2013-11-26",
+    "equity": 1482158.86,
+    "open_positions": 9,
+    "exposure": 1458444.07
+   },
+   {
+    "date": "2013-11-29",
+    "equity": 1492971.49,
+    "open_positions": 8,
+    "exposure": 1356289.09
+   },
+   {
+    "date": "2013-12-06",
+    "equity": 1492971.49,
+    "open_positions": 8,
+    "exposure": 1356289.09
+   },
+   {
+    "date": "2013-12-10",
+    "equity": 1492971.49,
+    "open_positions": 8,
+    "exposure": 1356289.09
+   },
+   {
+    "date": "2013-12-13",
+    "equity": 1537188.41,
+    "open_positions": 8,
+    "exposure": 1519072.59
+   },
+   {
+    "date": "2013-12-20",
+    "equity": 1537188.41,
+    "open_positions": 8,
+    "exposure": 1519072.59
+   },
+   {
+    "date": "2013-12-30",
+    "equity": 1537188.41,
+    "open_positions": 8,
+    "exposure": 1519072.59
+   },
+   {
+    "date": "2014-01-02",
+    "equity": 1537188.41,
+    "open_positions": 8,
+    "exposure": 1519072.59
+   },
+   {
+    "date": "2014-01-03",
+    "equity": 1537188.41,
+    "open_positions": 8,
+    "exposure": 1519072.59
+   },
+   {
+    "date": "2014-01-07",
+    "equity": 1537188.41,
+    "open_positions": 8,
+    "exposure": 1519072.59
+   },
+   {
+    "date": "2014-01-09",
+    "equity": 1533421.53,
+    "open_positions": 7,
+    "exposure": 1376484.47
+   },
+   {
+    "date": "2014-01-14",
+    "equity": 1547595.97,
+    "open_positions": 6,
+    "exposure": 1205517.96
+   },
+   {
+    "date": "2014-01-17",
+    "equity": 1547595.97,
+    "open_positions": 6,
+    "exposure": 1205517.96
+   },
+   {
+    "date": "2014-01-20",
+    "equity": 1560573.23,
+    "open_positions": 5,
+    "exposure": 903803.98
+   },
+   {
+    "date": "2014-01-21",
+    "equity": 1615501.69,
+    "open_positions": 8,
+    "exposure": 1524533.29
+   },
+   {
+    "date": "2014-01-23",
+    "equity": 1615501.69,
+    "open_positions": 8,
+    "exposure": 1524533.29
+   },
+   {
+    "date": "2014-01-24",
+    "equity": 1598917.87,
+    "open_positions": 7,
+    "exposure": 1352735.48
+   },
+   {
+    "date": "2014-01-27",
+    "equity": 1603326.58,
+    "open_positions": 6,
+    "exposure": 1203265.03
+   },
+   {
+    "date": "2014-01-28",
+    "equity": 1616050.88,
+    "open_positions": 8,
+    "exposure": 1582519.66
+   },
+   {
+    "date": "2014-01-30",
+    "equity": 1599279.24,
+    "open_positions": 7,
+    "exposure": 1334175.89
+   },
+   {
+    "date": "2014-01-31",
+    "equity": 1599279.24,
+    "open_positions": 7,
+    "exposure": 1334175.89
+   },
+   {
+    "date": "2014-02-03",
+    "equity": 1599279.24,
+    "open_positions": 7,
+    "exposure": 1334175.89
+   },
+   {
+    "date": "2014-02-04",
+    "equity": 1599279.24,
+    "open_positions": 8,
+    "exposure": 1493260.33
+   },
+   {
+    "date": "2014-02-06",
+    "equity": 1599279.24,
+    "open_positions": 8,
+    "exposure": 1493260.33
+   },
+   {
+    "date": "2014-02-10",
+    "equity": 1599279.24,
+    "open_positions": 8,
+    "exposure": 1493260.33
+   },
+   {
+    "date": "2014-02-11",
+    "equity": 1599279.24,
+    "open_positions": 8,
+    "exposure": 1493260.33
+   },
+   {
+    "date": "2014-02-14",
+    "equity": 1599279.24,
+    "open_positions": 8,
+    "exposure": 1493260.33
+   },
+   {
+    "date": "2014-02-19",
+    "equity": 1620238.94,
+    "open_positions": 8,
+    "exposure": 1579952.44
+   },
+   {
+    "date": "2014-02-26",
+    "equity": 1620238.94,
+    "open_positions": 8,
+    "exposure": 1579952.44
+   },
+   {
+    "date": "2014-03-05",
+    "equity": 1620238.94,
+    "open_positions": 8,
+    "exposure": 1579952.44
+   },
+   {
+    "date": "2014-03-06",
+    "equity": 1620238.94,
+    "open_positions": 8,
+    "exposure": 1579952.44
+   },
+   {
+    "date": "2014-03-07",
+    "equity": 1686069.61,
+    "open_positions": 7,
+    "exposure": 1456964.89
+   },
+   {
+    "date": "2014-03-10",
+    "equity": 1687645.31,
+    "open_positions": 6,
+    "exposure": 1203468.8
+   },
+   {
+    "date": "2014-03-11",
+    "equity": 1673850.64,
+    "open_positions": 5,
+    "exposure": 908781.38
+   },
+   {
+    "date": "2014-03-13",
+    "equity": 1673850.64,
+    "open_positions": 8,
+    "exposure": 1572819.57
+   },
+   {
+    "date": "2014-03-19",
+    "equity": 1650178.91,
+    "open_positions": 6,
+    "exposure": 1202222.64
+   },
+   {
+    "date": "2014-03-21",
+    "equity": 1650178.91,
+    "open_positions": 8,
+    "exposure": 1527509.4
+   },
+   {
+    "date": "2014-03-28",
+    "equity": 1650178.91,
+    "open_positions": 8,
+    "exposure": 1527509.4
+   },
+   {
+    "date": "2014-03-31",
+    "equity": 1650178.91,
+    "open_positions": 8,
+    "exposure": 1527509.4
+   },
+   {
+    "date": "2014-04-04",
+    "equity": 1650178.91,
+    "open_positions": 8,
+    "exposure": 1527509.4
+   },
+   {
+    "date": "2014-04-10",
+    "equity": 1632768.5,
+    "open_positions": 7,
+    "exposure": 1252797.91
+   },
+   {
+    "date": "2014-04-11",
+    "equity": 1615728.41,
+    "open_positions": 6,
+    "exposure": 1034553.53
+   },
+   {
+    "date": "2014-04-15",
+    "equity": 1598985.21,
+    "open_positions": 8,
+    "exposure": 1492253.36
+   },
+   {
+    "date": "2014-04-22",
+    "equity": 1598985.21,
+    "open_positions": 8,
+    "exposure": 1492253.36
+   },
+   {
+    "date": "2014-04-23",
+    "equity": 1598985.21,
+    "open_positions": 8,
+    "exposure": 1492253.36
+   },
+   {
+    "date": "2014-04-29",
+    "equity": 1598985.21,
+    "open_positions": 8,
+    "exposure": 1492253.36
+   },
+   {
+    "date": "2014-04-30",
+    "equity": 1598985.21,
+    "open_positions": 8,
+    "exposure": 1492253.36
+   },
+   {
+    "date": "2014-05-02",
+    "equity": 1651197.7,
+    "open_positions": 9,
+    "exposure": 1611991.97
+   },
+   {
+    "date": "2014-05-05",
+    "equity": 1649957.58,
+    "open_positions": 8,
+    "exposure": 1459301.63
+   },
+   {
+    "date": "2014-05-06",
+    "equity": 1638225.39,
+    "open_positions": 7,
+    "exposure": 1196826.96
+   },
+   {
+    "date": "2014-05-07",
+    "equity": 1621723.73,
+    "open_positions": 6,
+    "exposure": 987535.88
+   },
+   {
+    "date": "2014-05-09",
+    "equity": 1604691.91,
+    "open_positions": 9,
+    "exposure": 1485888.64
+   },
+   {
+    "date": "2014-05-14",
+    "equity": 1604691.91,
+    "open_positions": 9,
+    "exposure": 1485888.64
+   },
+   {
+    "date": "2014-05-15",
+    "equity": 1604691.91,
+    "open_positions": 9,
+    "exposure": 1485888.64
+   },
+   {
+    "date": "2014-05-16",
+    "equity": 1587678.75,
+    "open_positions": 9,
+    "exposure": 1431447.36
+   },
+   {
+    "date": "2014-05-19",
+    "equity": 1574873.12,
+    "open_positions": 8,
+    "exposure": 1193666.99
+   },
+   {
+    "date": "2014-05-23",
+    "equity": 1574873.12,
+    "open_positions": 10,
+    "exposure": 1540744.23
+   },
+   {
+    "date": "2014-05-26",
+    "equity": 1601195.61,
+    "open_positions": 8,
+    "exposure": 1245595.79
+   },
+   {
+    "date": "2014-05-29",
+    "equity": 1601195.61,
+    "open_positions": 8,
+    "exposure": 1245595.79
+   },
+   {
+    "date": "2014-05-30",
+    "equity": 1601195.61,
+    "open_positions": 10,
+    "exposure": 1499923.23
+   },
+   {
+    "date": "2014-06-05",
+    "equity": 1601195.61,
+    "open_positions": 10,
+    "exposure": 1499923.23
+   },
+   {
+    "date": "2014-06-06",
+    "equity": 1601195.61,
+    "open_positions": 10,
+    "exposure": 1499923.23
+   },
+   {
+    "date": "2014-06-13",
+    "equity": 1601195.61,
+    "open_positions": 10,
+    "exposure": 1499923.23
+   },
+   {
+    "date": "2014-06-19",
+    "equity": 1601195.61,
+    "open_positions": 10,
+    "exposure": 1499923.23
+   },
+   {
+    "date": "2014-06-20",
+    "equity": 1601195.61,
+    "open_positions": 10,
+    "exposure": 1499923.23
+   },
+   {
+    "date": "2014-06-27",
+    "equity": 1686895.89,
+    "open_positions": 10,
+    "exposure": 1491417.25
+   },
+   {
+    "date": "2014-07-04",
+    "equity": 1686895.89,
+    "open_positions": 10,
+    "exposure": 1491417.25
+   },
+   {
+    "date": "2014-07-09",
+    "equity": 1727378.78,
+    "open_positions": 8,
+    "exposure": 1222426.05
+   },
+   {
+    "date": "2014-07-10",
+    "equity": 1727378.78,
+    "open_positions": 8,
+    "exposure": 1222426.05
+   },
+   {
+    "date": "2014-07-11",
+    "equity": 1780710.75,
+    "open_positions": 10,
+    "exposure": 1432118.64
+   },
+   {
+    "date": "2014-07-14",
+    "equity": 1780710.75,
+    "open_positions": 10,
+    "exposure": 1432118.64
+   },
+   {
+    "date": "2014-07-18",
+    "equity": 1780710.75,
+    "open_positions": 10,
+    "exposure": 1432118.64
+   },
+   {
+    "date": "2014-07-25",
+    "equity": 1776508.31,
+    "open_positions": 10,
+    "exposure": 1402350.63
+   },
+   {
+    "date": "2014-07-28",
+    "equity": 1776508.31,
+    "open_positions": 10,
+    "exposure": 1402350.63
+   },
+   {
+    "date": "2014-07-30",
+    "equity": 1776508.31,
+    "open_positions": 10,
+    "exposure": 1402350.63
+   },
+   {
+    "date": "2014-08-04",
+    "equity": 1803259.73,
+    "open_positions": 10,
+    "exposure": 1395649.82
+   },
+   {
+    "date": "2014-08-08",
+    "equity": 1803259.73,
+    "open_positions": 10,
+    "exposure": 1395649.82
+   },
+   {
+    "date": "2014-08-11",
+    "equity": 1803259.73,
+    "open_positions": 10,
+    "exposure": 1395649.82
+   },
+   {
+    "date": "2014-08-12",
+    "equity": 1803259.73,
+    "open_positions": 10,
+    "exposure": 1395649.82
+   },
+   {
+    "date": "2014-08-14",
+    "equity": 1785089.94,
+    "open_positions": 9,
+    "exposure": 1246035.61
+   },
+   {
+    "date": "2014-08-19",
+    "equity": 1832263.69,
+    "open_positions": 10,
+    "exposure": 1511222.82
+   },
+   {
+    "date": "2014-08-25",
+    "equity": 1832263.69,
+    "open_positions": 10,
+    "exposure": 1511222.82
+   },
+   {
+    "date": "2014-08-26",
+    "equity": 1901624.36,
+    "open_positions": 10,
+    "exposure": 1607728.0
+   },
+   {
+    "date": "2014-09-03",
+    "equity": 1901624.36,
+    "open_positions": 10,
+    "exposure": 1607728.0
+   },
+   {
+    "date": "2014-09-10",
+    "equity": 1901624.36,
+    "open_positions": 10,
+    "exposure": 1607728.0
+   },
+   {
+    "date": "2014-09-16",
+    "equity": 1960887.45,
+    "open_positions": 9,
+    "exposure": 1427174.3
+   },
+   {
+    "date": "2014-09-17",
+    "equity": 2004385.38,
+    "open_positions": 10,
+    "exposure": 1509907.11
+   },
+   {
+    "date": "2014-09-22",
+    "equity": 2004385.38,
+    "open_positions": 10,
+    "exposure": 1509907.11
+   },
+   {
+    "date": "2014-09-23",
+    "equity": 2004385.38,
+    "open_positions": 10,
+    "exposure": 1509907.11
+   },
+   {
+    "date": "2014-09-24",
+    "equity": 2004472.33,
+    "open_positions": 10,
+    "exposure": 1524621.96
+   },
+   {
+    "date": "2014-09-26",
+    "equity": 2004472.33,
+    "open_positions": 10,
+    "exposure": 1524621.96
+   },
+   {
+    "date": "2014-10-01",
+    "equity": 2004472.33,
+    "open_positions": 10,
+    "exposure": 1524621.96
+   },
+   {
+    "date": "2014-10-07",
+    "equity": 2004472.33,
+    "open_positions": 10,
+    "exposure": 1524621.96
+   },
+   {
+    "date": "2014-10-08",
+    "equity": 2004472.33,
+    "open_positions": 10,
+    "exposure": 1524621.96
+   },
+   {
+    "date": "2014-10-09",
+    "equity": 2004472.33,
+    "open_positions": 10,
+    "exposure": 1524621.96
+   },
+   {
+    "date": "2014-10-10",
+    "equity": 1983839.45,
+    "open_positions": 9,
+    "exposure": 1285281.21
+   },
+   {
+    "date": "2014-10-13",
+    "equity": 2019856.85,
+    "open_positions": 10,
+    "exposure": 1523866.48
+   },
+   {
+    "date": "2014-10-16",
+    "equity": 2026232.17,
+    "open_positions": 8,
+    "exposure": 1219045.05
+   },
+   {
+    "date": "2014-10-17",
+    "equity": 2026232.17,
+    "open_positions": 8,
+    "exposure": 1219045.05
+   },
+   {
+    "date": "2014-10-21",
+    "equity": 2026232.17,
+    "open_positions": 10,
+    "exposure": 1524087.63
+   },
+   {
+    "date": "2014-10-22",
+    "equity": 2005543.25,
+    "open_positions": 9,
+    "exposure": 1349926.47
+   },
+   {
+    "date": "2014-10-29",
+    "equity": 2024952.08,
+    "open_positions": 8,
+    "exposure": 1156527.62
+   },
+   {
+    "date": "2014-10-30",
+    "equity": 2157256.71,
+    "open_positions": 10,
+    "exposure": 1742088.4
+   },
+   {
+    "date": "2014-11-10",
+    "equity": 2157256.71,
+    "open_positions": 10,
+    "exposure": 1742088.4
+   },
+   {
+    "date": "2014-11-17",
+    "equity": 2135155.57,
+    "open_positions": 10,
+    "exposure": 1729637.29
+   },
+   {
+    "date": "2014-11-25",
+    "equity": 2135155.57,
+    "open_positions": 10,
+    "exposure": 1729637.29
+   },
+   {
+    "date": "2014-12-01",
+    "equity": 2135155.57,
+    "open_positions": 10,
+    "exposure": 1729637.29
+   },
+   {
+    "date": "2014-12-03",
+    "equity": 2128266.41,
+    "open_positions": 9,
+    "exposure": 1530638.0
+   },
+   {
+    "date": "2014-12-08",
+    "equity": 2128266.41,
+    "open_positions": 10,
+    "exposure": 1746969.41
+   },
+   {
+    "date": "2014-12-09",
+    "equity": 2128266.41,
+    "open_positions": 10,
+    "exposure": 1746969.41
+   },
+   {
+    "date": "2014-12-11",
+    "equity": 2128266.41,
+    "open_positions": 10,
+    "exposure": 1746969.41
+   },
+   {
+    "date": "2014-12-12",
+    "equity": 2128266.41,
+    "open_positions": 10,
+    "exposure": 1746969.41
+   },
+   {
+    "date": "2014-12-15",
+    "equity": 2128266.41,
+    "open_positions": 10,
+    "exposure": 1746969.41
+   },
+   {
+    "date": "2014-12-16",
+    "equity": 2128266.41,
+    "open_positions": 10,
+    "exposure": 1746969.41
+   },
+   {
+    "date": "2014-12-17",
+    "equity": 2173365.93,
+    "open_positions": 3,
+    "exposure": 479089.71
+   },
+   {
+    "date": "2014-12-22",
+    "equity": 2231481.04,
+    "open_positions": 10,
+    "exposure": 1951217.65
+   },
+   {
+    "date": "2014-12-30",
+    "equity": 2231481.04,
+    "open_positions": 10,
+    "exposure": 1951217.65
+   },
+   {
+    "date": "2015-01-14",
+    "equity": 2231481.04,
+    "open_positions": 10,
+    "exposure": 1951217.65
+   },
+   {
+    "date": "2015-01-21",
+    "equity": 2239832.37,
+    "open_positions": 10,
+    "exposure": 2023864.13
+   },
+   {
+    "date": "2015-01-23",
+    "equity": 2217204.16,
+    "open_positions": 9,
+    "exposure": 1893754.08
+   },
+   {
+    "date": "2015-01-29",
+    "equity": 2217204.16,
+    "open_positions": 10,
+    "exposure": 2046265.71
+   },
+   {
+    "date": "2015-02-03",
+    "equity": 2217204.16,
+    "open_positions": 10,
+    "exposure": 2046265.71
+   },
+   {
+    "date": "2015-02-04",
+    "equity": 2217204.16,
+    "open_positions": 10,
+    "exposure": 2046265.71
+   },
+   {
+    "date": "2015-02-05",
+    "equity": 2217204.16,
+    "open_positions": 10,
+    "exposure": 2046265.71
+   },
+   {
+    "date": "2015-02-06",
+    "equity": 2197171.15,
+    "open_positions": 8,
+    "exposure": 1595428.43
+   },
+   {
+    "date": "2015-02-09",
+    "equity": 2180858.91,
+    "open_positions": 7,
+    "exposure": 1379702.13
+   },
+   {
+    "date": "2015-02-10",
+    "equity": 2183955.32,
+    "open_positions": 6,
+    "exposure": 1099671.55
+   },
+   {
+    "date": "2015-02-12",
+    "equity": 2183955.32,
+    "open_positions": 10,
+    "exposure": 1874016.11
+   },
+   {
+    "date": "2015-02-20",
+    "equity": 2183955.32,
+    "open_positions": 10,
+    "exposure": 1874016.11
+   },
+   {
+    "date": "2015-02-24",
+    "equity": 2205081.38,
+    "open_positions": 9,
+    "exposure": 1695219.77
+   },
+   {
+    "date": "2015-02-25",
+    "equity": 2205081.38,
+    "open_positions": 9,
+    "exposure": 1695219.77
+   },
+   {
+    "date": "2015-02-26",
+    "equity": 2160748.45,
+    "open_positions": 7,
+    "exposure": 1273503.23
+   },
+   {
+    "date": "2015-02-27",
+    "equity": 2160748.45,
+    "open_positions": 10,
+    "exposure": 1853472.63
+   },
+   {
+    "date": "2015-03-09",
+    "equity": 2138208.11,
+    "open_positions": 10,
+    "exposure": 1917167.98
+   },
+   {
+    "date": "2015-03-11",
+    "equity": 2138208.11,
+    "open_positions": 10,
+    "exposure": 1917167.98
+   },
+   {
+    "date": "2015-03-13",
+    "equity": 2122058.12,
+    "open_positions": 9,
+    "exposure": 1751761.75
+   },
+   {
+    "date": "2015-03-16",
+    "equity": 2122058.12,
+    "open_positions": 10,
+    "exposure": 1964142.75
+   },
+   {
+    "date": "2015-03-18",
+    "equity": 2144261.4,
+    "open_positions": 9,
+    "exposure": 1774182.51
+   },
+   {
+    "date": "2015-03-20",
+    "equity": 2186012.33,
+    "open_positions": 8,
+    "exposure": 1603485.27
+   },
+   {
+    "date": "2015-03-23",
+    "equity": 2337829.57,
+    "open_positions": 10,
+    "exposure": 1871986.32
+   },
+   {
+    "date": "2015-03-24",
+    "equity": 2317137.2,
+    "open_positions": 9,
+    "exposure": 1642406.09
+   },
+   {
+    "date": "2015-03-25",
+    "equity": 2320314.41,
+    "open_positions": 8,
+    "exposure": 1438878.2
+   },
+   {
+    "date": "2015-03-27",
+    "equity": 2320314.41,
+    "open_positions": 8,
+    "exposure": 1438878.2
+   },
+   {
+    "date": "2015-03-30",
+    "equity": 2320314.41,
+    "open_positions": 10,
+    "exposure": 1898352.72
+   },
+   {
+    "date": "2015-04-08",
+    "equity": 2320314.41,
+    "open_positions": 10,
+    "exposure": 1898352.72
+   },
+   {
+    "date": "2015-04-16",
+    "equity": 2303430.29,
+    "open_positions": 9,
+    "exposure": 1681960.3
+   },
+   {
+    "date": "2015-04-17",
+    "equity": 2279699.46,
+    "open_positions": 10,
+    "exposure": 1794019.35
+   },
+   {
+    "date": "2015-04-20",
+    "equity": 2264233.14,
+    "open_positions": 9,
+    "exposure": 1549812.7
+   },
+   {
+    "date": "2015-04-21",
+    "equity": 2244209.84,
+    "open_positions": 8,
+    "exposure": 1389383.77
+   },
+   {
+    "date": "2015-04-22",
+    "equity": 2238951.73,
+    "open_positions": 7,
+    "exposure": 1158531.5
+   },
+   {
+    "date": "2015-04-23",
+    "equity": 2215860.37,
+    "open_positions": 6,
+    "exposure": 1017812.48
+   },
+   {
+    "date": "2015-04-24",
+    "equity": 2215860.37,
+    "open_positions": 10,
+    "exposure": 1789505.27
+   },
+   {
+    "date": "2015-04-27",
+    "equity": 2185813.54,
+    "open_positions": 7,
+    "exposure": 1243055.58
+   },
+   {
+    "date": "2015-04-29",
+    "equity": 2192284.47,
+    "open_positions": 6,
+    "exposure": 1070693.45
+   },
+   {
+    "date": "2015-05-04",
+    "equity": 2192284.47,
+    "open_positions": 10,
+    "exposure": 1676298.28
+   },
+   {
+    "date": "2015-05-07",
+    "equity": 2192284.47,
+    "open_positions": 10,
+    "exposure": 1676298.28
+   },
+   {
+    "date": "2015-05-11",
+    "equity": 2192284.47,
+    "open_positions": 10,
+    "exposure": 1676298.28
+   },
+   {
+    "date": "2015-05-14",
+    "equity": 2192284.47,
+    "open_positions": 10,
+    "exposure": 1676298.28
+   },
+   {
+    "date": "2015-05-18",
+    "equity": 2192284.47,
+    "open_positions": 10,
+    "exposure": 1676298.28
+   },
+   {
+    "date": "2015-05-25",
+    "equity": 2192284.47,
+    "open_positions": 10,
+    "exposure": 1676298.28
+   },
+   {
+    "date": "2015-05-28",
+    "equity": 2192284.47,
+    "open_positions": 10,
+    "exposure": 1676298.28
+   },
+   {
+    "date": "2015-06-01",
+    "equity": 2192284.47,
+    "open_positions": 10,
+    "exposure": 1676298.28
+   },
+   {
+    "date": "2015-06-03",
+    "equity": 2192284.47,
+    "open_positions": 10,
+    "exposure": 1676298.28
+   },
+   {
+    "date": "2015-06-04",
+    "equity": 2192284.47,
+    "open_positions": 10,
+    "exposure": 1676298.28
+   },
+   {
+    "date": "2015-06-08",
+    "equity": 2192284.47,
+    "open_positions": 10,
+    "exposure": 1676298.28
+   },
+   {
+    "date": "2015-06-09",
+    "equity": 2180892.03,
+    "open_positions": 9,
+    "exposure": 1442874.37
+   },
+   {
+    "date": "2015-06-11",
+    "equity": 2166727.34,
+    "open_positions": 8,
+    "exposure": 1246296.16
+   },
+   {
+    "date": "2015-06-12",
+    "equity": 2166727.34,
+    "open_positions": 8,
+    "exposure": 1246296.16
+   },
+   {
+    "date": "2015-06-15",
+    "equity": 2162534.47,
+    "open_positions": 10,
+    "exposure": 1687899.17
+   },
+   {
+    "date": "2015-06-22",
+    "equity": 2155905.84,
+    "open_positions": 10,
+    "exposure": 1840943.42
+   },
+   {
+    "date": "2015-07-06",
+    "equity": 2155905.84,
+    "open_positions": 10,
+    "exposure": 1840943.42
+   },
+   {
+    "date": "2015-07-10",
+    "equity": 2198877.58,
+    "open_positions": 9,
+    "exposure": 1646461.57
+   },
+   {
+    "date": "2015-07-13",
+    "equity": 2198877.58,
+    "open_positions": 10,
+    "exposure": 1850678.92
+   },
+   {
+    "date": "2015-07-20",
+    "equity": 2304144.94,
+    "open_positions": 10,
+    "exposure": 2285443.77
+   },
+   {
+    "date": "2015-07-21",
+    "equity": 2304144.94,
+    "open_positions": 10,
+    "exposure": 2285443.77
+   },
+   {
+    "date": "2015-07-23",
+    "equity": 2304144.94,
+    "open_positions": 10,
+    "exposure": 2285443.77
+   },
+   {
+    "date": "2015-07-27",
+    "equity": 2387313.97,
+    "open_positions": 8,
+    "exposure": 2164942.93
+   },
+   {
+    "date": "2015-07-28",
+    "equity": 2416679.24,
+    "open_positions": 7,
+    "exposure": 1900697.16
+   },
+   {
+    "date": "2015-07-31",
+    "equity": 2416679.24,
+    "open_positions": 7,
+    "exposure": 1900697.16
+   },
+   {
+    "date": "2015-08-03",
+    "equity": 2416679.24,
+    "open_positions": 9,
+    "exposure": 2396240.53
+   },
+   {
+    "date": "2015-08-10",
+    "equity": 2416679.24,
+    "open_positions": 9,
+    "exposure": 2396240.53
+   },
+   {
+    "date": "2015-08-12",
+    "equity": 2416679.24,
+    "open_positions": 9,
+    "exposure": 2396240.53
+   },
+   {
+    "date": "2015-08-13",
+    "equity": 2416679.24,
+    "open_positions": 9,
+    "exposure": 2396240.53
+   },
+   {
+    "date": "2015-08-17",
+    "equity": 2416679.24,
+    "open_positions": 9,
+    "exposure": 2396240.53
+   },
+   {
+    "date": "2015-08-19",
+    "equity": 2416679.24,
+    "open_positions": 9,
+    "exposure": 2396240.53
+   },
+   {
+    "date": "2015-08-21",
+    "equity": 2458509.39,
+    "open_positions": 8,
+    "exposure": 1995170.26
+   },
+   {
+    "date": "2015-08-24",
+    "equity": 2524430.05,
+    "open_positions": 10,
+    "exposure": 2157490.46
+   },
+   {
+    "date": "2015-08-25",
+    "equity": 2543228.38,
+    "open_positions": 7,
+    "exposure": 1457729.74
+   },
+   {
+    "date": "2015-08-31",
+    "equity": 2543228.38,
+    "open_positions": 10,
+    "exposure": 2234385.41
+   },
+   {
+    "date": "2015-09-07",
+    "equity": 2517829.41,
+    "open_positions": 10,
+    "exposure": 2147315.81
+   },
+   {
+    "date": "2015-09-08",
+    "equity": 2491795.35,
+    "open_positions": 9,
+    "exposure": 1824419.73
+   },
+   {
+    "date": "2015-09-10",
+    "equity": 2482474.23,
+    "open_positions": 8,
+    "exposure": 1609022.84
+   },
+   {
+    "date": "2015-09-14",
+    "equity": 2482474.23,
+    "open_positions": 10,
+    "exposure": 2087614.63
+   },
+   {
+    "date": "2015-09-21",
+    "equity": 2458113.22,
+    "open_positions": 9,
+    "exposure": 1850271.81
+   },
+   {
+    "date": "2015-09-22",
+    "equity": 2458113.22,
+    "open_positions": 10,
+    "exposure": 2070839.89
+   },
+   {
+    "date": "2015-09-29",
+    "equity": 2458113.22,
+    "open_positions": 10,
+    "exposure": 2070839.89
+   },
+   {
+    "date": "2015-09-30",
+    "equity": 2458113.22,
+    "open_positions": 10,
+    "exposure": 2070839.89
+   },
+   {
+    "date": "2015-10-08",
+    "equity": 2458113.22,
+    "open_positions": 10,
+    "exposure": 2070839.89
+   },
+   {
+    "date": "2015-10-15",
+    "equity": 2458113.22,
+    "open_positions": 10,
+    "exposure": 2070839.89
+   },
+   {
+    "date": "2015-10-23",
+    "equity": 2458113.22,
+    "open_positions": 10,
+    "exposure": 2070839.89
+   },
+   {
+    "date": "2015-10-29",
+    "equity": 2458113.22,
+    "open_positions": 10,
+    "exposure": 2070839.89
+   },
+   {
+    "date": "2015-10-30",
+    "equity": 2453266.13,
+    "open_positions": 10,
+    "exposure": 2074039.75
+   },
+   {
+    "date": "2015-11-05",
+    "equity": 2447279.19,
+    "open_positions": 9,
+    "exposure": 1955971.56
+   },
+   {
+    "date": "2015-11-06",
+    "equity": 2447279.19,
+    "open_positions": 10,
+    "exposure": 2160880.93
+   },
+   {
+    "date": "2015-11-09",
+    "equity": 2447279.19,
+    "open_positions": 10,
+    "exposure": 2160880.93
+   },
+   {
+    "date": "2015-11-10",
+    "equity": 2447279.19,
+    "open_positions": 10,
+    "exposure": 2160880.93
+   },
+   {
+    "date": "2015-11-13",
+    "equity": 2425551.84,
+    "open_positions": 8,
+    "exposure": 1701920.86
+   },
+   {
+    "date": "2015-11-16",
+    "equity": 2411559.75,
+    "open_positions": 7,
+    "exposure": 1474580.58
+   },
+   {
+    "date": "2015-11-17",
+    "equity": 2411559.75,
+    "open_positions": 10,
+    "exposure": 2246546.39
+   },
+   {
+    "date": "2015-11-24",
+    "equity": 2417551.37,
+    "open_positions": 10,
+    "exposure": 2365179.72
+   },
+   {
+    "date": "2015-11-30",
+    "equity": 2417551.37,
+    "open_positions": 10,
+    "exposure": 2365179.72
+   },
+   {
+    "date": "2015-12-02",
+    "equity": 2417551.37,
+    "open_positions": 10,
+    "exposure": 2365179.72
+   },
+   {
+    "date": "2015-12-09",
+    "equity": 2382887.51,
+    "open_positions": 10,
+    "exposure": 2302048.08
+   },
+   {
+    "date": "2015-12-10",
+    "equity": 2333061.73,
+    "open_positions": 8,
+    "exposure": 1796875.0
+   },
+   {
+    "date": "2015-12-16",
+    "equity": 2324660.47,
+    "open_positions": 10,
+    "exposure": 2314520.79
+   },
+   {
+    "date": "2015-12-17",
+    "equity": 2320607.68,
+    "open_positions": 9,
+    "exposure": 2157417.12
+   },
+   {
+    "date": "2015-12-23",
+    "equity": 2320607.68,
+    "open_positions": 10,
+    "exposure": 2271396.97
+   },
+   {
+    "date": "2015-12-31",
+    "equity": 2320607.68,
+    "open_positions": 10,
+    "exposure": 2271396.97
+   },
+   {
+    "date": "2016-01-07",
+    "equity": 2320607.68,
+    "open_positions": 10,
+    "exposure": 2271396.97
+   },
+   {
+    "date": "2016-01-08",
+    "equity": 2320607.68,
+    "open_positions": 10,
+    "exposure": 2271396.97
+   },
+   {
+    "date": "2016-01-12",
+    "equity": 2320607.68,
+    "open_positions": 10,
+    "exposure": 2271396.97
+   },
+   {
+    "date": "2016-01-13",
+    "equity": 2315124.47,
+    "open_positions": 8,
+    "exposure": 1900373.63
+   },
+   {
+    "date": "2016-01-14",
+    "equity": 2315124.47,
+    "open_positions": 8,
+    "exposure": 1900373.63
+   },
+   {
+    "date": "2016-01-15",
+    "equity": 2275614.76,
+    "open_positions": 10,
+    "exposure": 2190986.02
+   },
+   {
+    "date": "2016-01-18",
+    "equity": 2242593.82,
+    "open_positions": 5,
+    "exposure": 1165272.77
+   },
+   {
+    "date": "2016-01-19",
+    "equity": 2219383.76,
+    "open_positions": 4,
+    "exposure": 977875.25
+   },
+   {
+    "date": "2016-01-20",
+    "equity": 2199323.53,
+    "open_positions": 3,
+    "exposure": 643764.75
+   },
+   {
+    "date": "2016-01-21",
+    "equity": 2199323.53,
+    "open_positions": 3,
+    "exposure": 643764.75
+   },
+   {
+    "date": "2016-01-22",
+    "equity": 2199323.53,
+    "open_positions": 10,
+    "exposure": 1934386.88
+   },
+   {
+    "date": "2016-01-25",
+    "equity": 2199323.53,
+    "open_positions": 10,
+    "exposure": 1934386.88
+   },
+   {
+    "date": "2016-01-28",
+    "equity": 2199323.53,
+    "open_positions": 10,
+    "exposure": 1934386.88
+   },
+   {
+    "date": "2016-02-01",
+    "equity": 2199323.53,
+    "open_positions": 10,
+    "exposure": 1934386.88
+   },
+   {
+    "date": "2016-02-03",
+    "equity": 2199323.53,
+    "open_positions": 10,
+    "exposure": 1934386.88
+   },
+   {
+    "date": "2016-02-04",
+    "equity": 2199323.53,
+    "open_positions": 10,
+    "exposure": 1934386.88
+   },
+   {
+    "date": "2016-02-05",
+    "equity": 2199323.53,
+    "open_positions": 10,
+    "exposure": 1934386.88
+   },
+   {
+    "date": "2016-02-08",
+    "equity": 2199323.53,
+    "open_positions": 10,
+    "exposure": 1934386.88
+   },
+   {
+    "date": "2016-02-09",
+    "equity": 2184136.73,
+    "open_positions": 9,
+    "exposure": 1679081.83
+   },
+   {
+    "date": "2016-02-10",
+    "equity": 2184136.73,
+    "open_positions": 9,
+    "exposure": 1679081.83
+   },
+   {
+    "date": "2016-02-11",
+    "equity": 2165485.73,
+    "open_positions": 6,
+    "exposure": 1202580.03
+   },
+   {
+    "date": "2016-02-12",
+    "equity": 2126940.88,
+    "open_positions": 2,
+    "exposure": 436673.58
+   },
+   {
+    "date": "2016-02-15",
+    "equity": 2126940.88,
+    "open_positions": 10,
+    "exposure": 1707380.9
+   },
+   {
+    "date": "2016-02-17",
+    "equity": 2126940.88,
+    "open_positions": 10,
+    "exposure": 1707380.9
+   },
+   {
+    "date": "2016-02-22",
+    "equity": 2126940.88,
+    "open_positions": 10,
+    "exposure": 1707380.9
+   },
+   {
+    "date": "2016-02-23",
+    "equity": 2105195.9,
+    "open_positions": 9,
+    "exposure": 1516315.19
+   },
+   {
+    "date": "2016-02-24",
+    "equity": 2105195.9,
+    "open_positions": 9,
+    "exposure": 1516315.19
+   },
+   {
+    "date": "2016-02-25",
+    "equity": 2105195.9,
+    "open_positions": 9,
+    "exposure": 1516315.19
+   },
+   {
+    "date": "2016-02-26",
+    "equity": 2105195.9,
+    "open_positions": 9,
+    "exposure": 1516315.19
+   },
+   {
+    "date": "2016-02-29",
+    "equity": 2083693.19,
+    "open_positions": 10,
+    "exposure": 1659060.67
+   },
+   {
+    "date": "2016-03-08",
+    "equity": 2083693.19,
+    "open_positions": 10,
+    "exposure": 1659060.67
+   },
+   {
+    "date": "2016-03-15",
+    "equity": 2083693.19,
+    "open_positions": 10,
+    "exposure": 1659060.67
+   },
+   {
+    "date": "2016-03-17",
+    "equity": 2083693.19,
+    "open_positions": 10,
+    "exposure": 1659060.67
+   },
+   {
+    "date": "2016-03-22",
+    "equity": 2083693.19,
+    "open_positions": 10,
+    "exposure": 1659060.67
+   },
+   {
+    "date": "2016-03-28",
+    "equity": 2083693.19,
+    "open_positions": 10,
+    "exposure": 1659060.67
+   },
+   {
+    "date": "2016-03-29",
+    "equity": 2107767.63,
+    "open_positions": 9,
+    "exposure": 1490070.85
+   },
+   {
+    "date": "2016-03-31",
+    "equity": 2107767.63,
+    "open_positions": 10,
+    "exposure": 1645006.33
+   },
+   {
+    "date": "2016-04-07",
+    "equity": 2107767.63,
+    "open_positions": 10,
+    "exposure": 1645006.33
+   },
+   {
+    "date": "2016-04-18",
+    "equity": 2191834.82,
+    "open_positions": 10,
+    "exposure": 1584444.98
+   },
+   {
+    "date": "2016-04-25",
+    "equity": 2191834.82,
+    "open_positions": 10,
+    "exposure": 1584444.98
+   },
+   {
+    "date": "2016-04-26",
+    "equity": 2191834.82,
+    "open_positions": 10,
+    "exposure": 1584444.98
+   },
+   {
+    "date": "2016-04-28",
+    "equity": 2179113.54,
+    "open_positions": 9,
+    "exposure": 1492849.28
+   },
+   {
+    "date": "2016-05-03",
+    "equity": 2179113.54,
+    "open_positions": 10,
+    "exposure": 1643632.14
+   },
+   {
+    "date": "2016-05-05",
+    "equity": 2179113.54,
+    "open_positions": 10,
+    "exposure": 1643632.14
+   },
+   {
+    "date": "2016-05-10",
+    "equity": 2179113.54,
+    "open_positions": 10,
+    "exposure": 1643632.14
+   },
+   {
+    "date": "2016-05-13",
+    "equity": 2179113.54,
+    "open_positions": 10,
+    "exposure": 1643632.14
+   },
+   {
+    "date": "2016-05-16",
+    "equity": 2179113.54,
+    "open_positions": 10,
+    "exposure": 1643632.14
+   },
+   {
+    "date": "2016-05-17",
+    "equity": 2352999.25,
+    "open_positions": 9,
+    "exposure": 2076336.71
+   },
+   {
+    "date": "2016-05-23",
+    "equity": 2352999.25,
+    "open_positions": 9,
+    "exposure": 2076336.71
+   },
+   {
+    "date": "2016-05-24",
+    "equity": 2280219.13,
+    "open_positions": 10,
+    "exposure": 2216088.94
+   },
+   {
+    "date": "2016-05-31",
+    "equity": 2339865.29,
+    "open_positions": 10,
+    "exposure": 2273483.89
+   },
+   {
+    "date": "2016-06-07",
+    "equity": 2339865.29,
+    "open_positions": 10,
+    "exposure": 2273483.89
+   },
+   {
+    "date": "2016-06-14",
+    "equity": 2339865.29,
+    "open_positions": 10,
+    "exposure": 2273483.89
+   },
+   {
+    "date": "2016-06-17",
+    "equity": 2316546.35,
+    "open_positions": 9,
+    "exposure": 2046263.08
+   },
+   {
+    "date": "2016-06-21",
+    "equity": 2316546.35,
+    "open_positions": 10,
+    "exposure": 2248974.11
+   },
+   {
+    "date": "2016-06-24",
+    "equity": 2330843.86,
+    "open_positions": 8,
+    "exposure": 1840264.19
+   },
+   {
+    "date": "2016-06-28",
+    "equity": 2330843.86,
+    "open_positions": 10,
+    "exposure": 2285545.85
+   },
+   {
+    "date": "2016-07-01",
+    "equity": 2330843.86,
+    "open_positions": 10,
+    "exposure": 2285545.85
+   },
+   {
+    "date": "2016-07-05",
+    "equity": 2330843.86,
+    "open_positions": 10,
+    "exposure": 2285545.85
+   },
+   {
+    "date": "2016-07-13",
+    "equity": 2349129.32,
+    "open_positions": 10,
+    "exposure": 2314455.84
+   },
+   {
+    "date": "2016-07-15",
+    "equity": 2349129.32,
+    "open_positions": 10,
+    "exposure": 2314455.84
+   },
+   {
+    "date": "2016-07-18",
+    "equity": 2349129.32,
+    "open_positions": 10,
+    "exposure": 2314455.84
+   },
+   {
+    "date": "2016-07-19",
+    "equity": 2349129.32,
+    "open_positions": 10,
+    "exposure": 2314455.84
+   },
+   {
+    "date": "2016-07-20",
+    "equity": 2349129.32,
+    "open_positions": 10,
+    "exposure": 2314455.84
+   },
+   {
+    "date": "2016-07-27",
+    "equity": 2401872.97,
+    "open_positions": 10,
+    "exposure": 2344337.15
+   },
+   {
+    "date": "2016-08-03",
+    "equity": 2527776.77,
+    "open_positions": 10,
+    "exposure": 2220502.68
+   },
+   {
+    "date": "2016-08-09",
+    "equity": 2527776.77,
+    "open_positions": 10,
+    "exposure": 2220502.68
+   },
+   {
+    "date": "2016-08-10",
+    "equity": 2527776.77,
+    "open_positions": 10,
+    "exposure": 2220502.68
+   },
+   {
+    "date": "2016-08-11",
+    "equity": 2676751.9,
+    "open_positions": 7,
+    "exposure": 1617848.07
+   },
+   {
+    "date": "2016-08-18",
+    "equity": 2676751.9,
+    "open_positions": 7,
+    "exposure": 1617848.07
+   },
+   {
+    "date": "2016-08-19",
+    "equity": 2780360.84,
+    "open_positions": 10,
+    "exposure": 2413724.25
+   },
+   {
+    "date": "2016-08-22",
+    "equity": 2780360.84,
+    "open_positions": 10,
+    "exposure": 2413724.25
+   },
+   {
+    "date": "2016-08-26",
+    "equity": 2796663.02,
+    "open_positions": 10,
+    "exposure": 2577512.34
+   },
+   {
+    "date": "2016-08-29",
+    "equity": 2796663.02,
+    "open_positions": 10,
+    "exposure": 2577512.34
+   },
+   {
+    "date": "2016-09-02",
+    "equity": 2796663.02,
+    "open_positions": 10,
+    "exposure": 2577512.34
+   },
+   {
+    "date": "2016-09-08",
+    "equity": 2796663.02,
+    "open_positions": 10,
+    "exposure": 2577512.34
+   },
+   {
+    "date": "2016-09-12",
+    "equity": 2987246.06,
+    "open_positions": 10,
+    "exposure": 2653709.07
+   },
+   {
+    "date": "2016-09-14",
+    "equity": 2975968.76,
+    "open_positions": 8,
+    "exposure": 2070379.97
+   },
+   {
+    "date": "2016-09-16",
+    "equity": 2975968.76,
+    "open_positions": 8,
+    "exposure": 2070379.97
+   },
+   {
+    "date": "2016-09-20",
+    "equity": 2975968.76,
+    "open_positions": 10,
+    "exposure": 2809216.04
+   },
+   {
+    "date": "2016-09-27",
+    "equity": 3236171.03,
+    "open_positions": 10,
+    "exposure": 3079571.11
+   },
+   {
+    "date": "2016-09-29",
+    "equity": 3135016.74,
+    "open_positions": 6,
+    "exposure": 1755103.21
+   },
+   {
+    "date": "2016-10-04",
+    "equity": 3135016.74,
+    "open_positions": 10,
+    "exposure": 3123003.07
+   },
+   {
+    "date": "2016-10-13",
+    "equity": 3135016.74,
+    "open_positions": 10,
+    "exposure": 3123003.07
+   },
+   {
+    "date": "2016-10-19",
+    "equity": 3135016.74,
+    "open_positions": 10,
+    "exposure": 3123003.07
+   },
+   {
+    "date": "2016-10-20",
+    "equity": 3135016.74,
+    "open_positions": 10,
+    "exposure": 3123003.07
+   },
+   {
+    "date": "2016-10-21",
+    "equity": 3135016.74,
+    "open_positions": 10,
+    "exposure": 3123003.07
+   },
+   {
+    "date": "2016-10-26",
+    "equity": 3082883.04,
+    "open_positions": 8,
+    "exposure": 2319465.67
+   },
+   {
+    "date": "2016-10-27",
+    "equity": 3082883.04,
+    "open_positions": 10,
+    "exposure": 3038668.02
+   },
+   {
+    "date": "2016-11-02",
+    "equity": 3122911.47,
+    "open_positions": 9,
+    "exposure": 2591293.79
+   },
+   {
+    "date": "2016-11-03",
+    "equity": 3122911.47,
+    "open_positions": 9,
+    "exposure": 2591293.79
+   },
+   {
+    "date": "2016-11-04",
+    "equity": 3078069.29,
+    "open_positions": 10,
+    "exposure": 2827526.72
+   },
+   {
+    "date": "2016-11-09",
+    "equity": 2829885.82,
+    "open_positions": 1,
+    "exposure": 361576.05
+   },
+   {
+    "date": "2016-11-11",
+    "equity": 2829885.82,
+    "open_positions": 10,
+    "exposure": 2804809.65
+   },
+   {
+    "date": "2016-11-15",
+    "equity": 2800923.45,
+    "open_positions": 9,
+    "exposure": 2520678.54
+   },
+   {
+    "date": "2016-11-16",
+    "equity": 2771411.61,
+    "open_positions": 8,
+    "exposure": 2033692.09
+   },
+   {
+    "date": "2016-11-18",
+    "equity": 2771411.61,
+    "open_positions": 8,
+    "exposure": 2033692.09
+   },
+   {
+    "date": "2016-11-21",
+    "equity": 2742597.96,
+    "open_positions": 10,
+    "exposure": 2238384.72
+   },
+   {
+    "date": "2016-11-28",
+    "equity": 2742597.96,
+    "open_positions": 10,
+    "exposure": 2238384.72
+   },
+   {
+    "date": "2016-12-05",
+    "equity": 2742597.96,
+    "open_positions": 10,
+    "exposure": 2238384.72
+   },
+   {
+    "date": "2016-12-12",
+    "equity": 2742597.96,
+    "open_positions": 10,
+    "exposure": 2238384.72
+   },
+   {
+    "date": "2016-12-19",
+    "equity": 2742597.96,
+    "open_positions": 10,
+    "exposure": 2238384.72
+   },
+   {
+    "date": "2016-12-20",
+    "equity": 2726446.9,
+    "open_positions": 9,
+    "exposure": 1876808.67
+   },
+   {
+    "date": "2016-12-21",
+    "equity": 2726446.9,
+    "open_positions": 9,
+    "exposure": 1876808.67
+   },
+   {
+    "date": "2016-12-22",
+    "equity": 2726446.9,
+    "open_positions": 9,
+    "exposure": 1876808.67
+   },
+   {
+    "date": "2016-12-23",
+    "equity": 2726446.9,
+    "open_positions": 9,
+    "exposure": 1876808.67
+   },
+   {
+    "date": "2016-12-26",
+    "equity": 2717412.61,
+    "open_positions": 10,
+    "exposure": 2179197.97
+   },
+   {
+    "date": "2016-12-27",
+    "equity": 2717412.61,
+    "open_positions": 10,
+    "exposure": 2179197.97
+   },
+   {
+    "date": "2017-01-02",
+    "equity": 2717412.61,
+    "open_positions": 10,
+    "exposure": 2179197.97
+   },
+   {
+    "date": "2017-01-17",
+    "equity": 2717412.61,
+    "open_positions": 10,
+    "exposure": 2179197.97
+   },
+   {
+    "date": "2017-01-23",
+    "equity": 2717412.61,
+    "open_positions": 10,
+    "exposure": 2179197.97
+   },
+   {
+    "date": "2017-01-24",
+    "equity": 2717412.61,
+    "open_positions": 10,
+    "exposure": 2179197.97
+   },
+   {
+    "date": "2017-01-31",
+    "equity": 2717412.61,
+    "open_positions": 10,
+    "exposure": 2179197.97
+   },
+   {
+    "date": "2017-02-07",
+    "equity": 3006251.51,
+    "open_positions": 9,
+    "exposure": 2789464.57
+   },
+   {
+    "date": "2017-02-10",
+    "equity": 3006251.51,
+    "open_positions": 9,
+    "exposure": 2789464.57
+   },
+   {
+    "date": "2017-02-13",
+    "equity": 3081227.67,
+    "open_positions": 8,
+    "exposure": 2400729.14
+   },
+   {
+    "date": "2017-02-14",
+    "equity": 3142248.23,
+    "open_positions": 8,
+    "exposure": 2853174.64
+   },
+   {
+    "date": "2017-02-15",
+    "equity": 3142248.23,
+    "open_positions": 8,
+    "exposure": 2853174.64
+   },
+   {
+    "date": "2017-02-21",
+    "equity": 3142248.23,
+    "open_positions": 8,
+    "exposure": 2853174.64
+   },
+   {
+    "date": "2017-03-01",
+    "equity": 3142248.23,
+    "open_positions": 8,
+    "exposure": 2853174.64
+   },
+   {
+    "date": "2017-03-02",
+    "equity": 3113224.58,
+    "open_positions": 7,
+    "exposure": 2411137.72
+   },
+   {
+    "date": "2017-03-08",
+    "equity": 3113224.58,
+    "open_positions": 8,
+    "exposure": 2830045.91
+   },
+   {
+    "date": "2017-03-09",
+    "equity": 3113224.58,
+    "open_positions": 8,
+    "exposure": 2830045.91
+   },
+   {
+    "date": "2017-03-10",
+    "equity": 3082256.46,
+    "open_positions": 7,
+    "exposure": 2465663.12
+   },
+   {
+    "date": "2017-03-16",
+    "equity": 3082256.46,
+    "open_positions": 8,
+    "exposure": 2891391.33
+   },
+   {
+    "date": "2017-03-22",
+    "equity": 3082256.46,
+    "open_positions": 8,
+    "exposure": 2891391.33
+   },
+   {
+    "date": "2017-03-23",
+    "equity": 3083046.34,
+    "open_positions": 7,
+    "exposure": 2800818.38
+   },
+   {
+    "date": "2017-03-30",
+    "equity": 3083046.34,
+    "open_positions": 7,
+    "exposure": 2800818.38
+   },
+   {
+    "date": "2017-04-07",
+    "equity": 3083046.34,
+    "open_positions": 7,
+    "exposure": 2800818.38
+   },
+   {
+    "date": "2017-04-17",
+    "equity": 3083046.34,
+    "open_positions": 7,
+    "exposure": 2800818.38
+   },
+   {
+    "date": "2017-04-18",
+    "equity": 3083046.34,
+    "open_positions": 7,
+    "exposure": 2800818.38
+   },
+   {
+    "date": "2017-04-19",
+    "equity": 3083046.34,
+    "open_positions": 7,
+    "exposure": 2800818.38
+   },
+   {
+    "date": "2017-04-24",
+    "equity": 3055140.04,
+    "open_positions": 8,
+    "exposure": 2996929.77
+   },
+   {
+    "date": "2017-04-27",
+    "equity": 3055140.04,
+    "open_positions": 8,
+    "exposure": 2996929.77
+   },
+   {
+    "date": "2017-05-02",
+    "equity": 3055140.04,
+    "open_positions": 8,
+    "exposure": 2996929.77
+   },
+   {
+    "date": "2017-05-03",
+    "equity": 3043887.7,
+    "open_positions": 7,
+    "exposure": 2578021.58
+   },
+   {
+    "date": "2017-05-05",
+    "equity": 3043887.7,
+    "open_positions": 7,
+    "exposure": 2578021.58
+   },
+   {
+    "date": "2017-05-08",
+    "equity": 3043887.7,
+    "open_positions": 7,
+    "exposure": 2578021.58
+   },
+   {
+    "date": "2017-05-09",
+    "equity": 3083719.44,
+    "open_positions": 8,
+    "exposure": 2934631.38
+   },
+   {
+    "date": "2017-05-12",
+    "equity": 3083719.44,
+    "open_positions": 8,
+    "exposure": 2934631.38
+   },
+   {
+    "date": "2017-05-16",
+    "equity": 3381554.9,
+    "open_positions": 8,
+    "exposure": 3303416.97
+   },
+   {
+    "date": "2017-05-17",
+    "equity": 3360066.71,
+    "open_positions": 7,
+    "exposure": 3098008.97
+   },
+   {
+    "date": "2017-05-18",
+    "equity": 3391948.89,
+    "open_positions": 6,
+    "exposure": 2672280.76
+   },
+   {
+    "date": "2017-05-19",
+    "equity": 3391948.89,
+    "open_positions": 6,
+    "exposure": 2672280.76
+   },
+   {
+    "date": "2017-05-22",
+    "equity": 3360144.19,
+    "open_positions": 5,
+    "exposure": 2283845.36
+   },
+   {
+    "date": "2017-05-23",
+    "equity": 3325008.03,
+    "open_positions": 8,
+    "exposure": 3146767.16
+   },
+   {
+    "date": "2017-05-24",
+    "equity": 3325008.03,
+    "open_positions": 8,
+    "exposure": 3146767.16
+   },
+   {
+    "date": "2017-05-25",
+    "equity": 3325008.03,
+    "open_positions": 8,
+    "exposure": 3146767.16
+   },
+   {
+    "date": "2017-05-26",
+    "equity": 3289875.09,
+    "open_positions": 7,
+    "exposure": 2618865.59
+   },
+   {
+    "date": "2017-05-30",
+    "equity": 3289875.09,
+    "open_positions": 9,
+    "exposure": 3289131.88
+   },
+   {
+    "date": "2017-06-06",
+    "equity": 3255461.16,
+    "open_positions": 9,
+    "exposure": 3181736.1
+   },
+   {
+    "date": "2017-06-08",
+    "equity": 3255461.16,
+    "open_positions": 9,
+    "exposure": 3181736.1
+   },
+   {
+    "date": "2017-06-13",
+    "equity": 3255461.16,
+    "open_positions": 9,
+    "exposure": 3181736.1
+   },
+   {
+    "date": "2017-06-14",
+    "equity": 3285671.61,
+    "open_positions": 8,
+    "exposure": 2820375.75
+   },
+   {
+    "date": "2017-06-15",
+    "equity": 3285671.61,
+    "open_positions": 8,
+    "exposure": 2820375.75
+   },
+   {
+    "date": "2017-06-20",
+    "equity": 3285671.61,
+    "open_positions": 9,
+    "exposure": 3187799.73
+   },
+   {
+    "date": "2017-06-22",
+    "equity": 3252075.68,
+    "open_positions": 8,
+    "exposure": 2907062.04
+   },
+   {
+    "date": "2017-06-23",
+    "equity": 3293158.37,
+    "open_positions": 6,
+    "exposure": 2048496.58
+   },
+   {
+    "date": "2017-06-27",
+    "equity": 3293158.37,
+    "open_positions": 6,
+    "exposure": 2048496.58
+   },
+   {
+    "date": "2017-06-28",
+    "equity": 3317607.03,
+    "open_positions": 9,
+    "exposure": 3126426.04
+   },
+   {
+    "date": "2017-07-05",
+    "equity": 3317607.03,
+    "open_positions": 9,
+    "exposure": 3126426.04
+   },
+   {
+    "date": "2017-07-10",
+    "equity": 3317607.03,
+    "open_positions": 9,
+    "exposure": 3126426.04
+   },
+   {
+    "date": "2017-07-12",
+    "equity": 3317607.03,
+    "open_positions": 9,
+    "exposure": 3126426.04
+   },
+   {
+    "date": "2017-07-18",
+    "equity": 3317607.03,
+    "open_positions": 9,
+    "exposure": 3126426.04
+   },
+   {
+    "date": "2017-07-19",
+    "equity": 3377260.1,
+    "open_positions": 9,
+    "exposure": 3042826.77
+   },
+   {
+    "date": "2017-07-26",
+    "equity": 3377260.1,
+    "open_positions": 10,
+    "exposure": 3367198.45
+   },
+   {
+    "date": "2017-08-02",
+    "equity": 3377260.1,
+    "open_positions": 10,
+    "exposure": 3367198.45
+   },
+   {
+    "date": "2017-08-04",
+    "equity": 3377260.1,
+    "open_positions": 10,
+    "exposure": 3367198.45
+   },
+   {
+    "date": "2017-08-07",
+    "equity": 3377260.1,
+    "open_positions": 10,
+    "exposure": 3367198.45
+   },
+   {
+    "date": "2017-08-08",
+    "equity": 3377260.1,
+    "open_positions": 10,
+    "exposure": 3367198.45
+   },
+   {
+    "date": "2017-08-09",
+    "equity": 3348418.48,
+    "open_positions": 9,
+    "exposure": 2999774.47
+   },
+   {
+    "date": "2017-08-10",
+    "equity": 3283566.8,
+    "open_positions": 5,
+    "exposure": 1758621.78
+   },
+   {
+    "date": "2017-08-11",
+    "equity": 3269650.25,
+    "open_positions": 4,
+    "exposure": 1434250.11
+   },
+   {
+    "date": "2017-08-16",
+    "equity": 3269650.25,
+    "open_positions": 4,
+    "exposure": 1434250.11
+   },
+   {
+    "date": "2017-08-17",
+    "equity": 3364162.11,
+    "open_positions": 9,
+    "exposure": 3338606.69
+   },
+   {
+    "date": "2017-08-22",
+    "equity": 3364162.11,
+    "open_positions": 9,
+    "exposure": 3338606.69
+   },
+   {
+    "date": "2017-08-24",
+    "equity": 3364162.11,
+    "open_positions": 9,
+    "exposure": 3338606.69
+   },
+   {
+    "date": "2017-08-28",
+    "equity": 3329572.09,
+    "open_positions": 8,
+    "exposure": 2924437.4
+   },
+   {
+    "date": "2017-09-01",
+    "equity": 3329572.09,
+    "open_positions": 9,
+    "exposure": 3166034.27
+   },
+   {
+    "date": "2017-09-08",
+    "equity": 3329572.09,
+    "open_positions": 9,
+    "exposure": 3166034.27
+   },
+   {
+    "date": "2017-09-13",
+    "equity": 3354688.02,
+    "open_positions": 8,
+    "exposure": 2758804.75
+   },
+   {
+    "date": "2017-09-15",
+    "equity": 3354688.02,
+    "open_positions": 10,
+    "exposure": 3244763.52
+   },
+   {
+    "date": "2017-09-19",
+    "equity": 3354688.02,
+    "open_positions": 10,
+    "exposure": 3244763.52
+   },
+   {
+    "date": "2017-09-22",
+    "equity": 3791160.57,
+    "open_positions": 10,
+    "exposure": 3287001.23
+   },
+   {
+    "date": "2017-09-25",
+    "equity": 3807045.56,
+    "open_positions": 9,
+    "exposure": 2822144.31
+   },
+   {
+    "date": "2017-09-28",
+    "equity": 3807045.56,
+    "open_positions": 9,
+    "exposure": 2822144.31
+   },
+   {
+    "date": "2017-09-29",
+    "equity": 3807045.56,
+    "open_positions": 10,
+    "exposure": 3271439.68
+   },
+   {
+    "date": "2017-10-03",
+    "equity": 3912070.9,
+    "open_positions": 9,
+    "exposure": 3032290.47
+   },
+   {
+    "date": "2017-10-09",
+    "equity": 3912070.9,
+    "open_positions": 10,
+    "exposure": 3265459.78
+   },
+   {
+    "date": "2017-10-16",
+    "equity": 3912070.9,
+    "open_positions": 10,
+    "exposure": 3265459.78
+   },
+   {
+    "date": "2017-10-18",
+    "equity": 3912070.9,
+    "open_positions": 10,
+    "exposure": 3265459.78
+   },
+   {
+    "date": "2017-10-24",
+    "equity": 3912070.9,
+    "open_positions": 10,
+    "exposure": 3265459.78
+   },
+   {
+    "date": "2017-10-25",
+    "equity": 3897889.25,
+    "open_positions": 9,
+    "exposure": 2869368.73
+   },
+   {
+    "date": "2017-10-30",
+    "equity": 3897889.25,
+    "open_positions": 9,
+    "exposure": 2869368.73
+   },
+   {
+    "date": "2017-10-31",
+    "equity": 3897889.25,
+    "open_positions": 10,
+    "exposure": 3648838.2
+   },
+   {
+    "date": "2017-11-01",
+    "equity": 3897889.25,
+    "open_positions": 10,
+    "exposure": 3648838.2
+   },
+   {
+    "date": "2017-11-07",
+    "equity": 3897889.25,
+    "open_positions": 10,
+    "exposure": 3648838.2
+   },
+   {
+    "date": "2017-11-08",
+    "equity": 3897889.25,
+    "open_positions": 10,
+    "exposure": 3648838.2
+   },
+   {
+    "date": "2017-11-09",
+    "equity": 3920310.65,
+    "open_positions": 9,
+    "exposure": 3199542.84
+   },
+   {
+    "date": "2017-11-10",
+    "equity": 3920310.65,
+    "open_positions": 9,
+    "exposure": 3199542.84
+   },
+   {
+    "date": "2017-11-13",
+    "equity": 3920310.65,
+    "open_positions": 9,
+    "exposure": 3199542.84
+   },
+   {
+    "date": "2017-11-14",
+    "equity": 4125972.88,
+    "open_positions": 9,
+    "exposure": 3899276.61
+   },
+   {
+    "date": "2017-11-15",
+    "equity": 4125972.88,
+    "open_positions": 9,
+    "exposure": 3899276.61
+   },
+   {
+    "date": "2017-11-16",
+    "equity": 4134156.18,
+    "open_positions": 8,
+    "exposure": 3396099.67
+   },
+   {
+    "date": "2017-11-21",
+    "equity": 4301554.88,
+    "open_positions": 10,
+    "exposure": 4178383.04
+   },
+   {
+    "date": "2017-11-28",
+    "equity": 4359418.65,
+    "open_positions": 9,
+    "exposure": 3936786.17
+   },
+   {
+    "date": "2017-11-29",
+    "equity": 4359418.65,
+    "open_positions": 9,
+    "exposure": 3936786.17
+   },
+   {
+    "date": "2017-11-30",
+    "equity": 4359418.65,
+    "open_positions": 9,
+    "exposure": 3936786.17
+   },
+   {
+    "date": "2017-12-01",
+    "equity": 4359418.65,
+    "open_positions": 9,
+    "exposure": 3936786.17
+   },
+   {
+    "date": "2017-12-04",
+    "equity": 4359418.65,
+    "open_positions": 9,
+    "exposure": 3936786.17
+   },
+   {
+    "date": "2017-12-05",
+    "equity": 4319733.57,
+    "open_positions": 9,
+    "exposure": 4031211.67
+   },
+   {
+    "date": "2017-12-06",
+    "equity": 4301443.75,
+    "open_positions": 8,
+    "exposure": 3609214.25
+   },
+   {
+    "date": "2017-12-12",
+    "equity": 4352563.02,
+    "open_positions": 9,
+    "exposure": 4038044.99
+   },
+   {
+    "date": "2017-12-18",
+    "equity": 4352563.02,
+    "open_positions": 9,
+    "exposure": 4038044.99
+   },
+   {
+    "date": "2017-12-19",
+    "equity": 4352563.02,
+    "open_positions": 10,
+    "exposure": 4308360.11
+   },
+   {
+    "date": "2017-12-27",
+    "equity": 4352563.02,
+    "open_positions": 10,
+    "exposure": 4308360.11
+   },
+   {
+    "date": "2018-01-04",
+    "equity": 4352563.02,
+    "open_positions": 10,
+    "exposure": 4308360.11
+   },
+   {
+    "date": "2018-01-11",
+    "equity": 4352563.02,
+    "open_positions": 10,
+    "exposure": 4308360.11
+   },
+   {
+    "date": "2018-01-16",
+    "equity": 4417262.93,
+    "open_positions": 8,
+    "exposure": 3132335.79
+   },
+   {
+    "date": "2018-01-17",
+    "equity": 4416920.01,
+    "open_positions": 7,
+    "exposure": 2790591.0
+   },
+   {
+    "date": "2018-01-18",
+    "equity": 4416920.01,
+    "open_positions": 10,
+    "exposure": 3930265.5
+   },
+   {
+    "date": "2018-01-19",
+    "equity": 4520301.06,
+    "open_positions": 9,
+    "exposure": 3642299.54
+   },
+   {
+    "date": "2018-01-24",
+    "equity": 4520301.06,
+    "open_positions": 9,
+    "exposure": 3642299.54
+   },
+   {
+    "date": "2018-01-25",
+    "equity": 4586997.89,
+    "open_positions": 10,
+    "exposure": 3615257.28
+   },
+   {
+    "date": "2018-01-29",
+    "equity": 4658754.72,
+    "open_positions": 9,
+    "exposure": 3165651.94
+   },
+   {
+    "date": "2018-01-30",
+    "equity": 4611948.17,
+    "open_positions": 8,
+    "exposure": 2743214.67
+   },
+   {
+    "date": "2018-01-31",
+    "equity": 4611948.17,
+    "open_positions": 8,
+    "exposure": 2743214.67
+   },
+   {
+    "date": "2018-02-01",
+    "equity": 4567154.69,
+    "open_positions": 7,
+    "exposure": 2427384.48
+   },
+   {
+    "date": "2018-02-02",
+    "equity": 4486634.41,
+    "open_positions": 10,
+    "exposure": 4105153.09
+   },
+   {
+    "date": "2018-02-05",
+    "equity": 4450969.09,
+    "open_positions": 7,
+    "exposure": 2910770.22
+   },
+   {
+    "date": "2018-02-06",
+    "equity": 4439624.97,
+    "open_positions": 6,
+    "exposure": 2601818.2
+   },
+   {
+    "date": "2018-02-09",
+    "equity": 4439624.97,
+    "open_positions": 10,
+    "exposure": 3881371.79
+   },
+   {
+    "date": "2018-02-19",
+    "equity": 4439624.97,
+    "open_positions": 10,
+    "exposure": 3881371.79
+   },
+   {
+    "date": "2018-02-23",
+    "equity": 4408645.42,
+    "open_positions": 9,
+    "exposure": 3461324.31
+   },
+   {
+    "date": "2018-02-26",
+    "equity": 4408645.42,
+    "open_positions": 10,
+    "exposure": 3726574.39
+   },
+   {
+    "date": "2018-03-06",
+    "equity": 4363335.01,
+    "open_positions": 10,
+    "exposure": 3736252.1
+   },
+   {
+    "date": "2018-03-07",
+    "equity": 4363335.01,
+    "open_positions": 10,
+    "exposure": 3736252.1
+   },
+   {
+    "date": "2018-03-08",
+    "equity": 4363335.01,
+    "open_positions": 10,
+    "exposure": 3736252.1
+   },
+   {
+    "date": "2018-03-13",
+    "equity": 4363335.01,
+    "open_positions": 10,
+    "exposure": 3736252.1
+   },
+   {
+    "date": "2018-03-14",
+    "equity": 4396982.23,
+    "open_positions": 9,
+    "exposure": 3258350.7
+   },
+   {
+    "date": "2018-03-19",
+    "equity": 4396982.23,
+    "open_positions": 9,
+    "exposure": 3258350.7
+   },
+   {
+    "date": "2018-03-20",
+    "equity": 4396982.23,
+    "open_positions": 10,
+    "exposure": 3539336.56
+   },
+   {
+    "date": "2018-03-21",
+    "equity": 4351144.1,
+    "open_positions": 9,
+    "exposure": 3137054.66
+   },
+   {
+    "date": "2018-03-23",
+    "equity": 4351144.1,
+    "open_positions": 9,
+    "exposure": 3137054.66
+   },
+   {
+    "date": "2018-03-26",
+    "equity": 4351144.1,
+    "open_positions": 9,
+    "exposure": 3137054.66
+   },
+   {
+    "date": "2018-03-27",
+    "equity": 4351144.1,
+    "open_positions": 10,
+    "exposure": 3711369.66
+   },
+   {
+    "date": "2018-04-02",
+    "equity": 4342255.79,
+    "open_positions": 9,
+    "exposure": 3387126.16
+   },
+   {
+    "date": "2018-04-05",
+    "equity": 4342255.79,
+    "open_positions": 10,
+    "exposure": 3765918.95
+   },
+   {
+    "date": "2018-04-12",
+    "equity": 4342255.79,
+    "open_positions": 10,
+    "exposure": 3765918.95
+   },
+   {
+    "date": "2018-04-19",
+    "equity": 4360090.35,
+    "open_positions": 10,
+    "exposure": 3823553.95
+   },
+   {
+    "date": "2018-04-26",
+    "equity": 4360090.35,
+    "open_positions": 10,
+    "exposure": 3823553.95
+   },
+   {
+    "date": "2018-05-03",
+    "equity": 4360090.35,
+    "open_positions": 10,
+    "exposure": 3823553.95
+   },
+   {
+    "date": "2018-05-04",
+    "equity": 4576012.31,
+    "open_positions": 10,
+    "exposure": 4457781.0
+   },
+   {
+    "date": "2018-05-07",
+    "equity": 4576012.31,
+    "open_positions": 10,
+    "exposure": 4457781.0
+   },
+   {
+    "date": "2018-05-10",
+    "equity": 4576012.31,
+    "open_positions": 10,
+    "exposure": 4457781.0
+   },
+   {
+    "date": "2018-05-11",
+    "equity": 4550398.01,
+    "open_positions": 9,
+    "exposure": 4336520.19
+   },
+   {
+    "date": "2018-05-14",
+    "equity": 4613742.87,
+    "open_positions": 8,
+    "exposure": 3920127.31
+   },
+   {
+    "date": "2018-05-15",
+    "equity": 4519093.47,
+    "open_positions": 6,
+    "exposure": 2660248.03
+   },
+   {
+    "date": "2018-05-18",
+    "equity": 4519093.47,
+    "open_positions": 9,
+    "exposure": 4264522.07
+   },
+   {
+    "date": "2018-05-21",
+    "equity": 4473275.16,
+    "open_positions": 7,
+    "exposure": 3157721.46
+   },
+   {
+    "date": "2018-05-22",
+    "equity": 4430174.28,
+    "open_positions": 6,
+    "exposure": 2406354.46
+   },
+   {
+    "date": "2018-05-23",
+    "equity": 4430174.28,
+    "open_positions": 6,
+    "exposure": 2406354.46
+   },
+   {
+    "date": "2018-05-24",
+    "equity": 4430174.28,
+    "open_positions": 6,
+    "exposure": 2406354.46
+   },
+   {
+    "date": "2018-05-25",
+    "equity": 4430174.28,
+    "open_positions": 10,
+    "exposure": 4312434.34
+   },
+   {
+    "date": "2018-05-29",
+    "equity": 4430174.28,
+    "open_positions": 10,
+    "exposure": 4312434.34
+   },
+   {
+    "date": "2018-06-01",
+    "equity": 4419952.09,
+    "open_positions": 10,
+    "exposure": 4216190.53
+   },
+   {
+    "date": "2018-06-04",
+    "equity": 4373517.37,
+    "open_positions": 9,
+    "exposure": 3718014.14
+   },
+   {
+    "date": "2018-06-05",
+    "equity": 4371592.83,
+    "open_positions": 7,
+    "exposure": 2742259.27
+   },
+   {
+    "date": "2018-06-06",
+    "equity": 4371592.83,
+    "open_positions": 7,
+    "exposure": 2742259.27
+   },
+   {
+    "date": "2018-06-08",
+    "equity": 4371592.83,
+    "open_positions": 10,
+    "exposure": 4095636.04
+   },
+   {
+    "date": "2018-06-15",
+    "equity": 4385331.65,
+    "open_positions": 9,
+    "exposure": 3814650.18
+   },
+   {
+    "date": "2018-06-20",
+    "equity": 4385331.65,
+    "open_positions": 9,
+    "exposure": 3814650.18
+   },
+   {
+    "date": "2018-06-22",
+    "equity": 4385331.65,
+    "open_positions": 10,
+    "exposure": 4192540.15
+   },
+   {
+    "date": "2018-06-27",
+    "equity": 4340348.87,
+    "open_positions": 9,
+    "exposure": 3764928.06
+   },
+   {
+    "date": "2018-06-28",
+    "equity": 4295122.43,
+    "open_positions": 8,
+    "exposure": 3142559.79
+   },
+   {
+    "date": "2018-06-29",
+    "equity": 4295122.43,
+    "open_positions": 10,
+    "exposure": 4193190.11
+   },
+   {
+    "date": "2018-07-02",
+    "equity": 4295122.43,
+    "open_positions": 10,
+    "exposure": 4193190.11
+   },
+   {
+    "date": "2018-07-03",
+    "equity": 4295122.43,
+    "open_positions": 10,
+    "exposure": 4193190.11
+   },
+   {
+    "date": "2018-07-04",
+    "equity": 4250329.35,
+    "open_positions": 9,
+    "exposure": 3815300.14
+   },
+   {
+    "date": "2018-07-06",
+    "equity": 4205978.46,
+    "open_positions": 10,
+    "exposure": 4021110.59
+   },
+   {
+    "date": "2018-07-13",
+    "equity": 4205978.46,
+    "open_positions": 10,
+    "exposure": 4021110.59
+   },
+   {
+    "date": "2018-07-16",
+    "equity": 4205978.46,
+    "open_positions": 10,
+    "exposure": 4021110.59
+   },
+   {
+    "date": "2018-07-18",
+    "equity": 4205978.46,
+    "open_positions": 10,
+    "exposure": 4021110.59
+   },
+   {
+    "date": "2018-07-20",
+    "equity": 4205978.46,
+    "open_positions": 10,
+    "exposure": 4021110.59
+   },
+   {
+    "date": "2018-07-26",
+    "equity": 4164448.65,
+    "open_positions": 9,
+    "exposure": 3616668.98
+   },
+   {
+    "date": "2018-07-27",
+    "equity": 4226312.25,
+    "open_positions": 10,
+    "exposure": 4177637.51
+   },
+   {
+    "date": "2018-08-03",
+    "equity": 4242413.81,
+    "open_positions": 10,
+    "exposure": 4137596.15
+   },
+   {
+    "date": "2018-08-09",
+    "equity": 4242413.81,
+    "open_positions": 10,
+    "exposure": 4137596.15
+   },
+   {
+    "date": "2018-08-10",
+    "equity": 4206204.39,
+    "open_positions": 9,
+    "exposure": 3834444.52
+   },
+   {
+    "date": "2018-08-14",
+    "equity": 4206204.39,
+    "open_positions": 9,
+    "exposure": 3834444.52
+   },
+   {
+    "date": "2018-08-20",
+    "equity": 4325548.79,
+    "open_positions": 9,
+    "exposure": 3912173.85
+   },
+   {
+    "date": "2018-08-23",
+    "equity": 4325548.79,
+    "open_positions": 9,
+    "exposure": 3912173.85
+   },
+   {
+    "date": "2018-08-28",
+    "equity": 4438708.98,
+    "open_positions": 9,
+    "exposure": 4257120.73
+   },
+   {
+    "date": "2018-09-03",
+    "equity": 4438708.98,
+    "open_positions": 9,
+    "exposure": 4257120.73
+   },
+   {
+    "date": "2018-09-04",
+    "equity": 4399845.16,
+    "open_positions": 9,
+    "exposure": 4261651.83
+   },
+   {
+    "date": "2018-09-05",
+    "equity": 4399845.16,
+    "open_positions": 9,
+    "exposure": 4261651.83
+   },
+   {
+    "date": "2018-09-11",
+    "equity": 4408446.86,
+    "open_positions": 9,
+    "exposure": 4319427.03
+   },
+   {
+    "date": "2018-09-12",
+    "equity": 4408446.86,
+    "open_positions": 9,
+    "exposure": 4319427.03
+   },
+   {
+    "date": "2018-09-17",
+    "equity": 4408446.86,
+    "open_positions": 9,
+    "exposure": 4319427.03
+   },
+   {
+    "date": "2018-09-18",
+    "equity": 4408446.86,
+    "open_positions": 9,
+    "exposure": 4319427.03
+   },
+   {
+    "date": "2018-09-19",
+    "equity": 4408446.86,
+    "open_positions": 9,
+    "exposure": 4319427.03
+   },
+   {
+    "date": "2018-09-21",
+    "equity": 4357979.72,
+    "open_positions": 4,
+    "exposure": 1914996.26
+   },
+   {
+    "date": "2018-09-25",
+    "equity": 4267453.52,
+    "open_positions": 2,
+    "exposure": 895665.15
+   },
+   {
+    "date": "2018-09-26",
+    "equity": 4267453.52,
+    "open_positions": 2,
+    "exposure": 895665.15
+   },
+   {
+    "date": "2018-09-27",
+    "equity": 4267453.52,
+    "open_positions": 10,
+    "exposure": 4206518.02
+   },
+   {
+    "date": "2018-09-28",
+    "equity": 4223964.3,
+    "open_positions": 9,
+    "exposure": 3874204.25
+   },
+   {
+    "date": "2018-10-03",
+    "equity": 4223964.3,
+    "open_positions": 9,
+    "exposure": 3874204.25
+   },
+   {
+    "date": "2018-10-04",
+    "equity": 4253027.27,
+    "open_positions": 8,
+    "exposure": 3448768.84
+   },
+   {
+    "date": "2018-10-05",
+    "equity": 4165991.06,
+    "open_positions": 9,
+    "exposure": 3992920.62
+   },
+   {
+    "date": "2018-10-08",
+    "equity": 4165991.06,
+    "open_positions": 9,
+    "exposure": 3992920.62
+   },
+   {
+    "date": "2018-10-09",
+    "equity": 4119853.04,
+    "open_positions": 7,
+    "exposure": 2907071.76
+   },
+   {
+    "date": "2018-10-11",
+    "equity": 4032637.07,
+    "open_positions": 5,
+    "exposure": 1749597.13
+   },
+   {
+    "date": "2018-10-12",
+    "equity": 4032637.07,
+    "open_positions": 10,
+    "exposure": 3790586.45
+   },
+   {
+    "date": "2018-10-22",
+    "equity": 4032637.07,
+    "open_positions": 10,
+    "exposure": 3790586.45
+   },
+   {
+    "date": "2018-10-23",
+    "equity": 3988877.5,
+    "open_positions": 9,
+    "exposure": 3354078.82
+   },
+   {
+    "date": "2018-10-24",
+    "equity": 3972880.39,
+    "open_positions": 8,
+    "exposure": 2925380.25
+   },
+   {
+    "date": "2018-10-25",
+    "equity": 3972880.39,
+    "open_positions": 8,
+    "exposure": 2925380.25
+   },
+   {
+    "date": "2018-10-26",
+    "equity": 3972880.39,
+    "open_positions": 8,
+    "exposure": 2925380.25
+   },
+   {
+    "date": "2018-10-29",
+    "equity": 3972880.39,
+    "open_positions": 10,
+    "exposure": 3575081.71
+   },
+   {
+    "date": "2018-11-05",
+    "equity": 3972880.39,
+    "open_positions": 10,
+    "exposure": 3575081.71
+   },
+   {
+    "date": "2018-11-07",
+    "equity": 3972880.39,
+    "open_positions": 10,
+    "exposure": 3575081.71
+   },
+   {
+    "date": "2018-11-15",
+    "equity": 3972880.39,
+    "open_positions": 10,
+    "exposure": 3575081.71
+   },
+   {
+    "date": "2018-11-16",
+    "equity": 3948290.95,
+    "open_positions": 9,
+    "exposure": 3294111.45
+   },
+   {
+    "date": "2018-11-20",
+    "equity": 3948290.95,
+    "open_positions": 10,
+    "exposure": 3651847.24
+   },
+   {
+    "date": "2018-11-21",
+    "equity": 3910549.56,
+    "open_positions": 9,
+    "exposure": 3205179.79
+   },
+   {
+    "date": "2018-11-26",
+    "equity": 3910549.56,
+    "open_positions": 9,
+    "exposure": 3205179.79
+   },
+   {
+    "date": "2018-11-28",
+    "equity": 3910549.56,
+    "open_positions": 10,
+    "exposure": 3670313.0
+   },
+   {
+    "date": "2018-12-05",
+    "equity": 3910549.56,
+    "open_positions": 10,
+    "exposure": 3670313.0
+   },
+   {
+    "date": "2018-12-06",
+    "equity": 3934719.44,
+    "open_positions": 9,
+    "exposure": 3372639.95
+   },
+   {
+    "date": "2018-12-07",
+    "equity": 3894552.49,
+    "open_positions": 8,
+    "exposure": 3050274.24
+   },
+   {
+    "date": "2018-12-10",
+    "equity": 3894552.49,
+    "open_positions": 8,
+    "exposure": 3050274.24
+   },
+   {
+    "date": "2018-12-11",
+    "equity": 3892167.44,
+    "open_positions": 7,
+    "exposure": 2692538.44
+   },
+   {
+    "date": "2018-12-12",
+    "equity": 3892167.44,
+    "open_positions": 9,
+    "exposure": 3603043.9
+   },
+   {
+    "date": "2018-12-19",
+    "equity": 3892167.44,
+    "open_positions": 9,
+    "exposure": 3603043.9
+   },
+   {
+    "date": "2018-12-21",
+    "equity": 3852260.93,
+    "open_positions": 8,
+    "exposure": 3193697.6
+   },
+   {
+    "date": "2018-12-24",
+    "equity": 3852260.93,
+    "open_positions": 8,
+    "exposure": 3193697.6
+   },
+   {
+    "date": "2018-12-27",
+    "equity": 3901218.06,
+    "open_positions": 9,
+    "exposure": 3747048.03
+   },
+   {
+    "date": "2019-01-04",
+    "equity": 3925655.98,
+    "open_positions": 9,
+    "exposure": 3855530.65
+   },
+   {
+    "date": "2019-01-07",
+    "equity": 3925655.98,
+    "open_positions": 9,
+    "exposure": 3855530.65
+   },
+   {
+    "date": "2019-01-11",
+    "equity": 3877963.23,
+    "open_positions": 8,
+    "exposure": 3801839.32
+   },
+   {
+    "date": "2019-01-14",
+    "equity": 3837438.82,
+    "open_positions": 7,
+    "exposure": 3474503.58
+   },
+   {
+    "date": "2019-01-18",
+    "equity": 3837438.82,
+    "open_positions": 7,
+    "exposure": 3474503.58
+   },
+   {
+    "date": "2019-01-21",
+    "equity": 3797586.81,
+    "open_positions": 6,
+    "exposure": 3119080.79
+   },
+   {
+    "date": "2019-01-25",
+    "equity": 3797586.81,
+    "open_positions": 7,
+    "exposure": 3608295.93
+   },
+   {
+    "date": "2019-01-28",
+    "equity": 3757596.97,
+    "open_positions": 6,
+    "exposure": 3121259.18
+   },
+   {
+    "date": "2019-01-29",
+    "equity": 3757596.97,
+    "open_positions": 6,
+    "exposure": 3121259.18
+   },
+   {
+    "date": "2019-02-04",
+    "equity": 3757596.97,
+    "open_positions": 6,
+    "exposure": 3121259.18
+   },
+   {
+    "date": "2019-02-05",
+    "equity": 3744152.74,
+    "open_positions": 4,
+    "exposure": 2130884.89
+   },
+   {
+    "date": "2019-02-08",
+    "equity": 3744152.74,
+    "open_positions": 7,
+    "exposure": 3320555.92
+   },
+   {
+    "date": "2019-02-11",
+    "equity": 3712820.73,
+    "open_positions": 6,
+    "exposure": 2858244.12
+   },
+   {
+    "date": "2019-02-12",
+    "equity": 3698549.23,
+    "open_positions": 5,
+    "exposure": 2279699.47
+   },
+   {
+    "date": "2019-02-14",
+    "equity": 3698549.23,
+    "open_positions": 5,
+    "exposure": 2279699.47
+   },
+   {
+    "date": "2019-02-15",
+    "equity": 3659939.9,
+    "open_positions": 4,
+    "exposure": 1804759.39
+   },
+   {
+    "date": "2019-02-18",
+    "equity": 3659939.9,
+    "open_positions": 8,
+    "exposure": 3636383.27
+   },
+   {
+    "date": "2019-02-19",
+    "equity": 3687810.69,
+    "open_positions": 7,
+    "exposure": 3011488.04
+   },
+   {
+    "date": "2019-02-20",
+    "equity": 3687810.69,
+    "open_positions": 7,
+    "exposure": 3011488.04
+   },
+   {
+    "date": "2019-02-25",
+    "equity": 3747683.41,
+    "open_positions": 8,
+    "exposure": 3710968.9
+   },
+   {
+    "date": "2019-03-05",
+    "equity": 3747683.41,
+    "open_positions": 8,
+    "exposure": 3710968.9
+   },
+   {
+    "date": "2019-03-08",
+    "equity": 3747683.41,
+    "open_positions": 8,
+    "exposure": 3710968.9
+   },
+   {
+    "date": "2019-03-12",
+    "equity": 3747683.41,
+    "open_positions": 8,
+    "exposure": 3710968.9
+   },
+   {
+    "date": "2019-03-19",
+    "equity": 3747683.41,
+    "open_positions": 8,
+    "exposure": 3710968.9
+   },
+   {
+    "date": "2019-03-25",
+    "equity": 3747683.41,
+    "open_positions": 8,
+    "exposure": 3710968.9
+   },
+   {
+    "date": "2019-03-26",
+    "equity": 3747683.41,
+    "open_positions": 8,
+    "exposure": 3710968.9
+   },
+   {
+    "date": "2019-03-27",
+    "equity": 3747683.41,
+    "open_positions": 8,
+    "exposure": 3710968.9
+   },
+   {
+    "date": "2019-04-04",
+    "equity": 3747683.41,
+    "open_positions": 8,
+    "exposure": 3710968.9
+   },
+   {
+    "date": "2019-04-11",
+    "equity": 3747683.41,
+    "open_positions": 8,
+    "exposure": 3710968.9
+   },
+   {
+    "date": "2019-04-15",
+    "equity": 3747683.41,
+    "open_positions": 8,
+    "exposure": 3710968.9
+   },
+   {
+    "date": "2019-04-22",
+    "equity": 3747683.41,
+    "open_positions": 8,
+    "exposure": 3710968.9
+   },
+   {
+    "date": "2019-04-23",
+    "equity": 3747683.41,
+    "open_positions": 8,
+    "exposure": 3710968.9
+   },
+   {
+    "date": "2019-04-24",
+    "equity": 3752712.2,
+    "open_positions": 7,
+    "exposure": 3105456.92
+   },
+   {
+    "date": "2019-04-26",
+    "equity": 3752712.2,
+    "open_positions": 7,
+    "exposure": 3105456.92
+   },
+   {
+    "date": "2019-04-30",
+    "equity": 3752712.2,
+    "open_positions": 8,
+    "exposure": 3678642.53
+   },
+   {
+    "date": "2019-05-02",
+    "equity": 3752712.2,
+    "open_positions": 8,
+    "exposure": 3678642.53
+   },
+   {
+    "date": "2019-05-03",
+    "equity": 3733433.14,
+    "open_positions": 7,
+    "exposure": 3259972.04
+   },
+   {
+    "date": "2019-05-06",
+    "equity": 3733433.14,
+    "open_positions": 7,
+    "exposure": 3259972.04
+   },
+   {
+    "date": "2019-05-07",
+    "equity": 3733433.14,
+    "open_positions": 7,
+    "exposure": 3259972.04
+   },
+   {
+    "date": "2019-05-08",
+    "equity": 3733433.14,
+    "open_positions": 7,
+    "exposure": 3259972.04
+   },
+   {
+    "date": "2019-05-09",
+    "equity": 3694487.76,
+    "open_positions": 6,
+    "exposure": 2686786.43
+   },
+   {
+    "date": "2019-05-13",
+    "equity": 3694487.76,
+    "open_positions": 6,
+    "exposure": 2686786.43
+   },
+   {
+    "date": "2019-05-14",
+    "equity": 3731703.44,
+    "open_positions": 5,
+    "exposure": 2028169.66
+   },
+   {
+    "date": "2019-05-15",
+    "equity": 3913690.3,
+    "open_positions": 8,
+    "exposure": 3802578.75
+   },
+   {
+    "date": "2019-05-16",
+    "equity": 3913690.3,
+    "open_positions": 8,
+    "exposure": 3802578.75
+   },
+   {
+    "date": "2019-05-20",
+    "equity": 3913690.3,
+    "open_positions": 8,
+    "exposure": 3802578.75
+   },
+   {
+    "date": "2019-05-22",
+    "equity": 4002581.6,
+    "open_positions": 8,
+    "exposure": 3875433.35
+   },
+   {
+    "date": "2019-05-23",
+    "equity": 4002581.6,
+    "open_positions": 8,
+    "exposure": 3875433.35
+   },
+   {
+    "date": "2019-05-24",
+    "equity": 3962177.27,
+    "open_positions": 7,
+    "exposure": 3349453.25
+   },
+   {
+    "date": "2019-05-27",
+    "equity": 3962177.27,
+    "open_positions": 7,
+    "exposure": 3349453.25
+   },
+   {
+    "date": "2019-05-29",
+    "equity": 4045945.34,
+    "open_positions": 8,
+    "exposure": 3715307.94
+   },
+   {
+    "date": "2019-06-03",
+    "equity": 4045945.34,
+    "open_positions": 8,
+    "exposure": 3715307.94
+   },
+   {
+    "date": "2019-06-04",
+    "equity": 4004704.91,
+    "open_positions": 7,
+    "exposure": 3227747.72
+   },
+   {
+    "date": "2019-06-06",
+    "equity": 4004704.91,
+    "open_positions": 8,
+    "exposure": 3699282.18
+   },
+   {
+    "date": "2019-06-12",
+    "equity": 4007867.95,
+    "open_positions": 7,
+    "exposure": 3288454.93
+   },
+   {
+    "date": "2019-06-13",
+    "equity": 4007867.95,
+    "open_positions": 9,
+    "exposure": 3914413.02
+   },
+   {
+    "date": "2019-06-17",
+    "equity": 4007867.95,
+    "open_positions": 9,
+    "exposure": 3914413.02
+   },
+   {
+    "date": "2019-06-18",
+    "equity": 4007867.95,
+    "open_positions": 9,
+    "exposure": 3914413.02
+   },
+   {
+    "date": "2019-06-19",
+    "equity": 4006378.1,
+    "open_positions": 8,
+    "exposure": 3574773.35
+   },
+   {
+    "date": "2019-06-20",
+    "equity": 4006378.1,
+    "open_positions": 9,
+    "exposure": 3842851.14
+   },
+   {
+    "date": "2019-06-27",
+    "equity": 4006378.1,
+    "open_positions": 9,
+    "exposure": 3842851.14
+   },
+   {
+    "date": "2019-07-04",
+    "equity": 4006378.1,
+    "open_positions": 9,
+    "exposure": 3842851.14
+   },
+   {
+    "date": "2019-07-05",
+    "equity": 4006378.1,
+    "open_positions": 9,
+    "exposure": 3842851.14
+   },
+   {
+    "date": "2019-07-08",
+    "equity": 4087396.02,
+    "open_positions": 8,
+    "exposure": 3279682.72
+   },
+   {
+    "date": "2019-07-09",
+    "equity": 4087396.02,
+    "open_positions": 8,
+    "exposure": 3279682.72
+   },
+   {
+    "date": "2019-07-10",
+    "equity": 4058476.1,
+    "open_positions": 6,
+    "exposure": 2237422.33
+   },
+   {
+    "date": "2019-07-11",
+    "equity": 4017633.34,
+    "open_positions": 8,
+    "exposure": 3765658.37
+   },
+   {
+    "date": "2019-07-15",
+    "equity": 4017633.34,
+    "open_positions": 8,
+    "exposure": 3765658.37
+   },
+   {
+    "date": "2019-07-18",
+    "equity": 4017633.34,
+    "open_positions": 8,
+    "exposure": 3765658.37
+   },
+   {
+    "date": "2019-07-19",
+    "equity": 4023608.65,
+    "open_positions": 7,
+    "exposure": 3348401.43
+   },
+   {
+    "date": "2019-07-22",
+    "equity": 4023608.65,
+    "open_positions": 7,
+    "exposure": 3348401.43
+   },
+   {
+    "date": "2019-07-23",
+    "equity": 3981904.08,
+    "open_positions": 6,
+    "exposure": 2727688.04
+   },
+   {
+    "date": "2019-07-24",
+    "equity": 3981904.08,
+    "open_positions": 6,
+    "exposure": 2727688.04
+   },
+   {
+    "date": "2019-07-25",
+    "equity": 3981904.08,
+    "open_positions": 8,
+    "exposure": 3883871.59
+   },
+   {
+    "date": "2019-07-29",
+    "equity": 3981904.08,
+    "open_positions": 8,
+    "exposure": 3883871.59
+   },
+   {
+    "date": "2019-07-30",
+    "equity": 3981904.08,
+    "open_positions": 8,
+    "exposure": 3883871.59
+   },
+   {
+    "date": "2019-07-31",
+    "equity": 3981904.08,
+    "open_positions": 8,
+    "exposure": 3883871.59
+   },
+   {
+    "date": "2019-08-01",
+    "equity": 3981904.08,
+    "open_positions": 8,
+    "exposure": 3883871.59
+   },
+   {
+    "date": "2019-08-02",
+    "equity": 3981904.08,
+    "open_positions": 8,
+    "exposure": 3883871.59
+   },
+   {
+    "date": "2019-08-05",
+    "equity": 3981904.08,
+    "open_positions": 8,
+    "exposure": 3883871.59
+   },
+   {
+    "date": "2019-08-08",
+    "equity": 3981904.08,
+    "open_positions": 8,
+    "exposure": 3883871.59
+   },
+   {
+    "date": "2019-08-14",
+    "equity": 3899077.49,
+    "open_positions": 6,
+    "exposure": 2608912.28
+   },
+   {
+    "date": "2019-08-19",
+    "equity": 3899077.49,
+    "open_positions": 8,
+    "exposure": 3708550.07
+   },
+   {
+    "date": "2019-08-21",
+    "equity": 3899077.49,
+    "open_positions": 8,
+    "exposure": 3708550.07
+   },
+   {
+    "date": "2019-08-23",
+    "equity": 3899077.49,
+    "open_positions": 8,
+    "exposure": 3708550.07
+   },
+   {
+    "date": "2019-08-26",
+    "equity": 3918958.26,
+    "open_positions": 8,
+    "exposure": 3663424.26
+   },
+   {
+    "date": "2019-09-03",
+    "equity": 3918958.26,
+    "open_positions": 8,
+    "exposure": 3663424.26
+   },
+   {
+    "date": "2019-09-04",
+    "equity": 3944118.91,
+    "open_positions": 7,
+    "exposure": 3231734.26
+   },
+   {
+    "date": "2019-09-11",
+    "equity": 3946862.0,
+    "open_positions": 8,
+    "exposure": 3715988.7
+   },
+   {
+    "date": "2019-09-12",
+    "equity": 3937013.94,
+    "open_positions": 7,
+    "exposure": 3399267.44
+   },
+   {
+    "date": "2019-09-16",
+    "equity": 3937013.94,
+    "open_positions": 7,
+    "exposure": 3399267.44
+   },
+   {
+    "date": "2019-09-17",
+    "equity": 3937013.94,
+    "open_positions": 7,
+    "exposure": 3399267.44
+   },
+   {
+    "date": "2019-09-18",
+    "equity": 3937013.94,
+    "open_positions": 8,
+    "exposure": 3727187.09
+   },
+   {
+    "date": "2019-09-19",
+    "equity": 3937013.94,
+    "open_positions": 8,
+    "exposure": 3727187.09
+   },
+   {
+    "date": "2019-09-23",
+    "equity": 3896533.39,
+    "open_positions": 7,
+    "exposure": 3128554.34
+   },
+   {
+    "date": "2019-09-25",
+    "equity": 3896533.39,
+    "open_positions": 8,
+    "exposure": 3660636.32
+   },
+   {
+    "date": "2019-09-30",
+    "equity": 3896533.39,
+    "open_positions": 8,
+    "exposure": 3660636.32
+   },
+   {
+    "date": "2019-10-01",
+    "equity": 3896533.39,
+    "open_positions": 8,
+    "exposure": 3660636.32
+   },
+   {
+    "date": "2019-10-03",
+    "equity": 3896533.39,
+    "open_positions": 8,
+    "exposure": 3660636.32
+   },
+   {
+    "date": "2019-10-07",
+    "equity": 3907199.5,
+    "open_positions": 7,
+    "exposure": 3159631.27
+   },
+   {
+    "date": "2019-10-11",
+    "equity": 3907199.5,
+    "open_positions": 8,
+    "exposure": 3657539.86
+   },
+   {
+    "date": "2019-10-15",
+    "equity": 3907199.5,
+    "open_positions": 8,
+    "exposure": 3657539.86
+   },
+   {
+    "date": "2019-10-18",
+    "equity": 3907199.5,
+    "open_positions": 8,
+    "exposure": 3657539.86
+   },
+   {
+    "date": "2019-10-22",
+    "equity": 3909334.82,
+    "open_positions": 7,
+    "exposure": 3158831.94
+   },
+   {
+    "date": "2019-10-25",
+    "equity": 3868541.9,
+    "open_positions": 6,
+    "exposure": 2660923.35
+   },
+   {
+    "date": "2019-10-29",
+    "equity": 4110978.5,
+    "open_positions": 9,
+    "exposure": 3722079.82
+   },
+   {
+    "date": "2019-11-05",
+    "equity": 4110978.5,
+    "open_positions": 10,
+    "exposure": 4104686.47
+   },
+   {
+    "date": "2019-11-06",
+    "equity": 4110978.5,
+    "open_positions": 10,
+    "exposure": 4104686.47
+   },
+   {
+    "date": "2019-11-08",
+    "equity": 4110978.5,
+    "open_positions": 10,
+    "exposure": 4104686.47
+   },
+   {
+    "date": "2019-11-13",
+    "equity": 4110978.5,
+    "open_positions": 10,
+    "exposure": 4104686.47
+   },
+   {
+    "date": "2019-11-14",
+    "equity": 4110978.5,
+    "open_positions": 10,
+    "exposure": 4104686.47
+   },
+   {
+    "date": "2019-11-15",
+    "equity": 4140752.85,
+    "open_positions": 9,
+    "exposure": 3689168.1
+   },
+   {
+    "date": "2019-11-19",
+    "equity": 4140752.85,
+    "open_positions": 9,
+    "exposure": 3689168.1
+   },
+   {
+    "date": "2019-11-20",
+    "equity": 4140752.85,
+    "open_positions": 10,
+    "exposure": 4093531.66
+   },
+   {
+    "date": "2019-11-21",
+    "equity": 4098048.18,
+    "open_positions": 9,
+    "exposure": 3441413.13
+   },
+   {
+    "date": "2019-11-26",
+    "equity": 4098048.18,
+    "open_positions": 9,
+    "exposure": 3441413.13
+   },
+   {
+    "date": "2019-11-27",
+    "equity": 4133361.3,
+    "open_positions": 10,
+    "exposure": 4018347.93
+   },
+   {
+    "date": "2019-11-29",
+    "equity": 4133361.3,
+    "open_positions": 10,
+    "exposure": 4018347.93
+   },
+   {
+    "date": "2019-12-02",
+    "equity": 4133361.3,
+    "open_positions": 10,
+    "exposure": 4018347.93
+   },
+   {
+    "date": "2019-12-04",
+    "equity": 4200532.29,
+    "open_positions": 10,
+    "exposure": 4106408.29
+   },
+   {
+    "date": "2019-12-06",
+    "equity": 4200532.29,
+    "open_positions": 10,
+    "exposure": 4106408.29
+   },
+   {
+    "date": "2019-12-09",
+    "equity": 4200532.29,
+    "open_positions": 10,
+    "exposure": 4106408.29
+   },
+   {
+    "date": "2019-12-10",
+    "equity": 4193272.98,
+    "open_positions": 9,
+    "exposure": 3726318.3
+   },
+   {
+    "date": "2019-12-11",
+    "equity": 4259460.36,
+    "open_positions": 10,
+    "exposure": 4242402.09
+   },
+   {
+    "date": "2019-12-16",
+    "equity": 4227129.14,
+    "open_positions": 8,
+    "exposure": 3567389.58
+   },
+   {
+    "date": "2019-12-18",
+    "equity": 4227129.14,
+    "open_positions": 9,
+    "exposure": 4011260.18
+   },
+   {
+    "date": "2019-12-26",
+    "equity": 4269437.54,
+    "open_positions": 9,
+    "exposure": 3962815.61
+   },
+   {
+    "date": "2019-12-31",
+    "equity": 4269437.54,
+    "open_positions": 9,
+    "exposure": 3962815.61
+   },
+   {
+    "date": "2020-01-02",
+    "equity": 4269437.54,
+    "open_positions": 9,
+    "exposure": 3962815.61
+   },
+   {
+    "date": "2020-01-09",
+    "equity": 4269437.54,
+    "open_positions": 9,
+    "exposure": 3962815.61
+   },
+   {
+    "date": "2020-01-13",
+    "equity": 4269437.54,
+    "open_positions": 9,
+    "exposure": 3962815.61
+   },
+   {
+    "date": "2020-01-16",
+    "equity": 4269437.54,
+    "open_positions": 9,
+    "exposure": 3962815.61
+   },
+   {
+    "date": "2020-01-23",
+    "equity": 4256264.58,
+    "open_positions": 9,
+    "exposure": 3893473.58
+   },
+   {
+    "date": "2020-01-27",
+    "equity": 4256264.58,
+    "open_positions": 9,
+    "exposure": 3893473.58
+   },
+   {
+    "date": "2020-01-29",
+    "equity": 4256264.58,
+    "open_positions": 9,
+    "exposure": 3893473.58
+   },
+   {
+    "date": "2020-01-30",
+    "equity": 4285912.97,
+    "open_positions": 9,
+    "exposure": 4038200.76
+   },
+   {
+    "date": "2020-02-03",
+    "equity": 4176331.5,
+    "open_positions": 6,
+    "exposure": 2629130.26
+   },
+   {
+    "date": "2020-02-04",
+    "equity": 4176331.5,
+    "open_positions": 6,
+    "exposure": 2629130.26
+   },
+   {
+    "date": "2020-02-06",
+    "equity": 4176331.5,
+    "open_positions": 9,
+    "exposure": 4103555.51
+   },
+   {
+    "date": "2020-02-10",
+    "equity": 4200358.16,
+    "open_positions": 8,
+    "exposure": 3659684.91
+   },
+   {
+    "date": "2020-02-13",
+    "equity": 4322240.97,
+    "open_positions": 9,
+    "exposure": 3992135.08
+   },
+   {
+    "date": "2020-02-17",
+    "equity": 4322240.97,
+    "open_positions": 9,
+    "exposure": 3992135.08
+   },
+   {
+    "date": "2020-02-20",
+    "equity": 4322240.97,
+    "open_positions": 9,
+    "exposure": 3992135.08
+   },
+   {
+    "date": "2020-02-24",
+    "equity": 4279021.33,
+    "open_positions": 8,
+    "exposure": 3398765.39
+   },
+   {
+    "date": "2020-02-25",
+    "equity": 4279021.33,
+    "open_positions": 8,
+    "exposure": 3398765.39
+   },
+   {
+    "date": "2020-02-27",
+    "equity": 4269721.78,
+    "open_positions": 6,
+    "exposure": 2517709.83
+   },
+   {
+    "date": "2020-02-28",
+    "equity": 4165584.57,
+    "open_positions": 10,
+    "exposure": 3614601.1
+   },
+   {
+    "date": "2020-03-02",
+    "equity": 4165584.57,
+    "open_positions": 10,
+    "exposure": 3614601.1
+   },
+   {
+    "date": "2020-03-04",
+    "equity": 4231752.89,
+    "open_positions": 9,
+    "exposure": 3130963.7
+   },
+   {
+    "date": "2020-03-06",
+    "equity": 4135340.04,
+    "open_positions": 6,
+    "exposure": 2188921.03
+   },
+   {
+    "date": "2020-03-09",
+    "equity": 4135340.04,
+    "open_positions": 6,
+    "exposure": 2188921.03
+   },
+   {
+    "date": "2020-03-12",
+    "equity": 4007385.47,
+    "open_positions": 3,
+    "exposure": 825309.68
+   },
+   {
+    "date": "2020-03-13",
+    "equity": 3877946.44,
+    "open_positions": 0,
+    "exposure": 0
+   }
+  ],
+  "cagr_pct": 0.1292,
+  "alpha_vs_nifty_pct": 0.2013,
+  "alpha_cagr_pct": 0.0054
+ },
+ "mistakes": {
+  "stops": {
+   "stopped_trades": 1800,
+   "trades_with_a_fixed_target": 0,
+   "would_have_hit_target_without_stop": 0,
+   "would_have_hit_target_pct": null,
+   "closed_above_entry_by_horizon": 926,
+   "closed_above_entry_pct": 0.5144,
+   "avg_loss_on_stops_pct": -0.022
+  }
+ },
+ "missed": {
+  "horizon_days": 20,
+  "big_move_threshold": 0.15,
+  "universe_big_movers": 4003,
+  "captured_by_screen": 930,
+  "capture_rate": 0.2323,
+  "by_rule": [
+   {
+    "rule": "rs_positive",
+    "blocked_solely": 3266,
+    "big_movers_blocked": 190,
+    "avg_fwd_return_of_blocked": 0.0106,
+    "hit_rate_of_blocked": 0.0582
+   },
+   {
+    "rule": "ma_aligned",
+    "blocked_solely": 4514,
+    "big_movers_blocked": 176,
+    "avg_fwd_return_of_blocked": 0.0022,
+    "hit_rate_of_blocked": 0.039
+   },
+   {
+    "rule": "not_extended_50dma",
+    "blocked_solely": 776,
+    "big_movers_blocked": 109,
+    "avg_fwd_return_of_blocked": 0.0199,
+    "hit_rate_of_blocked": 0.1405
+   },
+   {
+    "rule": "near_52w_high",
+    "blocked_solely": 749,
+    "big_movers_blocked": 48,
+    "avg_fwd_return_of_blocked": -0.001,
+    "hit_rate_of_blocked": 0.0641
+   },
+   {
+    "rule": "atr_ceiling",
+    "blocked_solely": 80,
+    "big_movers_blocked": 20,
+    "avg_fwd_return_of_blocked": 0.0374,
+    "hit_rate_of_blocked": 0.25
+   },
+   {
+    "rule": "not_extended_atr",
+    "blocked_solely": 670,
+    "big_movers_blocked": 17,
+    "avg_fwd_return_of_blocked": 0.0032,
+    "hit_rate_of_blocked": 0.0254
+   },
+   {
+    "rule": "atr_floor",
+    "blocked_solely": 120,
+    "big_movers_blocked": 4,
+    "avg_fwd_return_of_blocked": 0.0113,
+    "hit_rate_of_blocked": 0.0333
+   }
+  ],
+  "top_misses": [
+   {
+    "date": "2009-05-11",
+    "symbol": "VOLTAS",
+    "fwd_return": 0.9641,
+    "rules_failed": 4,
+    "failed": "near_52w_high,atr_ceiling,not_extended_50dma,ma_aligned"
+   },
+   {
+    "date": "2009-04-23",
+    "symbol": "ABREL",
+    "fwd_return": 0.9044,
+    "rules_failed": 3,
+    "failed": "near_52w_high,atr_ceiling,ma_aligned"
+   },
+   {
+    "date": "2009-04-16",
+    "symbol": "SUZLON",
+    "fwd_return": 0.867,
+    "rules_failed": 5,
+    "failed": "near_52w_high,atr_ceiling,not_extended_50dma,rs_positive,ma_aligned"
+   },
+   {
+    "date": "2009-05-11",
+    "symbol": "WELCORP",
+    "fwd_return": 0.8667,
+    "rules_failed": 4,
+    "failed": "near_52w_high,atr_ceiling,not_extended_50dma,ma_aligned"
+   },
+   {
+    "date": "2009-05-04",
+    "symbol": "WELCORP",
+    "fwd_return": 0.825,
+    "rules_failed": 5,
+    "failed": "near_52w_high,atr_ceiling,not_extended_50dma,rs_positive,ma_aligned"
+   },
+   {
+    "date": "2009-05-04",
+    "symbol": "ABREL",
+    "fwd_return": 0.7953,
+    "rules_failed": 4,
+    "failed": "near_52w_high,atr_ceiling,not_extended_50dma,ma_aligned"
+   },
+   {
+    "date": "2009-05-11",
+    "symbol": "ABREL",
+    "fwd_return": 0.7885,
+    "rules_failed": 3,
+    "failed": "near_52w_high,atr_ceiling,ma_aligned"
+   },
+   {
+    "date": "2018-07-06",
+    "symbol": "ADANIENT",
+    "fwd_return": 0.7826,
+    "rules_failed": 3,
+    "failed": "near_52w_high,rs_positive,ma_aligned"
+   },
+   {
+    "date": "2009-05-04",
+    "symbol": "DLF",
+    "fwd_return": 0.7744,
+    "rules_failed": 5,
+    "failed": "near_52w_high,atr_ceiling,not_extended_50dma,rs_positive,ma_aligned"
+   },
+   {
+    "date": "2009-05-04",
+    "symbol": "VOLTAS",
+    "fwd_return": 0.7642,
+    "rules_failed": 4,
+    "failed": "near_52w_high,atr_ceiling,not_extended_50dma,ma_aligned"
+   },
+   {
+    "date": "2014-05-09",
+    "symbol": "BEML",
+    "fwd_return": 0.7546,
+    "rules_failed": 1,
+    "failed": "not_extended_50dma"
+   },
+   {
+    "date": "2018-06-29",
+    "symbol": "ADANIENT",
+    "fwd_return": 0.742,
+    "rules_failed": 3,
+    "failed": "near_52w_high,rs_positive,ma_aligned"
+   },
+   {
+    "date": "2009-05-18",
+    "symbol": "TECHM",
+    "fwd_return": 0.7384,
+    "rules_failed": 3,
+    "failed": "near_52w_high,not_extended_50dma,ma_aligned"
+   },
+   {
+    "date": "2019-12-11",
+    "symbol": "ADANIGREEN",
+    "fwd_return": 0.7299,
+    "rules_failed": 1,
+    "failed": "not_extended_50dma"
+   },
+   {
+    "date": "2014-05-09",
+    "symbol": "UNIONBANK",
+    "fwd_return": 0.7288,
+    "rules_failed": 2,
+    "failed": "near_52w_high,ma_aligned"
+   },
+   {
+    "date": "2012-10-31",
+    "symbol": "UNITDSPR",
+    "fwd_return": 0.7036,
+    "rules_failed": 1,
+    "failed": "atr_ceiling"
+   },
+   {
+    "date": "2009-05-04",
+    "symbol": "SUZLON",
+    "fwd_return": 0.6952,
+    "rules_failed": 5,
+    "failed": "near_52w_high,atr_ceiling,not_extended_50dma,rs_positive,ma_aligned"
+   },
+   {
+    "date": "2009-05-11",
+    "symbol": "TECHM",
+    "fwd_return": 0.6952,
+    "rules_failed": 3,
+    "failed": "near_52w_high,atr_ceiling,ma_aligned"
+   },
+   {
+    "date": "2016-08-03",
+    "symbol": "JUBLPHARMA",
+    "fwd_return": 0.6866,
+    "rules_failed": 3,
+    "failed": "near_52w_high,rs_positive,ma_aligned"
+   },
+   {
+    "date": "2009-04-23",
+    "symbol": "ICICIBANK",
+    "fwd_return": 0.6777,
+    "rules_failed": 4,
+    "failed": "near_52w_high,atr_ceiling,rs_positive,ma_aligned"
+   },
+   {
+    "date": "2014-03-28",
+    "symbol": "WOCKPHARMA",
+    "fwd_return": 0.6769,
+    "rules_failed": 2,
+    "failed": "near_52w_high,ma_aligned"
+   },
+   {
+    "date": "2009-04-16",
+    "symbol": "AXISBANK",
+    "fwd_return": 0.6741,
+    "rules_failed": 5,
+    "failed": "near_52w_high,atr_ceiling,not_extended_50dma,rs_positive,ma_aligned"
+   },
+   {
+    "date": "2014-05-09",
+    "symbol": "VEDL",
+    "fwd_return": 0.669,
+    "rules_failed": 2,
+    "failed": "rs_positive,ma_aligned"
+   },
+   {
+    "date": "2014-05-02",
+    "symbol": "BEML",
+    "fwd_return": 0.6526,
+    "rules_failed": 1,
+    "failed": "not_extended_50dma"
+   },
+   {
+    "date": "2009-05-11",
+    "symbol": "SUZLON",
+    "fwd_return": 0.6437,
+    "rules_failed": 4,
+    "failed": "near_52w_high,atr_ceiling,not_extended_50dma,ma_aligned"
+   }
+  ]
+ }
+}

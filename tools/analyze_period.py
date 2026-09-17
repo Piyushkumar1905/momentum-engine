@@ -193,22 +193,28 @@ def stop_autopsy(t: pd.DataFrame, panel, max_hold: int) -> dict:
     stopped = t[t["exit_reason"] == "stop"]
     if stopped.empty:
         return {}
+    has_target = stopped["target"].notna() if "target" in stopped.columns else None
     dates = panel.dates
     recovered = would_have_won = 0
+    n_with_target = 0
     for _, r in stopped.iterrows():
         j = panel.close.columns.get_loc(r["symbol"])
         i = dates.get_loc(pd.Timestamp(r["date"]))
         end = min(i + 1 + max_hold, len(dates))
         hi = panel.high.iloc[i + 1:end, j].max()
         cl = panel.close.iloc[end - 1, j] if end - 1 < len(dates) else np.nan
-        if pd.notna(hi) and hi >= r["target"]:
-            would_have_won += 1
+        if pd.notna(r.get("target")) and pd.notna(hi):
+            n_with_target += 1
+            if hi >= r["target"]:
+                would_have_won += 1
         if pd.notna(cl) and cl > r["entry"]:
             recovered += 1
     return {
         "stopped_trades": len(stopped),
+        "trades_with_a_fixed_target": n_with_target,
         "would_have_hit_target_without_stop": would_have_won,
-        "would_have_hit_target_pct": round(would_have_won / len(stopped), 4),
+        "would_have_hit_target_pct": (round(would_have_won / n_with_target, 4)
+                                      if n_with_target else None),
         "closed_above_entry_by_horizon": recovered,
         "closed_above_entry_pct": round(recovered / len(stopped), 4),
         "avg_loss_on_stops_pct": round(stopped["ret"].mean(), 4),
@@ -305,6 +311,8 @@ def main() -> None:
     ap.add_argument("--risk-pct", type=float, default=0.01)
     ap.add_argument("--max-positions", type=int, default=10)
     ap.add_argument("--max-weight", type=float, default=0.20)
+    ap.add_argument("--models", default="momentum,reversal",
+                    help="comma-separated models to include in the portfolio")
     ap.add_argument("--out", default=str(ROOT / "output" / "analysis"))
     a = ap.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
@@ -332,14 +340,22 @@ def main() -> None:
     trades["exit_date"] = [dates[min(idx[pd.Timestamp(d)] + int(h), len(dates) - 1)]
                            for d, h in zip(trades["date"], trades["hold_days"])]
     trades["cost_pct"] = float(cfg["backtest"]["cost_pct"])
+    # A trailing-stop strategy has no fixed target, which _simulate records as inf.
+    # Left in place it corrupts the CSV and every mean computed from it.
+    trades["has_target"] = np.isfinite(trades["target"])
+    trades.loc[~trades["has_target"], "target"] = np.nan
 
-    window = {"start": a.start, "end": str(dates[-1].date()),
+    # The benchmark must cover EXACTLY the window the portfolio traded. Reading the
+    # panel's last date here compared an 11-year portfolio against 17 years of index
+    # return and produced an alpha of -376%.
+    end_ts = pd.Timestamp(a.end) if a.end else dates[-1]
+    window = {"start": a.start, "end": str(end_ts.date()),
               "scan_dates": len(res["scan_dates"]),
-              "trading_days": int(((dates >= pd.Timestamp(a.start)) & (dates <= dates[-1])).sum())}
+              "trading_days": int(((dates >= pd.Timestamp(a.start)) & (dates <= end_ts)).sum())}
 
     # benchmark over the same window
     b = panel.bench.reindex(dates).dropna()
-    b = b[b.index >= pd.Timestamp(a.start)]
+    b = b[(b.index >= pd.Timestamp(a.start)) & (b.index <= end_ts)]
     years = (b.index[-1] - b.index[0]).days / 365.25
     nifty_ret = float(b.iloc[-1] / b.iloc[0] - 1)
 
@@ -356,7 +372,11 @@ def main() -> None:
     for model in sorted(trades["model"].unique()):
         out["by_model"][model] = trade_report(trades[trades["model"] == model])
 
-    main_models = trades[trades["model"].isin(["momentum", "reversal"])]
+    wanted = [m.strip() for m in a.models.split(",") if m.strip()]
+    missing = [m for m in wanted if m not in set(trades["model"])]
+    if missing:
+        raise SystemExit(f"no trades for model(s) {missing}; available: {sorted(set(trades['model']))}")
+    main_models = trades[trades["model"].isin(wanted)]
     out["all_signals"] = trade_report(main_models)
 
     port = simulate_portfolio(main_models, a.capital, a.risk_pct, a.max_positions, a.max_weight)
@@ -369,7 +389,7 @@ def main() -> None:
 
     out["mistakes"] = {"stops": stop_autopsy(main_models, panel, int(cfg["backtest"]["max_hold_days"]))}
 
-    scan_idx = np.where((dates >= pd.Timestamp(a.start)) & (dates <= dates[-1]))[0][
+    scan_idx = np.where((dates >= pd.Timestamp(a.start)) & (dates <= end_ts))[0][
         ::int(cfg["backtest"]["rebalance_every"])]
     out["missed"] = missed_opportunities(F, regime, cfg, base, panel, scan_idx)
 
