@@ -1,0 +1,18 @@
+{
+  "name": "w08_plus_lowvol",
+  "_hypothesis": "Add a benign third leg. A robust ranking effect should survive a mild tilt; a fitted one will not.",
+  "factors": {
+    "reversal_1m": 1.0,
+    "rs_vs_sector": -1.0,
+    "low_vol": 0.5
+  },
+  "filters": {},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {
+    "stop_atr": 2.5,
+    "target_r": null,
+    "max_hold": 10,
+    "trail_atr": null
+  }
+}

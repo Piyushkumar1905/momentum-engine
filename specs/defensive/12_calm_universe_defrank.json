@@ -1,0 +1,9 @@
+{
+  "name": "def_calm_universe_defrank",
+  "note": "Same calm universe as def_lowvol_universe (0.30 vol cap + 200DMA) but ranked by the defensive composite instead of trend. Asks whether, once the universe is already calm, defensive RANKING still adds anything or whether the cap is the whole story.",
+  "factors": {"low_vol": 1.0, "low_beta": 0.7, "lottery_max5": 0.7, "skew_126": 0.5},
+  "filters": {"max_vol_ann": 0.30, "min_close_over_200dma": 0.0},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {"stop_atr": 2.5, "target_r": null, "max_hold": 40, "trail_atr": 3.5}
+}

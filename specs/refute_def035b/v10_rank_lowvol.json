@@ -1,0 +1,9 @@
+{
+  "name": "vrf_rank_lowvol",
+  "note": "ATTRIBUTION: same filters/exits, ranked by low_vol instead of momentum. If unrelated rankings inside the same universe all earn the same edge, the edge belongs to the FILTER, not the ranking.",
+  "factors": {"low_vol": 1.0},
+  "filters": {"max_vol_ann": 0.35, "min_close_over_200dma": 0.0},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {"stop_atr": 2.5, "target_r": null, "max_hold": 40, "trail_atr": 3.5}
+}

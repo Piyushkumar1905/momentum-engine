@@ -1,0 +1,9 @@
+{
+ "name": "regime_i_none_mom12_idiovol",
+ "note": "REPLICATION PROBE (batch 2). Same structure as spec b with a DIFFERENT risk measure (residual vol after removing market beta). If b is a real mechanism this should reproduce it; if b is a fluke this should not.",
+ "factors": {"mom_12m_skip1": 1.0, "idio_vol": 0.5},
+ "filters": {},
+ "regime": "none",
+ "top_n": 20,
+ "exit": {"stop_atr": 3.0, "target_r": null, "max_hold": 60, "trail_atr": 4.0}
+}

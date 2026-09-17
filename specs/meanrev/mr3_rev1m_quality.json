@@ -1,0 +1,9 @@
+{
+  "name": "mr3_rev1m_quality",
+  "_hypothesis": "Same signal as mr1, restricted to structurally healthy names: above the 200DMA and annualised vol <= 0.45 (~173 of 289 names pass). Separates 'dip in a good stock' from 'falling knife'. Differs from mr1 by the filter alone, so the comparison is clean.",
+  "factors": {"reversal_1m": 1.0},
+  "filters": {"min_close_over_200dma": 0.0, "max_vol_ann": 0.45},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {"stop_atr": 2.5, "target_r": null, "max_hold": 10, "trail_atr": null}
+}

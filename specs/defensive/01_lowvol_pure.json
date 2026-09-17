@@ -1,0 +1,9 @@
+{
+  "name": "def_lowvol_pure",
+  "note": "Canonical low-volatility anomaly as a standalone ranking. Train rank IC is NEGATIVE (t60=-5.1), so a positive train edge is NOT expected; the test is whether the sign flips out of sample when high-beta unwinds.",
+  "factors": {"low_vol": 1.0},
+  "filters": {},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {"stop_atr": 3.0, "target_r": null, "max_hold": 60, "trail_atr": 4.0}
+}

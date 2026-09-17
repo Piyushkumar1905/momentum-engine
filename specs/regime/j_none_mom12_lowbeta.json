@@ -1,0 +1,9 @@
+{
+ "name": "regime_j_none_mom12_lowbeta",
+ "note": "REPLICATION PROBE (batch 2). Third independent risk measure (252d beta to the Nifty) in place of low_vol. Same weight, same exit, no filters.",
+ "factors": {"mom_12m_skip1": 1.0, "low_beta": 0.5},
+ "filters": {},
+ "regime": "none",
+ "top_n": 20,
+ "exit": {"stop_atr": 3.0, "target_r": null, "max_hold": 60, "trail_atr": 4.0}
+}

@@ -1,0 +1,9 @@
+{
+  "name": "def_composite_timeonly",
+  "note": "Same selection as 04 but with no stop and no trail at all: pure 60-session hold. The low-risk anomaly is a buy-and-hold claim, and an ATR stop on a calm stock is a noise-tight stop. Paired with 04 this separates 'defensive selection failed' from 'the exit policy failed'.",
+  "factors": {"low_vol": 1.0, "low_beta": 0.7, "lottery_max5": 0.7, "skew_126": 0.5},
+  "filters": {},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {"stop_atr": null, "target_r": null, "max_hold": 60, "trail_atr": null}
+}

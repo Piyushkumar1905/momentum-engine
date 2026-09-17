@@ -1,0 +1,18 @@
+{
+ "name": "rb_lowbeta_illiq_topn10",
+ "factors": {
+  "mom_12m_skip1": 1.0,
+  "low_beta": 0.5,
+  "illiquidity": 0.5
+ },
+ "filters": {},
+ "regime": "none",
+ "top_n": 10,
+ "exit": {
+  "stop_atr": 3.0,
+  "target_r": null,
+  "max_hold": 60,
+  "trail_atr": 4.0
+ },
+ "_hypothesis": "Concentration test on the batch-1 OOS leader. Also sharpens the cost caveat: a tighter illiquidity tilt means worse real-world slippage."
+}

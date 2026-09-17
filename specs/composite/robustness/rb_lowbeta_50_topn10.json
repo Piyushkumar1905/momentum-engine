@@ -1,0 +1,17 @@
+{
+ "name": "rb_lowbeta_50_topn10",
+ "factors": {
+  "mom_12m_skip1": 1.0,
+  "low_beta": 0.5
+ },
+ "filters": {},
+ "regime": "none",
+ "top_n": 10,
+ "exit": {
+  "stop_atr": 3.0,
+  "target_r": null,
+  "max_hold": 60,
+  "trail_atr": 4.0
+ },
+ "_hypothesis": "Concentration test. If the blended RANKING carries information, a tighter cut should show MORE edge per trade, not less."
+}

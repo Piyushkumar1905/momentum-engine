@@ -1,0 +1,8 @@
+{
+  "name": "sel_top5",
+  "factors": {"mom_12m_skip1": 1.0},
+  "filters": {},
+  "regime": "none",
+  "top_n": 5,
+  "exit": {"stop_atr": 3.0, "target_r": null, "max_hold": 60, "trail_atr": 4.0}
+}

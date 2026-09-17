@@ -1,0 +1,9 @@
+{
+  "name": "rb6_weight_half",
+  "_hypothesis": "WEIGHT SENSITIVITY of mr5. Halve the sector-laggard leg (-0.5 instead of -1.0), tilting the blend back toward plain reversal_1m. Together with rb1 this traces the edge across the full mixing range from pure reversal (mr1) to pure sector-lag (rb1).",
+  "factors": {"reversal_1m": 1.0, "rs_vs_sector": -0.5},
+  "filters": {},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {"stop_atr": 2.5, "target_r": null, "max_hold": 10, "trail_atr": null}
+}

@@ -1,0 +1,9 @@
+{
+  "name": "def_cap025",
+  "note": "ROBUSTNESS, pre-registered: identical to def_lowvol_universe but a tighter 0.25 vol cap (~51 names/scan). If the defensive cap is real the neighbourhood should hold; if only 0.30 works it is noise.",
+  "factors": {"mom_12m_skip1": 1.0},
+  "filters": {"max_vol_ann": 0.25, "min_close_over_200dma": 0.0},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {"stop_atr": 2.5, "target_r": null, "max_hold": 40, "trail_atr": 3.5}
+}

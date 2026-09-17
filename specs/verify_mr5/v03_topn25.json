@@ -1,0 +1,17 @@
+{
+  "name": "v03_topn25",
+  "_hypothesis": "Perturbation: top_n 20 -> 25.",
+  "factors": {
+    "reversal_1m": 1.0,
+    "rs_vs_sector": -1.0
+  },
+  "filters": {},
+  "regime": "none",
+  "top_n": 25,
+  "exit": {
+    "stop_atr": 2.5,
+    "target_r": null,
+    "max_hold": 10,
+    "trail_atr": null
+  }
+}

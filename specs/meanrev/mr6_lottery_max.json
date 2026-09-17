@@ -1,0 +1,9 @@
+{
+  "name": "mr6_lottery_max",
+  "_hypothesis": "The MAX / lottery-demand effect (Bali-Cakici-Whitelaw): avoid stocks that just printed a large single-day gain, because lottery demand overprices them and it unwinds. A contrarian signal that is only +0.47 rank-correlated with reversal_1m, so it is a genuinely different cut at over-reaction. Its natural horizon is monthly, hence max_hold 20. Vol cap is hygiene only.",
+  "factors": {"lottery_max5": 1.0},
+  "filters": {"max_vol_ann": 0.60},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {"stop_atr": 2.5, "target_r": null, "max_hold": 20, "trail_atr": null}
+}

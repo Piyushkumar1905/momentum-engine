@@ -1,0 +1,9 @@
+{
+  "name": "vrf_rank_voltrend",
+  "note": "ATTRIBUTION: same filters/exits, ranked by volume_trend inside the same universe.",
+  "factors": {"volume_trend": 1.0},
+  "filters": {"max_vol_ann": 0.35, "min_close_over_200dma": 0.0},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {"stop_atr": 2.5, "target_r": null, "max_hold": 40, "trail_atr": 3.5}
+}

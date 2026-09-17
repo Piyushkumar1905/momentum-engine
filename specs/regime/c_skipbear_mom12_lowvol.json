@@ -1,0 +1,9 @@
+{
+ "name": "regime_c_skipbear_mom12_lowvol",
+ "note": "Spec b plus skip_bear. Defensive tilt combined with regime switching, as assigned. Difference vs b isolates skip_bear on a defensive book.",
+ "factors": {"mom_12m_skip1": 1.0, "low_vol": 0.5},
+ "filters": {},
+ "regime": "skip_bear",
+ "top_n": 20,
+ "exit": {"stop_atr": 3.0, "target_r": null, "max_hold": 60, "trail_atr": 4.0}
+}

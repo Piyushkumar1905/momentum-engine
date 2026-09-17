@@ -1,0 +1,8 @@
+{
+  "name": "ex5_timeonly_h60",
+  "factors": {"mom_12m_skip1": 1.0},
+  "filters": {},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {"stop_atr": null, "target_r": null, "max_hold": 60, "trail_atr": null, "breakeven_r": null, "nominal_risk_atr": 1.5}
+}

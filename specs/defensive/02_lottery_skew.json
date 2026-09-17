@@ -1,0 +1,9 @@
+{
+  "name": "def_lottery_skew",
+  "note": "Anti-lottery leg of the low-risk anomaly (MAX effect) plus negative-skew avoidance. Only 0.43 rank-correlated with each other and 0.56/0.37 with low_vol, so this is a partly independent defensive signal. Same exit as 01/03/04 so the factor is isolated.",
+  "factors": {"lottery_max5": 1.0, "skew_126": 0.5},
+  "filters": {},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {"stop_atr": 3.0, "target_r": null, "max_hold": 60, "trail_atr": 4.0}
+}

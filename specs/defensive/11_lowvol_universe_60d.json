@@ -1,0 +1,9 @@
+{
+  "name": "def_lowvol_universe_60d",
+  "note": "EXIT ROBUSTNESS, pre-registered: same selection as def_lowvol_universe, wider stop and longer hold (3.0 ATR / trail 4.0 / 60 sessions). If the edge only exists at one exit setting it is noise.",
+  "factors": {"mom_12m_skip1": 1.0},
+  "filters": {"max_vol_ann": 0.30, "min_close_over_200dma": 0.0},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {"stop_atr": 3.0, "target_r": null, "max_hold": 60, "trail_atr": 4.0}
+}

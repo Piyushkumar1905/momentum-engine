@@ -1,0 +1,9 @@
+{
+  "name": "ref_f_mom12_only",
+  "note": "Attribution: drop the low_vol leg, keep the identical exit. Isolates whether the claimed edge comes from the composite or from the exit policy alone.",
+  "factors": {"mom_12m_skip1": 1.0},
+  "filters": {},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {"stop_atr": 3.0, "target_r": null, "max_hold": 60, "trail_atr": 4.0}
+}

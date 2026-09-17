@@ -1,0 +1,17 @@
+{
+ "name": "w6_mom6_lb25",
+ "factors": {
+  "mom_6m_skip1": 1.0,
+  "low_beta": 0.25
+ },
+ "filters": {},
+ "regime": "none",
+ "top_n": 20,
+ "exit": {
+  "stop_atr": 3.0,
+  "target_r": null,
+  "max_hold": 60,
+  "trail_atr": 4.0
+ },
+ "_note": "different momentum base, same tilt"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "rb3_hold20",
+  "_hypothesis": "HORIZON SENSITIVITY of mr5, longer. Identical selection, hold 20 sessions instead of 10.",
+  "factors": {"reversal_1m": 1.0, "rs_vs_sector": -1.0},
+  "filters": {},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {"stop_atr": 2.5, "target_r": null, "max_hold": 20, "trail_atr": null}
+}

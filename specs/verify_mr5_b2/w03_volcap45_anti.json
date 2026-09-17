@@ -1,0 +1,19 @@
+{
+  "name": "w03_volcap45_anti",
+  "_hypothesis": "Mirror of w02 on the identical filtered universe: w02 minus w03 is the long/short spread of the ranking inside the tradeable half, free of any control choice.",
+  "factors": {
+    "reversal_1m": -1.0,
+    "rs_vs_sector": 1.0
+  },
+  "filters": {
+    "max_vol_ann": 0.45
+  },
+  "regime": "none",
+  "top_n": 20,
+  "exit": {
+    "stop_atr": 2.5,
+    "target_r": null,
+    "max_hold": 10,
+    "trail_atr": null
+  }
+}

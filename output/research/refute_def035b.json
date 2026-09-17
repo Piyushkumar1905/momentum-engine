@@ -1,0 +1,1714 @@
+[
+ {
+  "name": "vrf_cap030",
+  "spec": {
+   "name": "vrf_cap030",
+   "note": "NEIGHBOURHOOD: vol cap 0.35 -> 0.30. Is 0.35 a spike or a plateau?",
+   "factors": {
+    "mom_12m_skip1": 1.0
+   },
+   "filters": {
+    "max_vol_ann": 0.3,
+    "min_close_over_200dma": 0.0
+   },
+   "regime": "none",
+   "top_n": 20,
+   "exit": {
+    "stop_atr": 2.5,
+    "target_r": null,
+    "max_hold": 40,
+    "trail_atr": 3.5
+   }
+  },
+  "overall": {
+   "trades": 5367,
+   "win_rate": 0.432,
+   "expectancy": 0.01491,
+   "profit_factor": 1.492,
+   "avg_hold": 24.7,
+   "median": -0.01838,
+   "edge_vs_control": 0.00067
+  },
+  "control": {
+   "trades": 5499,
+   "win_rate": 0.416,
+   "expectancy": 0.01424,
+   "profit_factor": 1.355,
+   "avg_hold": 24.5,
+   "median": -0.02881
+  },
+  "windows": {
+   "train": {
+    "strategy": {
+     "trades": 2854,
+     "win_rate": 0.467,
+     "expectancy": 0.02316,
+     "profit_factor": 1.836,
+     "avg_hold": 25.4,
+     "median": -0.0094,
+     "edge_vs_control": -0.0034
+    },
+    "control": {
+     "trades": 2979,
+     "win_rate": 0.449,
+     "expectancy": 0.02656,
+     "profit_factor": 1.712,
+     "avg_hold": 25.1,
+     "median": -0.01882
+    }
+   },
+   "validate": {
+    "strategy": {
+     "trades": 1453,
+     "win_rate": 0.4,
+     "expectancy": 0.00743,
+     "profit_factor": 1.222,
+     "avg_hold": 23.5,
+     "median": -0.02652,
+     "edge_vs_control": 0.00789
+    },
+    "control": {
+     "trades": 1460,
+     "win_rate": 0.372,
+     "expectancy": -0.00046,
+     "profit_factor": 0.99,
+     "avg_hold": 23.5,
+     "median": -0.03908
+    }
+   },
+   "holdout": {
+    "strategy": {
+     "trades": 1060,
+     "win_rate": 0.38,
+     "expectancy": 0.00297,
+     "profit_factor": 1.09,
+     "avg_hold": 24.7,
+     "median": -0.03161,
+     "edge_vs_control": 0.00314
+    },
+    "control": {
+     "trades": 1060,
+     "win_rate": 0.382,
+     "expectancy": -0.00017,
+     "profit_factor": 0.996,
+     "avg_hold": 24.5,
+     "median": -0.03468
+    }
+   }
+  },
+  "years": {
+   "2021": {
+    "strategy": {
+     "trades": 1000,
+     "win_rate": 0.518,
+     "expectancy": 0.02584,
+     "profit_factor": 1.972,
+     "avg_hold": 26.2,
+     "median": 0.00426,
+     "edge_vs_control": -0.00272
+    },
+    "control": {
+     "trades": 1000,
+     "win_rate": 0.445,
+     "expectancy": 0.02856,
+     "profit_factor": 1.725,
+     "avg_hold": 24.7,
+     "median": -0.02231
+    }
+   },
+   "2022": {
+    "strategy": {
+     "trades": 874,
+     "win_rate": 0.326,
+     "expectancy": -0.0098,
+     "profit_factor": 0.717,
+     "avg_hold": 22.2,
+     "median": -0.03628,
+     "edge_vs_control": -0.00638
+    },
+    "control": {
+     "trades": 1000,
+     "win_rate": 0.359,
+     "expectancy": -0.00342,
+     "profit_factor": 0.925,
+     "avg_hold": 23.3,
+     "median": -0.0426
+    }
+   },
+   "2023": {
+    "strategy": {
+     "trades": 980,
+     "win_rate": 0.542,
+     "expectancy": 0.04981,
+     "profit_factor": 3.195,
+     "avg_hold": 27.4,
+     "median": 0.01496,
+     "edge_vs_control": -0.00533
+    },
+    "control": {
+     "trades": 979,
+     "win_rate": 0.545,
+     "expectancy": 0.05514,
+     "profit_factor": 3.058,
+     "avg_hold": 27.3,
+     "median": 0.02049
+    }
+   },
+   "2024": {
+    "strategy": {
+     "trades": 980,
+     "win_rate": 0.414,
+     "expectancy": 0.01506,
+     "profit_factor": 1.474,
+     "avg_hold": 23.6,
+     "median": -0.02292,
+     "edge_vs_control": 0.01485
+    },
+    "control": {
+     "trades": 980,
+     "win_rate": 0.357,
+     "expectancy": 0.00021,
+     "profit_factor": 1.005,
+     "avg_hold": 23.0,
+     "median": -0.04109
+    }
+   },
+   "2025": {
+    "strategy": {
+     "trades": 993,
+     "win_rate": 0.36,
+     "expectancy": -0.00402,
+     "profit_factor": 0.882,
+     "avg_hold": 23.8,
+     "median": -0.03308,
+     "edge_vs_control": 0.00202
+    },
+    "control": {
+     "trades": 1000,
+     "win_rate": 0.366,
+     "expectancy": -0.00604,
+     "profit_factor": 0.86,
+     "avg_hold": 24.3,
+     "median": -0.03771
+    }
+   },
+   "2026": {
+    "strategy": {
+     "trades": 540,
+     "win_rate": 0.409,
+     "expectancy": 0.00589,
+     "profit_factor": 1.174,
+     "avg_hold": 25.2,
+     "median": -0.02757,
+     "edge_vs_control": -0.00335
+    },
+    "control": {
+     "trades": 540,
+     "win_rate": 0.43,
+     "expectancy": 0.00924,
+     "profit_factor": 1.236,
+     "avg_hold": 24.7,
+     "median": -0.03056
+    }
+   }
+  }
+ },
+ {
+  "name": "vrf_cap040",
+  "spec": {
+   "name": "vrf_cap040",
+   "note": "NEIGHBOURHOOD: vol cap 0.35 -> 0.40.",
+   "factors": {
+    "mom_12m_skip1": 1.0
+   },
+   "filters": {
+    "max_vol_ann": 0.4,
+    "min_close_over_200dma": 0.0
+   },
+   "regime": "none",
+   "top_n": 20,
+   "exit": {
+    "stop_atr": 2.5,
+    "target_r": null,
+    "max_hold": 40,
+    "trail_atr": 3.5
+   }
+  },
+  "overall": {
+   "trades": 5484,
+   "win_rate": 0.44,
+   "expectancy": 0.02117,
+   "profit_factor": 1.556,
+   "avg_hold": 24.1,
+   "median": -0.02314,
+   "edge_vs_control": 0.00693
+  },
+  "control": {
+   "trades": 5499,
+   "win_rate": 0.416,
+   "expectancy": 0.01424,
+   "profit_factor": 1.355,
+   "avg_hold": 24.5,
+   "median": -0.02881
+  },
+  "windows": {
+   "train": {
+    "strategy": {
+     "trades": 2972,
+     "win_rate": 0.495,
+     "expectancy": 0.03609,
+     "profit_factor": 2.043,
+     "avg_hold": 24.9,
+     "median": -0.00294,
+     "edge_vs_control": 0.00953
+    },
+    "control": {
+     "trades": 2979,
+     "win_rate": 0.449,
+     "expectancy": 0.02656,
+     "profit_factor": 1.712,
+     "avg_hold": 25.1,
+     "median": -0.01882
+    }
+   },
+   "validate": {
+    "strategy": {
+     "trades": 1460,
+     "win_rate": 0.36,
+     "expectancy": 0.00202,
+     "profit_factor": 1.044,
+     "avg_hold": 22.1,
+     "median": -0.04374,
+     "edge_vs_control": 0.00248
+    },
+    "control": {
+     "trades": 1460,
+     "win_rate": 0.372,
+     "expectancy": -0.00046,
+     "profit_factor": 0.99,
+     "avg_hold": 23.5,
+     "median": -0.03908
+    }
+   },
+   "holdout": {
+    "strategy": {
+     "trades": 1052,
+     "win_rate": 0.397,
+     "expectancy": 0.00561,
+     "profit_factor": 1.148,
+     "avg_hold": 24.9,
+     "median": -0.03284,
+     "edge_vs_control": 0.00578
+    },
+    "control": {
+     "trades": 1060,
+     "win_rate": 0.382,
+     "expectancy": -0.00017,
+     "profit_factor": 0.996,
+     "avg_hold": 24.5,
+     "median": -0.03468
+    }
+   }
+  },
+  "years": {
+   "2021": {
+    "strategy": {
+     "trades": 1000,
+     "win_rate": 0.505,
+     "expectancy": 0.04064,
+     "profit_factor": 2.17,
+     "avg_hold": 24.8,
+     "median": 0.00178,
+     "edge_vs_control": 0.01208
+    },
+    "control": {
+     "trades": 1000,
+     "win_rate": 0.445,
+     "expectancy": 0.02856,
+     "profit_factor": 1.725,
+     "avg_hold": 24.7,
+     "median": -0.02231
+    }
+   },
+   "2022": {
+    "strategy": {
+     "trades": 1000,
+     "win_rate": 0.404,
+     "expectancy": 0.00804,
+     "profit_factor": 1.189,
+     "avg_hold": 22.8,
+     "median": -0.03972,
+     "edge_vs_control": 0.01146
+    },
+    "control": {
+     "trades": 1000,
+     "win_rate": 0.359,
+     "expectancy": -0.00342,
+     "profit_factor": 0.925,
+     "avg_hold": 23.3,
+     "median": -0.0426
+    }
+   },
+   "2023": {
+    "strategy": {
+     "trades": 972,
+     "win_rate": 0.579,
+     "expectancy": 0.06027,
+     "profit_factor": 3.284,
+     "avg_hold": 27.0,
+     "median": 0.03196,
+     "edge_vs_control": 0.00513
+    },
+    "control": {
+     "trades": 979,
+     "win_rate": 0.545,
+     "expectancy": 0.05514,
+     "profit_factor": 3.058,
+     "avg_hold": 27.3,
+     "median": 0.02049
+    }
+   },
+   "2024": {
+    "strategy": {
+     "trades": 980,
+     "win_rate": 0.349,
+     "expectancy": 0.00375,
+     "profit_factor": 1.084,
+     "avg_hold": 21.7,
+     "median": -0.04677,
+     "edge_vs_control": 0.00354
+    },
+    "control": {
+     "trades": 980,
+     "win_rate": 0.357,
+     "expectancy": 0.00021,
+     "profit_factor": 1.005,
+     "avg_hold": 23.0,
+     "median": -0.04109
+    }
+   },
+   "2025": {
+    "strategy": {
+     "trades": 1000,
+     "win_rate": 0.358,
+     "expectancy": -0.00478,
+     "profit_factor": 0.888,
+     "avg_hold": 23.6,
+     "median": -0.03993,
+     "edge_vs_control": 0.00126
+    },
+    "control": {
+     "trades": 1000,
+     "win_rate": 0.366,
+     "expectancy": -0.00604,
+     "profit_factor": 0.86,
+     "avg_hold": 24.3,
+     "median": -0.03771
+    }
+   },
+   "2026": {
+    "strategy": {
+     "trades": 532,
+     "win_rate": 0.457,
+     "expectancy": 0.01873,
+     "profit_factor": 1.507,
+     "avg_hold": 25.8,
+     "median": -0.01386,
+     "edge_vs_control": 0.00949
+    },
+    "control": {
+     "trades": 540,
+     "win_rate": 0.43,
+     "expectancy": 0.00924,
+     "profit_factor": 1.236,
+     "avg_hold": 24.7,
+     "median": -0.03056
+    }
+   }
+  }
+ },
+ {
+  "name": "vrf_cap050",
+  "spec": {
+   "name": "vrf_cap050",
+   "note": "NEIGHBOURHOOD: vol cap 0.35 -> 0.50 (nearly non-binding).",
+   "factors": {
+    "mom_12m_skip1": 1.0
+   },
+   "filters": {
+    "max_vol_ann": 0.5,
+    "min_close_over_200dma": 0.0
+   },
+   "regime": "none",
+   "top_n": 20,
+   "exit": {
+    "stop_atr": 2.5,
+    "target_r": null,
+    "max_hold": 40,
+    "trail_atr": 3.5
+   }
+  },
+  "overall": {
+   "trades": 5494,
+   "win_rate": 0.445,
+   "expectancy": 0.028,
+   "profit_factor": 1.625,
+   "avg_hold": 24.3,
+   "median": -0.02711,
+   "edge_vs_control": 0.01376
+  },
+  "control": {
+   "trades": 5499,
+   "win_rate": 0.416,
+   "expectancy": 0.01424,
+   "profit_factor": 1.355,
+   "avg_hold": 24.5,
+   "median": -0.02881
+  },
+  "windows": {
+   "train": {
+    "strategy": {
+     "trades": 2977,
+     "win_rate": 0.497,
+     "expectancy": 0.04727,
+     "profit_factor": 2.162,
+     "avg_hold": 25.2,
+     "median": -0.00146,
+     "edge_vs_control": 0.02071
+    },
+    "control": {
+     "trades": 2979,
+     "win_rate": 0.449,
+     "expectancy": 0.02656,
+     "profit_factor": 1.712,
+     "avg_hold": 25.1,
+     "median": -0.01882
+    }
+   },
+   "validate": {
+    "strategy": {
+     "trades": 1460,
+     "win_rate": 0.362,
+     "expectancy": -0.00112,
+     "profit_factor": 0.98,
+     "avg_hold": 22.1,
+     "median": -0.0549,
+     "edge_vs_control": -0.00066
+    },
+    "control": {
+     "trades": 1460,
+     "win_rate": 0.372,
+     "expectancy": -0.00046,
+     "profit_factor": 0.99,
+     "avg_hold": 23.5,
+     "median": -0.03908
+    }
+   },
+   "holdout": {
+    "strategy": {
+     "trades": 1057,
+     "win_rate": 0.41,
+     "expectancy": 0.01396,
+     "profit_factor": 1.346,
+     "avg_hold": 24.6,
+     "median": -0.03285,
+     "edge_vs_control": 0.01413
+    },
+    "control": {
+     "trades": 1060,
+     "win_rate": 0.382,
+     "expectancy": -0.00017,
+     "profit_factor": 0.996,
+     "avg_hold": 24.5,
+     "median": -0.03468
+    }
+   }
+  },
+  "years": {
+   "2021": {
+    "strategy": {
+     "trades": 1000,
+     "win_rate": 0.483,
+     "expectancy": 0.03717,
+     "profit_factor": 1.894,
+     "avg_hold": 24.5,
+     "median": -0.00841,
+     "edge_vs_control": 0.00861
+    },
+    "control": {
+     "trades": 1000,
+     "win_rate": 0.445,
+     "expectancy": 0.02856,
+     "profit_factor": 1.725,
+     "avg_hold": 24.7,
+     "median": -0.02231
+    }
+   },
+   "2022": {
+    "strategy": {
+     "trades": 1000,
+     "win_rate": 0.406,
+     "expectancy": 0.00934,
+     "profit_factor": 1.183,
+     "avg_hold": 23.3,
+     "median": -0.04968,
+     "edge_vs_control": 0.01276
+    },
+    "control": {
+     "trades": 1000,
+     "win_rate": 0.359,
+     "expectancy": -0.00342,
+     "profit_factor": 0.925,
+     "avg_hold": 23.3,
+     "median": -0.0426
+    }
+   },
+   "2023": {
+    "strategy": {
+     "trades": 977,
+     "win_rate": 0.606,
+     "expectancy": 0.09643,
+     "profit_factor": 4.309,
+     "avg_hold": 27.9,
+     "median": 0.06964,
+     "edge_vs_control": 0.04129
+    },
+    "control": {
+     "trades": 979,
+     "win_rate": 0.545,
+     "expectancy": 0.05514,
+     "profit_factor": 3.058,
+     "avg_hold": 27.3,
+     "median": 0.02049
+    }
+   },
+   "2024": {
+    "strategy": {
+     "trades": 980,
+     "win_rate": 0.372,
+     "expectancy": 0.00942,
+     "profit_factor": 1.182,
+     "avg_hold": 22.0,
+     "median": -0.04917,
+     "edge_vs_control": 0.00921
+    },
+    "control": {
+     "trades": 980,
+     "win_rate": 0.357,
+     "expectancy": 0.00021,
+     "profit_factor": 1.005,
+     "avg_hold": 23.0,
+     "median": -0.04109
+    }
+   },
+   "2025": {
+    "strategy": {
+     "trades": 1000,
+     "win_rate": 0.34,
+     "expectancy": -0.01582,
+     "profit_factor": 0.705,
+     "avg_hold": 23.3,
+     "median": -0.05363,
+     "edge_vs_control": -0.00978
+    },
+    "control": {
+     "trades": 1000,
+     "win_rate": 0.366,
+     "expectancy": -0.00604,
+     "profit_factor": 0.86,
+     "avg_hold": 24.3,
+     "median": -0.03771
+    }
+   },
+   "2026": {
+    "strategy": {
+     "trades": 537,
+     "win_rate": 0.479,
+     "expectancy": 0.03671,
+     "profit_factor": 1.955,
+     "avg_hold": 25.1,
+     "median": -0.01087,
+     "edge_vs_control": 0.02747
+    },
+    "control": {
+     "trades": 540,
+     "win_rate": 0.43,
+     "expectancy": 0.00924,
+     "profit_factor": 1.236,
+     "avg_hold": 24.7,
+     "median": -0.03056
+    }
+   }
+  }
+ },
+ {
+  "name": "vrf_rank_lowvol",
+  "spec": {
+   "name": "vrf_rank_lowvol",
+   "note": "ATTRIBUTION: same filters/exits, ranked by low_vol instead of momentum. If unrelated rankings inside the same universe all earn the same edge, the edge belongs to the FILTER, not the ranking.",
+   "factors": {
+    "low_vol": 1.0
+   },
+   "filters": {
+    "max_vol_ann": 0.35,
+    "min_close_over_200dma": 0.0
+   },
+   "regime": "none",
+   "top_n": 20,
+   "exit": {
+    "stop_atr": 2.5,
+    "target_r": null,
+    "max_hold": 40,
+    "trail_atr": 3.5
+   }
+  },
+  "overall": {
+   "trades": 5491,
+   "win_rate": 0.421,
+   "expectancy": 0.0082,
+   "profit_factor": 1.312,
+   "avg_hold": 24.5,
+   "median": -0.01967,
+   "edge_vs_control": -0.00604
+  },
+  "control": {
+   "trades": 5499,
+   "win_rate": 0.416,
+   "expectancy": 0.01424,
+   "profit_factor": 1.355,
+   "avg_hold": 24.5,
+   "median": -0.02881
+  },
+  "windows": {
+   "train": {
+    "strategy": {
+     "trades": 2971,
+     "win_rate": 0.453,
+     "expectancy": 0.01486,
+     "profit_factor": 1.598,
+     "avg_hold": 24.9,
+     "median": -0.01342,
+     "edge_vs_control": -0.0117
+    },
+    "control": {
+     "trades": 2979,
+     "win_rate": 0.449,
+     "expectancy": 0.02656,
+     "profit_factor": 1.712,
+     "avg_hold": 25.1,
+     "median": -0.01882
+    }
+   },
+   "validate": {
+    "strategy": {
+     "trades": 1460,
+     "win_rate": 0.396,
+     "expectancy": 0.00053,
+     "profit_factor": 1.018,
+     "avg_hold": 23.7,
+     "median": -0.02641,
+     "edge_vs_control": 0.00099
+    },
+    "control": {
+     "trades": 1460,
+     "win_rate": 0.372,
+     "expectancy": -0.00046,
+     "profit_factor": 0.99,
+     "avg_hold": 23.5,
+     "median": -0.03908
+    }
+   },
+   "holdout": {
+    "strategy": {
+     "trades": 1060,
+     "win_rate": 0.362,
+     "expectancy": 6e-05,
+     "profit_factor": 1.002,
+     "avg_hold": 24.2,
+     "median": -0.0269,
+     "edge_vs_control": 0.00023
+    },
+    "control": {
+     "trades": 1060,
+     "win_rate": 0.382,
+     "expectancy": -0.00017,
+     "profit_factor": 0.996,
+     "avg_hold": 24.5,
+     "median": -0.03468
+    }
+   }
+  },
+  "years": {
+   "2021": {
+    "strategy": {
+     "trades": 1000,
+     "win_rate": 0.477,
+     "expectancy": 0.01798,
+     "profit_factor": 1.718,
+     "avg_hold": 25.3,
+     "median": -0.00875,
+     "edge_vs_control": -0.01058
+    },
+    "control": {
+     "trades": 1000,
+     "win_rate": 0.445,
+     "expectancy": 0.02856,
+     "profit_factor": 1.725,
+     "avg_hold": 24.7,
+     "median": -0.02231
+    }
+   },
+   "2022": {
+    "strategy": {
+     "trades": 991,
+     "win_rate": 0.358,
+     "expectancy": 0.00279,
+     "profit_factor": 1.088,
+     "avg_hold": 23.4,
+     "median": -0.03302,
+     "edge_vs_control": 0.00621
+    },
+    "control": {
+     "trades": 1000,
+     "win_rate": 0.359,
+     "expectancy": -0.00342,
+     "profit_factor": 0.925,
+     "avg_hold": 23.3,
+     "median": -0.0426
+    }
+   },
+   "2023": {
+    "strategy": {
+     "trades": 980,
+     "win_rate": 0.526,
+     "expectancy": 0.02389,
+     "profit_factor": 2.351,
+     "avg_hold": 26.1,
+     "median": 0.00454,
+     "edge_vs_control": -0.03125
+    },
+    "control": {
+     "trades": 979,
+     "win_rate": 0.545,
+     "expectancy": 0.05514,
+     "profit_factor": 3.058,
+     "avg_hold": 27.3,
+     "median": 0.02049
+    }
+   },
+   "2024": {
+    "strategy": {
+     "trades": 980,
+     "win_rate": 0.396,
+     "expectancy": 0.00395,
+     "profit_factor": 1.143,
+     "avg_hold": 23.3,
+     "median": -0.02909,
+     "edge_vs_control": 0.00374
+    },
+    "control": {
+     "trades": 980,
+     "win_rate": 0.357,
+     "expectancy": 0.00021,
+     "profit_factor": 1.005,
+     "avg_hold": 23.0,
+     "median": -0.04109
+    }
+   },
+   "2025": {
+    "strategy": {
+     "trades": 1000,
+     "win_rate": 0.364,
+     "expectancy": -0.00438,
+     "profit_factor": 0.844,
+     "avg_hold": 24.1,
+     "median": -0.02551,
+     "edge_vs_control": 0.00166
+    },
+    "control": {
+     "trades": 1000,
+     "win_rate": 0.366,
+     "expectancy": -0.00604,
+     "profit_factor": 0.86,
+     "avg_hold": 24.3,
+     "median": -0.03771
+    }
+   },
+   "2026": {
+    "strategy": {
+     "trades": 540,
+     "win_rate": 0.389,
+     "expectancy": 0.00248,
+     "profit_factor": 1.089,
+     "avg_hold": 24.5,
+     "median": -0.02451,
+     "edge_vs_control": -0.00676
+    },
+    "control": {
+     "trades": 540,
+     "win_rate": 0.43,
+     "expectancy": 0.00924,
+     "profit_factor": 1.236,
+     "avg_hold": 24.7,
+     "median": -0.03056
+    }
+   }
+  }
+ },
+ {
+  "name": "vrf_rank_rev1m",
+  "spec": {
+   "name": "vrf_rank_rev1m",
+   "note": "ATTRIBUTION: same filters/exits, ranked by reversal_1m (an unrelated, near-orthogonal ranking) inside the same universe.",
+   "factors": {
+    "reversal_1m": 1.0
+   },
+   "filters": {
+    "max_vol_ann": 0.35,
+    "min_close_over_200dma": 0.0
+   },
+   "regime": "none",
+   "top_n": 20,
+   "exit": {
+    "stop_atr": 2.5,
+    "target_r": null,
+    "max_hold": 40,
+    "trail_atr": 3.5
+   }
+  },
+  "overall": {
+   "trades": 5489,
+   "win_rate": 0.429,
+   "expectancy": 0.01312,
+   "profit_factor": 1.4,
+   "avg_hold": 25.8,
+   "median": -0.02202,
+   "edge_vs_control": -0.00112
+  },
+  "control": {
+   "trades": 5499,
+   "win_rate": 0.416,
+   "expectancy": 0.01424,
+   "profit_factor": 1.355,
+   "avg_hold": 24.5,
+   "median": -0.02881
+  },
+  "windows": {
+   "train": {
+    "strategy": {
+     "trades": 2970,
+     "win_rate": 0.476,
+     "expectancy": 0.02364,
+     "profit_factor": 1.806,
+     "avg_hold": 26.7,
+     "median": -0.00794,
+     "edge_vs_control": -0.00292
+    },
+    "control": {
+     "trades": 2979,
+     "win_rate": 0.449,
+     "expectancy": 0.02656,
+     "profit_factor": 1.712,
+     "avg_hold": 25.1,
+     "median": -0.01882
+    }
+   },
+   "validate": {
+    "strategy": {
+     "trades": 1460,
+     "win_rate": 0.404,
+     "expectancy": 0.00646,
+     "profit_factor": 1.176,
+     "avg_hold": 24.6,
+     "median": -0.02979,
+     "edge_vs_control": 0.00692
+    },
+    "control": {
+     "trades": 1460,
+     "win_rate": 0.372,
+     "expectancy": -0.00046,
+     "profit_factor": 0.99,
+     "avg_hold": 23.5,
+     "median": -0.03908
+    }
+   },
+   "holdout": {
+    "strategy": {
+     "trades": 1059,
+     "win_rate": 0.329,
+     "expectancy": -0.00719,
+     "profit_factor": 0.807,
+     "avg_hold": 24.7,
+     "median": -0.03849,
+     "edge_vs_control": -0.00702
+    },
+    "control": {
+     "trades": 1060,
+     "win_rate": 0.382,
+     "expectancy": -0.00017,
+     "profit_factor": 0.996,
+     "avg_hold": 24.5,
+     "median": -0.03468
+    }
+   }
+  },
+  "years": {
+   "2021": {
+    "strategy": {
+     "trades": 1000,
+     "win_rate": 0.481,
+     "expectancy": 0.02382,
+     "profit_factor": 1.771,
+     "avg_hold": 26.9,
+     "median": -0.00772,
+     "edge_vs_control": -0.00474
+    },
+    "control": {
+     "trades": 1000,
+     "win_rate": 0.445,
+     "expectancy": 0.02856,
+     "profit_factor": 1.725,
+     "avg_hold": 24.7,
+     "median": -0.02231
+    }
+   },
+   "2022": {
+    "strategy": {
+     "trades": 991,
+     "win_rate": 0.388,
+     "expectancy": 0.00318,
+     "profit_factor": 1.091,
+     "avg_hold": 24.5,
+     "median": -0.0333,
+     "edge_vs_control": 0.0066
+    },
+    "control": {
+     "trades": 1000,
+     "win_rate": 0.359,
+     "expectancy": -0.00342,
+     "profit_factor": 0.925,
+     "avg_hold": 23.3,
+     "median": -0.0426
+    }
+   },
+   "2023": {
+    "strategy": {
+     "trades": 979,
+     "win_rate": 0.561,
+     "expectancy": 0.04417,
+     "profit_factor": 3.01,
+     "avg_hold": 28.8,
+     "median": 0.01756,
+     "edge_vs_control": -0.01097
+    },
+    "control": {
+     "trades": 979,
+     "win_rate": 0.545,
+     "expectancy": 0.05514,
+     "profit_factor": 3.058,
+     "avg_hold": 27.3,
+     "median": 0.02049
+    }
+   },
+   "2024": {
+    "strategy": {
+     "trades": 980,
+     "win_rate": 0.396,
+     "expectancy": 0.00786,
+     "profit_factor": 1.214,
+     "avg_hold": 24.5,
+     "median": -0.03311,
+     "edge_vs_control": 0.00765
+    },
+    "control": {
+     "trades": 980,
+     "win_rate": 0.357,
+     "expectancy": 0.00021,
+     "profit_factor": 1.005,
+     "avg_hold": 23.0,
+     "median": -0.04109
+    }
+   },
+   "2025": {
+    "strategy": {
+     "trades": 1000,
+     "win_rate": 0.361,
+     "expectancy": -0.00453,
+     "profit_factor": 0.877,
+     "avg_hold": 24.3,
+     "median": -0.0362,
+     "edge_vs_control": 0.00151
+    },
+    "control": {
+     "trades": 1000,
+     "win_rate": 0.366,
+     "expectancy": -0.00604,
+     "profit_factor": 0.86,
+     "avg_hold": 24.3,
+     "median": -0.03771
+    }
+   },
+   "2026": {
+    "strategy": {
+     "trades": 539,
+     "win_rate": 0.351,
+     "expectancy": -0.00254,
+     "profit_factor": 0.932,
+     "avg_hold": 25.5,
+     "median": -0.03396,
+     "edge_vs_control": -0.01178
+    },
+    "control": {
+     "trades": 540,
+     "win_rate": 0.43,
+     "expectancy": 0.00924,
+     "profit_factor": 1.236,
+     "avg_hold": 24.7,
+     "median": -0.03056
+    }
+   }
+  }
+ },
+ {
+  "name": "vrf_rank_voltrend",
+  "spec": {
+   "name": "vrf_rank_voltrend",
+   "note": "ATTRIBUTION: same filters/exits, ranked by volume_trend inside the same universe.",
+   "factors": {
+    "volume_trend": 1.0
+   },
+   "filters": {
+    "max_vol_ann": 0.35,
+    "min_close_over_200dma": 0.0
+   },
+   "regime": "none",
+   "top_n": 20,
+   "exit": {
+    "stop_atr": 2.5,
+    "target_r": null,
+    "max_hold": 40,
+    "trail_atr": 3.5
+   }
+  },
+  "overall": {
+   "trades": 5490,
+   "win_rate": 0.448,
+   "expectancy": 0.01569,
+   "profit_factor": 1.45,
+   "avg_hold": 26.1,
+   "median": -0.01952,
+   "edge_vs_control": 0.00145
+  },
+  "control": {
+   "trades": 5499,
+   "win_rate": 0.416,
+   "expectancy": 0.01424,
+   "profit_factor": 1.355,
+   "avg_hold": 24.5,
+   "median": -0.02881
+  },
+  "windows": {
+   "train": {
+    "strategy": {
+     "trades": 2971,
+     "win_rate": 0.473,
+     "expectancy": 0.02181,
+     "profit_factor": 1.658,
+     "avg_hold": 26.7,
+     "median": -0.01151,
+     "edge_vs_control": -0.00475
+    },
+    "control": {
+     "trades": 2979,
+     "win_rate": 0.449,
+     "expectancy": 0.02656,
+     "profit_factor": 1.712,
+     "avg_hold": 25.1,
+     "median": -0.01882
+    }
+   },
+   "validate": {
+    "strategy": {
+     "trades": 1460,
+     "win_rate": 0.429,
+     "expectancy": 0.01111,
+     "profit_factor": 1.294,
+     "avg_hold": 25.3,
+     "median": -0.02427,
+     "edge_vs_control": 0.01157
+    },
+    "control": {
+     "trades": 1460,
+     "win_rate": 0.372,
+     "expectancy": -0.00046,
+     "profit_factor": 0.99,
+     "avg_hold": 23.5,
+     "median": -0.03908
+    }
+   },
+   "holdout": {
+    "strategy": {
+     "trades": 1059,
+     "win_rate": 0.401,
+     "expectancy": 0.0048,
+     "profit_factor": 1.134,
+     "avg_hold": 25.8,
+     "median": -0.0325,
+     "edge_vs_control": 0.00497
+    },
+    "control": {
+     "trades": 1060,
+     "win_rate": 0.382,
+     "expectancy": -0.00017,
+     "profit_factor": 0.996,
+     "avg_hold": 24.5,
+     "median": -0.03468
+    }
+   }
+  },
+  "years": {
+   "2021": {
+    "strategy": {
+     "trades": 1000,
+     "win_rate": 0.455,
+     "expectancy": 0.01603,
+     "profit_factor": 1.441,
+     "avg_hold": 26.8,
+     "median": -0.01624,
+     "edge_vs_control": -0.01253
+    },
+    "control": {
+     "trades": 1000,
+     "win_rate": 0.445,
+     "expectancy": 0.02856,
+     "profit_factor": 1.725,
+     "avg_hold": 24.7,
+     "median": -0.02231
+    }
+   },
+   "2022": {
+    "strategy": {
+     "trades": 991,
+     "win_rate": 0.405,
+     "expectancy": 0.00522,
+     "profit_factor": 1.142,
+     "avg_hold": 24.2,
+     "median": -0.03151,
+     "edge_vs_control": 0.00864
+    },
+    "control": {
+     "trades": 1000,
+     "win_rate": 0.359,
+     "expectancy": -0.00342,
+     "profit_factor": 0.925,
+     "avg_hold": 23.3,
+     "median": -0.0426
+    }
+   },
+   "2023": {
+    "strategy": {
+     "trades": 980,
+     "win_rate": 0.561,
+     "expectancy": 0.04449,
+     "profit_factor": 2.69,
+     "avg_hold": 29.1,
+     "median": 0.02305,
+     "edge_vs_control": -0.01065
+    },
+    "control": {
+     "trades": 979,
+     "win_rate": 0.545,
+     "expectancy": 0.05514,
+     "profit_factor": 3.058,
+     "avg_hold": 27.3,
+     "median": 0.02049
+    }
+   },
+   "2024": {
+    "strategy": {
+     "trades": 980,
+     "win_rate": 0.429,
+     "expectancy": 0.01368,
+     "profit_factor": 1.368,
+     "avg_hold": 25.5,
+     "median": -0.02357,
+     "edge_vs_control": 0.01347
+    },
+    "control": {
+     "trades": 980,
+     "win_rate": 0.357,
+     "expectancy": 0.00021,
+     "profit_factor": 1.005,
+     "avg_hold": 23.0,
+     "median": -0.04109
+    }
+   },
+   "2025": {
+    "strategy": {
+     "trades": 999,
+     "win_rate": 0.389,
+     "expectancy": 4e-05,
+     "profit_factor": 1.001,
+     "avg_hold": 25.1,
+     "median": -0.03677,
+     "edge_vs_control": 0.00608
+    },
+    "control": {
+     "trades": 1000,
+     "win_rate": 0.366,
+     "expectancy": -0.00604,
+     "profit_factor": 0.86,
+     "avg_hold": 24.3,
+     "median": -0.03771
+    }
+   },
+   "2026": {
+    "strategy": {
+     "trades": 540,
+     "win_rate": 0.45,
+     "expectancy": 0.01454,
+     "profit_factor": 1.417,
+     "avg_hold": 26.3,
+     "median": -0.01362,
+     "edge_vs_control": 0.0053
+    },
+    "control": {
+     "trades": 540,
+     "win_rate": 0.43,
+     "expectancy": 0.00924,
+     "profit_factor": 1.236,
+     "avg_hold": 24.7,
+     "median": -0.03056
+    }
+   }
+  }
+ },
+ {
+  "name": "vrf_stop20_trail30",
+  "spec": {
+   "name": "vrf_stop20_trail30",
+   "note": "PERTURBATION: stop 2.5->2.0 ATR, trail 3.5->3.0 ATR. Same entries.",
+   "factors": {
+    "mom_12m_skip1": 1.0
+   },
+   "filters": {
+    "max_vol_ann": 0.35,
+    "min_close_over_200dma": 0.0
+   },
+   "regime": "none",
+   "top_n": 20,
+   "exit": {
+    "stop_atr": 2.0,
+    "target_r": null,
+    "max_hold": 40,
+    "trail_atr": 3.0
+   }
+  },
+  "overall": {
+   "trades": 5475,
+   "win_rate": 0.409,
+   "expectancy": 0.0153,
+   "profit_factor": 1.508,
+   "avg_hold": 20.6,
+   "median": -0.02505,
+   "edge_vs_control": 0.00374
+  },
+  "control": {
+   "trades": 5499,
+   "win_rate": 0.381,
+   "expectancy": 0.01156,
+   "profit_factor": 1.32,
+   "avg_hold": 20.4,
+   "median": -0.03546
+  },
+  "windows": {
+   "train": {
+    "strategy": {
+     "trades": 2963,
+     "win_rate": 0.445,
+     "expectancy": 0.02444,
+     "profit_factor": 1.856,
+     "avg_hold": 21.2,
+     "median": -0.01773,
+     "edge_vs_control": 0.00234
+    },
+    "control": {
+     "trades": 2979,
+     "win_rate": 0.413,
+     "expectancy": 0.0221,
+     "profit_factor": 1.654,
+     "avg_hold": 21.1,
+     "median": -0.02843
+    }
+   },
+   "validate": {
+    "strategy": {
+     "trades": 1460,
+     "win_rate": 0.362,
+     "expectancy": 0.00436,
+     "profit_factor": 1.132,
+     "avg_hold": 19.2,
+     "median": -0.03176,
+     "edge_vs_control": 0.00654
+    },
+    "control": {
+     "trades": 1460,
+     "win_rate": 0.345,
+     "expectancy": -0.00218,
+     "profit_factor": 0.948,
+     "avg_hold": 19.2,
+     "median": -0.04305
+    }
+   },
+   "holdout": {
+    "strategy": {
+     "trades": 1052,
+     "win_rate": 0.375,
+     "expectancy": 0.0047,
+     "profit_factor": 1.155,
+     "avg_hold": 20.9,
+     "median": -0.03067,
+     "edge_vs_control": 0.00383
+    },
+    "control": {
+     "trades": 1060,
+     "win_rate": 0.339,
+     "expectancy": 0.00087,
+     "profit_factor": 1.025,
+     "avg_hold": 19.9,
+     "median": -0.03871
+    }
+   }
+  },
+  "years": {
+   "2021": {
+    "strategy": {
+     "trades": 1000,
+     "win_rate": 0.451,
+     "expectancy": 0.02637,
+     "profit_factor": 1.872,
+     "avg_hold": 20.9,
+     "median": -0.02113,
+     "edge_vs_control": 0.00411
+    },
+    "control": {
+     "trades": 1000,
+     "win_rate": 0.401,
+     "expectancy": 0.02226,
+     "profit_factor": 1.621,
+     "avg_hold": 20.5,
+     "median": -0.03474
+    }
+   },
+   "2022": {
+    "strategy": {
+     "trades": 991,
+     "win_rate": 0.368,
+     "expectancy": 0.00302,
+     "profit_factor": 1.095,
+     "avg_hold": 20.1,
+     "median": -0.03491,
+     "edge_vs_control": 0.00346
+    },
+    "control": {
+     "trades": 1000,
+     "win_rate": 0.347,
+     "expectancy": -0.00044,
+     "profit_factor": 0.989,
+     "avg_hold": 19.9,
+     "median": -0.04125
+    }
+   },
+   "2023": {
+    "strategy": {
+     "trades": 972,
+     "win_rate": 0.516,
+     "expectancy": 0.0443,
+     "profit_factor": 2.886,
+     "avg_hold": 22.6,
+     "median": 0.00818,
+     "edge_vs_control": -0.00068
+    },
+    "control": {
+     "trades": 979,
+     "win_rate": 0.492,
+     "expectancy": 0.04498,
+     "profit_factor": 2.723,
+     "avg_hold": 22.9,
+     "median": -0.00298
+    }
+   },
+   "2024": {
+    "strategy": {
+     "trades": 980,
+     "win_rate": 0.357,
+     "expectancy": 0.00772,
+     "profit_factor": 1.24,
+     "avg_hold": 18.8,
+     "median": -0.03201,
+     "edge_vs_control": 0.00711
+    },
+    "control": {
+     "trades": 980,
+     "win_rate": 0.34,
+     "expectancy": 0.00061,
+     "profit_factor": 1.015,
+     "avg_hold": 18.7,
+     "median": -0.04194
+    }
+   },
+   "2025": {
+    "strategy": {
+     "trades": 1000,
+     "win_rate": 0.348,
+     "expectancy": -0.0024,
+     "profit_factor": 0.927,
+     "avg_hold": 19.9,
+     "median": -0.03595,
+     "edge_vs_control": 0.00653
+    },
+    "control": {
+     "trades": 1000,
+     "win_rate": 0.32,
+     "expectancy": -0.00893,
+     "profit_factor": 0.776,
+     "avg_hold": 19.8,
+     "median": -0.0405
+    }
+   },
+   "2026": {
+    "strategy": {
+     "trades": 532,
+     "win_rate": 0.425,
+     "expectancy": 0.01157,
+     "profit_factor": 1.386,
+     "avg_hold": 21.8,
+     "median": -0.01897,
+     "edge_vs_control": 0.00033
+    },
+    "control": {
+     "trades": 540,
+     "win_rate": 0.389,
+     "expectancy": 0.01124,
+     "profit_factor": 1.32,
+     "avg_hold": 20.4,
+     "median": -0.03609
+    }
+   }
+  }
+ },
+ {
+  "name": "vrf_stop30_trail40",
+  "spec": {
+   "name": "vrf_stop30_trail40",
+   "note": "PERTURBATION: stop 2.5->3.0 ATR, trail 3.5->4.0 ATR. Same entries.",
+   "factors": {
+    "mom_12m_skip1": 1.0
+   },
+   "filters": {
+    "max_vol_ann": 0.35,
+    "min_close_over_200dma": 0.0
+   },
+   "regime": "none",
+   "top_n": 20,
+   "exit": {
+    "stop_atr": 3.0,
+    "target_r": null,
+    "max_hold": 40,
+    "trail_atr": 4.0
+   }
+  },
+  "overall": {
+   "trades": 5475,
+   "win_rate": 0.488,
+   "expectancy": 0.02448,
+   "profit_factor": 1.7,
+   "avg_hold": 28.1,
+   "median": -0.00464,
+   "edge_vs_control": 0.00593
+  },
+  "control": {
+   "trades": 5499,
+   "win_rate": 0.454,
+   "expectancy": 0.01855,
+   "profit_factor": 1.438,
+   "avg_hold": 28.2,
+   "median": -0.01727
+  },
+  "windows": {
+   "train": {
+    "strategy": {
+     "trades": 2963,
+     "win_rate": 0.543,
+     "expectancy": 0.03846,
+     "profit_factor": 2.231,
+     "avg_hold": 29.1,
+     "median": 0.01361,
+     "edge_vs_control": 0.00616
+    },
+    "control": {
+     "trades": 2979,
+     "win_rate": 0.493,
+     "expectancy": 0.0323,
+     "profit_factor": 1.838,
+     "avg_hold": 28.8,
+     "median": -0.00209
+    }
+   },
+   "validate": {
+    "strategy": {
+     "trades": 1460,
+     "win_rate": 0.415,
+     "expectancy": 0.00918,
+     "profit_factor": 1.222,
+     "avg_hold": 26.0,
+     "median": -0.02477,
+     "edge_vs_control": 0.00526
+    },
+    "control": {
+     "trades": 1460,
+     "win_rate": 0.408,
+     "expectancy": 0.00392,
+     "profit_factor": 1.078,
+     "avg_hold": 27.2,
+     "median": -0.03476
+    }
+   },
+   "holdout": {
+    "strategy": {
+     "trades": 1052,
+     "win_rate": 0.434,
+     "expectancy": 0.00636,
+     "profit_factor": 1.172,
+     "avg_hold": 28.3,
+     "median": -0.02277,
+     "edge_vs_control": 0.0063
+    },
+    "control": {
+     "trades": 1060,
+     "win_rate": 0.405,
+     "expectancy": 6e-05,
+     "profit_factor": 1.001,
+     "avg_hold": 27.9,
+     "median": -0.03339
+    }
+   }
+  },
+  "years": {
+   "2021": {
+    "strategy": {
+     "trades": 1000,
+     "win_rate": 0.573,
+     "expectancy": 0.04264,
+     "profit_factor": 2.387,
+     "avg_hold": 29.3,
+     "median": 0.02272,
+     "edge_vs_control": 0.00456
+    },
+    "control": {
+     "trades": 1000,
+     "win_rate": 0.501,
+     "expectancy": 0.03808,
+     "profit_factor": 1.988,
+     "avg_hold": 29.3,
+     "median": 0.00045
+    }
+   },
+   "2022": {
+    "strategy": {
+     "trades": 991,
+     "win_rate": 0.42,
+     "expectancy": 0.00277,
+     "profit_factor": 1.069,
+     "avg_hold": 26.8,
+     "median": -0.025,
+     "edge_vs_control": 0.00514
+    },
+    "control": {
+     "trades": 1000,
+     "win_rate": 0.396,
+     "expectancy": -0.00237,
+     "profit_factor": 0.952,
+     "avg_hold": 26.6,
+     "median": -0.0382
+    }
+   },
+   "2023": {
+    "strategy": {
+     "trades": 972,
+     "win_rate": 0.637,
+     "expectancy": 0.07054,
+     "profit_factor": 4.083,
+     "avg_hold": 31.4,
+     "median": 0.05913,
+     "edge_vs_control": 0.00871
+    },
+    "control": {
+     "trades": 979,
+     "win_rate": 0.585,
+     "expectancy": 0.06183,
+     "profit_factor": 3.254,
+     "avg_hold": 30.5,
+     "median": 0.03842
+    }
+   },
+   "2024": {
+    "strategy": {
+     "trades": 980,
+     "win_rate": 0.394,
+     "expectancy": 0.01009,
+     "profit_factor": 1.245,
+     "avg_hold": 25.5,
+     "median": -0.03206,
+     "edge_vs_control": 0.00761
+    },
+    "control": {
+     "trades": 980,
+     "win_rate": 0.384,
+     "expectancy": 0.00248,
+     "profit_factor": 1.049,
+     "avg_hold": 26.7,
+     "median": -0.04012
+    }
+   },
+   "2025": {
+    "strategy": {
+     "trades": 1000,
+     "win_rate": 0.425,
+     "expectancy": 0.00283,
+     "profit_factor": 1.073,
+     "avg_hold": 27.4,
+     "median": -0.02085,
+     "edge_vs_control": 0.00511
+    },
+    "control": {
+     "trades": 1000,
+     "win_rate": 0.407,
+     "expectancy": -0.00228,
+     "profit_factor": 0.95,
+     "avg_hold": 28.0,
+     "median": -0.03411
+    }
+   },
+   "2026": {
+    "strategy": {
+     "trades": 532,
+     "win_rate": 0.474,
+     "expectancy": 0.01385,
+     "profit_factor": 1.374,
+     "avg_hold": 28.9,
+     "median": -0.01115,
+     "edge_vs_control": 0.00341
+    },
+    "control": {
+     "trades": 540,
+     "win_rate": 0.446,
+     "expectancy": 0.01044,
+     "profit_factor": 1.248,
+     "avg_hold": 28.3,
+     "median": -0.02297
+    }
+   }
+  }
+ }
+]

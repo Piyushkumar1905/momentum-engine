@@ -1,0 +1,9 @@
+{
+  "name": "vrf_hold20",
+  "note": "PERTURBATION: max_hold 40 -> 20. Everything else identical.",
+  "factors": {"mom_12m_skip1": 1.0},
+  "filters": {"max_vol_ann": 0.35, "min_close_over_200dma": 0.0},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {"stop_atr": 2.5, "target_r": null, "max_hold": 20, "trail_atr": 3.5}
+}

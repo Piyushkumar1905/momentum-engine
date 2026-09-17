@@ -1,0 +1,9 @@
+{
+  "name": "def_composite",
+  "note": "All four defensive legs combined: low vol, low beta, anti-lottery, negative-skew avoidance. Weights set by rank-correlation (low_vol full weight, the partly independent legs downweighted), not fitted. Exit identical to 01/02/03 so selection is the only thing that varies.",
+  "factors": {"low_vol": 1.0, "low_beta": 0.7, "lottery_max5": 0.7, "skew_126": 0.5},
+  "filters": {},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {"stop_atr": 3.0, "target_r": null, "max_hold": 60, "trail_atr": 4.0}
+}

@@ -1,0 +1,9 @@
+{
+  "name": "ref_h_lowvol_w1",
+  "note": "Weight perturbation: low_vol 0.5 -> 1.0. Tests whether 0.5 sits on a knife edge.",
+  "factors": {"mom_12m_skip1": 1.0, "low_vol": 1.0},
+  "filters": {},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {"stop_atr": 3.0, "target_r": null, "max_hold": 60, "trail_atr": 4.0}
+}

@@ -1,0 +1,16 @@
+{
+  "name": "w01_mom1m_only",
+  "_hypothesis": "Mirror of the reversal leg alone. Paired with v12 this gives a control-free long/short spread for that leg.",
+  "factors": {
+    "reversal_1m": -1.0
+  },
+  "filters": {},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {
+    "stop_atr": 2.5,
+    "target_r": null,
+    "max_hold": 10,
+    "trail_atr": null
+  }
+}

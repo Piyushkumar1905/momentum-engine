@@ -1,0 +1,9 @@
+{
+  "name": "def_lowvol_universe",
+  "note": "Defensive as a risk CONSTRAINT rather than a ranking: hard-cap the universe at 0.30 annualised vol (the calm ~37% of names, ~106 per scan, ~76 after the 200DMA filter) and rank on trend within it. This is how low-vol is implemented in practice and is the alternative hypothesis to 01-05 - that defensive pays as a filter on trend, not as a stock-picking signal.",
+  "factors": {"mom_12m_skip1": 1.0},
+  "filters": {"max_vol_ann": 0.30, "min_close_over_200dma": 0.0},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {"stop_atr": 2.5, "target_r": null, "max_hold": 40, "trail_atr": 3.5}
+}

@@ -1,0 +1,9 @@
+{
+  "name": "rb2_hold5",
+  "_hypothesis": "HORIZON SENSITIVITY of mr5, shorter. Identical selection, hold 5 sessions instead of 10. A real over-reaction effect should decay smoothly with horizon, not exist only at one hold length.",
+  "factors": {"reversal_1m": 1.0, "rs_vs_sector": -1.0},
+  "filters": {},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {"stop_atr": 2.5, "target_r": null, "max_hold": 5, "trail_atr": null}
+}

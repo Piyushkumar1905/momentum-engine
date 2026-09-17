@@ -1,0 +1,479 @@
+{
+ "train": [
+  "2024-01-01",
+  "2025-06-30"
+ ],
+ "policies": {
+  "baseline_2R_20d": {
+   "stop_atr": 1.5,
+   "target_r": 2.0,
+   "max_hold": 20
+  },
+  "target_3R_20d": {
+   "stop_atr": 1.5,
+   "target_r": 3.0,
+   "max_hold": 20
+  },
+  "no_target_20d": {
+   "stop_atr": 1.5,
+   "target_r": null,
+   "max_hold": 20
+  },
+  "no_target_40d": {
+   "stop_atr": 1.5,
+   "target_r": null,
+   "max_hold": 40
+  },
+  "no_target_60d": {
+   "stop_atr": 1.5,
+   "target_r": null,
+   "max_hold": 60
+  },
+  "no_target_120d": {
+   "stop_atr": 1.5,
+   "target_r": null,
+   "max_hold": 120
+  },
+  "trail3_60d": {
+   "stop_atr": 1.5,
+   "target_r": null,
+   "max_hold": 60,
+   "trail_atr": 3.0
+  },
+  "trail3_120d": {
+   "stop_atr": 1.5,
+   "target_r": null,
+   "max_hold": 120,
+   "trail_atr": 3.0
+  },
+  "trail4_120d": {
+   "stop_atr": 1.5,
+   "target_r": null,
+   "max_hold": 120,
+   "trail_atr": 4.0
+  },
+  "wide_stop3_trail4_120d": {
+   "stop_atr": 3.0,
+   "target_r": null,
+   "max_hold": 120,
+   "trail_atr": 4.0
+  },
+  "be_trail3_120d": {
+   "stop_atr": 1.5,
+   "target_r": null,
+   "max_hold": 120,
+   "trail_atr": 3.0,
+   "breakeven_r": 1.0
+  },
+  "timeonly_60d": {
+   "stop_atr": null,
+   "target_r": null,
+   "max_hold": 60,
+   "nominal_risk_atr": 1.5
+  },
+  "timeonly_120d": {
+   "stop_atr": null,
+   "target_r": null,
+   "max_hold": 120,
+   "nominal_risk_atr": 1.5
+  }
+ },
+ "results": {
+  "momentum": {
+   "baseline_2R_20d": {
+    "trades": 1453,
+    "win_rate": 0.348,
+    "expectancy": -0.00644,
+    "profit_factor": 0.825,
+    "avg_R": -0.087,
+    "avg_hold": 9.1,
+    "best": 0.207,
+    "worst": -0.203
+   },
+   "target_3R_20d": {
+    "trades": 1453,
+    "win_rate": 0.321,
+    "expectancy": -0.00558,
+    "profit_factor": 0.853,
+    "avg_R": -0.066,
+    "avg_hold": 10.4,
+    "best": 0.344,
+    "worst": -0.203
+   },
+   "no_target_20d": {
+    "trades": 1453,
+    "win_rate": 0.309,
+    "expectancy": -0.00568,
+    "profit_factor": 0.853,
+    "avg_R": -0.063,
+    "avg_hold": 11.7,
+    "best": 0.573,
+    "worst": -0.203
+   },
+   "no_target_40d": {
+    "trades": 1453,
+    "win_rate": 0.226,
+    "expectancy": -0.00536,
+    "profit_factor": 0.88,
+    "avg_R": -0.069,
+    "avg_hold": 17.6,
+    "best": 1.127,
+    "worst": -0.203
+   },
+   "no_target_60d": {
+    "trades": 1453,
+    "win_rate": 0.18,
+    "expectancy": -0.00941,
+    "profit_factor": 0.804,
+    "avg_R": -0.147,
+    "avg_hold": 21.8,
+    "best": 1.384,
+    "worst": -0.203
+   },
+   "no_target_120d": {
+    "trades": 1453,
+    "win_rate": 0.134,
+    "expectancy": -0.01025,
+    "profit_factor": 0.799,
+    "avg_R": -0.144,
+    "avg_hold": 31.5,
+    "best": 1.205,
+    "worst": -0.203
+   },
+   "trail3_60d": {
+    "trades": 1453,
+    "win_rate": 0.244,
+    "expectancy": -0.01151,
+    "profit_factor": 0.716,
+    "avg_R": -0.172,
+    "avg_hold": 15.3,
+    "best": 0.929,
+    "worst": -0.203
+   },
+   "trail3_120d": {
+    "trades": 1453,
+    "win_rate": 0.242,
+    "expectancy": -0.01113,
+    "profit_factor": 0.725,
+    "avg_R": -0.168,
+    "avg_hold": 15.8,
+    "best": 0.929,
+    "worst": -0.203
+   },
+   "trail4_120d": {
+    "trades": 1453,
+    "win_rate": 0.215,
+    "expectancy": -0.01167,
+    "profit_factor": 0.734,
+    "avg_R": -0.192,
+    "avg_hold": 19.8,
+    "best": 1.078,
+    "worst": -0.203
+   },
+   "wide_stop3_trail4_120d": {
+    "trades": 1453,
+    "win_rate": 0.328,
+    "expectancy": -0.01228,
+    "profit_factor": 0.799,
+    "avg_R": -0.107,
+    "avg_hold": 32.9,
+    "best": 1.151,
+    "worst": -0.292
+   },
+   "be_trail3_120d": {
+    "trades": 1453,
+    "win_rate": 0.212,
+    "expectancy": -0.01004,
+    "profit_factor": 0.718,
+    "avg_R": -0.147,
+    "avg_hold": 14.1,
+    "best": 0.929,
+    "worst": -0.203
+   },
+   "timeonly_60d": {
+    "trades": 1453,
+    "win_rate": 0.547,
+    "expectancy": 0.0311,
+    "profit_factor": 1.541,
+    "avg_R": 0.593,
+    "avg_hold": 60.0,
+    "best": 1.384,
+    "worst": -0.471
+   },
+   "timeonly_120d": {
+    "trades": 1453,
+    "win_rate": 0.56,
+    "expectancy": 0.06243,
+    "profit_factor": 1.931,
+    "avg_R": 1.213,
+    "avg_hold": 120.0,
+    "best": 1.588,
+    "worst": -0.588
+   }
+  },
+  "reversal": {
+   "baseline_2R_20d": {
+    "trades": 142,
+    "win_rate": 0.338,
+    "expectancy": -0.00716,
+    "profit_factor": 0.803,
+    "avg_R": -0.104,
+    "avg_hold": 9.7,
+    "best": 0.193,
+    "worst": -0.124
+   },
+   "target_3R_20d": {
+    "trades": 142,
+    "win_rate": 0.331,
+    "expectancy": -0.00256,
+    "profit_factor": 0.93,
+    "avg_R": -0.026,
+    "avg_hold": 11.0,
+    "best": 0.29,
+    "worst": -0.124
+   },
+   "no_target_20d": {
+    "trades": 142,
+    "win_rate": 0.331,
+    "expectancy": -0.00323,
+    "profit_factor": 0.912,
+    "avg_R": -0.031,
+    "avg_hold": 12.0,
+    "best": 0.295,
+    "worst": -0.124
+   },
+   "no_target_40d": {
+    "trades": 142,
+    "win_rate": 0.275,
+    "expectancy": -0.00092,
+    "profit_factor": 0.978,
+    "avg_R": -0.033,
+    "avg_hold": 18.7,
+    "best": 0.529,
+    "worst": -0.126
+   },
+   "no_target_60d": {
+    "trades": 142,
+    "win_rate": 0.225,
+    "expectancy": 0.00834,
+    "profit_factor": 1.183,
+    "avg_R": 0.153,
+    "avg_hold": 24.0,
+    "best": 0.888,
+    "worst": -0.126
+   },
+   "no_target_120d": {
+    "trades": 142,
+    "win_rate": 0.176,
+    "expectancy": 0.01455,
+    "profit_factor": 1.302,
+    "avg_R": 0.262,
+    "avg_hold": 36.4,
+    "best": 0.935,
+    "worst": -0.126
+   },
+   "trail3_60d": {
+    "trades": 142,
+    "win_rate": 0.268,
+    "expectancy": -0.00175,
+    "profit_factor": 0.956,
+    "avg_R": -0.038,
+    "avg_hold": 17.5,
+    "best": 0.684,
+    "worst": -0.124
+   },
+   "trail3_120d": {
+    "trades": 142,
+    "win_rate": 0.268,
+    "expectancy": -0.00173,
+    "profit_factor": 0.956,
+    "avg_R": -0.038,
+    "avg_hold": 19.0,
+    "best": 0.684,
+    "worst": -0.124
+   },
+   "trail4_120d": {
+    "trades": 142,
+    "win_rate": 0.239,
+    "expectancy": 0.00671,
+    "profit_factor": 1.158,
+    "avg_R": 0.09,
+    "avg_hold": 25.7,
+    "best": 0.818,
+    "worst": -0.126
+   },
+   "wide_stop3_trail4_120d": {
+    "trades": 142,
+    "win_rate": 0.408,
+    "expectancy": 0.03827,
+    "profit_factor": 1.741,
+    "avg_R": 0.335,
+    "avg_hold": 46.8,
+    "best": 0.818,
+    "worst": -0.245
+   },
+   "be_trail3_120d": {
+    "trades": 142,
+    "win_rate": 0.239,
+    "expectancy": -0.0014,
+    "profit_factor": 0.961,
+    "avg_R": -0.026,
+    "avg_hold": 16.4,
+    "best": 0.684,
+    "worst": -0.124
+   },
+   "timeonly_60d": {
+    "trades": 142,
+    "win_rate": 0.535,
+    "expectancy": 0.05773,
+    "profit_factor": 1.972,
+    "avg_R": 1.136,
+    "avg_hold": 60.0,
+    "best": 0.888,
+    "worst": -0.464
+   },
+   "timeonly_120d": {
+    "trades": 142,
+    "win_rate": 0.5,
+    "expectancy": 0.08488,
+    "profit_factor": 2.435,
+    "avg_R": 1.582,
+    "avg_hold": 120.0,
+    "best": 1.337,
+    "worst": -0.308
+   }
+  },
+  "random_control": {
+   "baseline_2R_20d": {
+    "trades": 1480,
+    "win_rate": 0.37,
+    "expectancy": -0.00245,
+    "profit_factor": 0.931,
+    "avg_R": 0.001,
+    "avg_hold": 9.8,
+    "best": 0.239,
+    "worst": -0.248
+   },
+   "target_3R_20d": {
+    "trades": 1480,
+    "win_rate": 0.347,
+    "expectancy": -0.0017,
+    "profit_factor": 0.953,
+    "avg_R": 0.015,
+    "avg_hold": 11.3,
+    "best": 0.362,
+    "worst": -0.248
+   },
+   "no_target_20d": {
+    "trades": 1480,
+    "win_rate": 0.341,
+    "expectancy": -0.00196,
+    "profit_factor": 0.947,
+    "avg_R": 0.019,
+    "avg_hold": 12.3,
+    "best": 0.535,
+    "worst": -0.248
+   },
+   "no_target_40d": {
+    "trades": 1480,
+    "win_rate": 0.255,
+    "expectancy": 0.00203,
+    "profit_factor": 1.047,
+    "avg_R": 0.074,
+    "avg_hold": 19.1,
+    "best": 1.007,
+    "worst": -0.248
+   },
+   "no_target_60d": {
+    "trades": 1480,
+    "win_rate": 0.226,
+    "expectancy": 0.0065,
+    "profit_factor": 1.142,
+    "avg_R": 0.154,
+    "avg_hold": 24.2,
+    "best": 1.799,
+    "worst": -0.248
+   },
+   "no_target_120d": {
+    "trades": 1479,
+    "win_rate": 0.177,
+    "expectancy": 0.01119,
+    "profit_factor": 1.229,
+    "avg_R": 0.256,
+    "avg_hold": 36.5,
+    "best": 2.847,
+    "worst": -0.248
+   },
+   "trail3_60d": {
+    "trades": 1480,
+    "win_rate": 0.278,
+    "expectancy": -0.00236,
+    "profit_factor": 0.941,
+    "avg_R": -0.002,
+    "avg_hold": 17.8,
+    "best": 1.098,
+    "worst": -0.248
+   },
+   "trail3_120d": {
+    "trades": 1479,
+    "win_rate": 0.274,
+    "expectancy": -0.00241,
+    "profit_factor": 0.939,
+    "avg_R": -0.001,
+    "avg_hold": 19.1,
+    "best": 1.098,
+    "worst": -0.248
+   },
+   "trail4_120d": {
+    "trades": 1479,
+    "win_rate": 0.241,
+    "expectancy": 0.00061,
+    "profit_factor": 1.014,
+    "avg_R": 0.056,
+    "avg_hold": 23.9,
+    "best": 1.295,
+    "worst": -0.248
+   },
+   "wide_stop3_trail4_120d": {
+    "trades": 1479,
+    "win_rate": 0.35,
+    "expectancy": 0.00754,
+    "profit_factor": 1.132,
+    "avg_R": 0.075,
+    "avg_hold": 39.4,
+    "best": 1.295,
+    "worst": -0.304
+   },
+   "be_trail3_120d": {
+    "trades": 1479,
+    "win_rate": 0.235,
+    "expectancy": -0.0044,
+    "profit_factor": 0.876,
+    "avg_R": -0.039,
+    "avg_hold": 16.8,
+    "best": 0.952,
+    "worst": -0.248
+   },
+   "timeonly_60d": {
+    "trades": 1480,
+    "win_rate": 0.539,
+    "expectancy": 0.04814,
+    "profit_factor": 1.92,
+    "avg_R": 0.854,
+    "avg_hold": 60.0,
+    "best": 1.799,
+    "worst": -0.47
+   },
+   "timeonly_120d": {
+    "trades": 1479,
+    "win_rate": 0.565,
+    "expectancy": 0.08551,
+    "profit_factor": 2.343,
+    "avg_R": 1.636,
+    "avg_hold": 120.0,
+    "best": 2.847,
+    "worst": -0.506
+   }
+  }
+ }
+}

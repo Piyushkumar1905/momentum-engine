@@ -1,0 +1,9 @@
+{
+  "name": "mr1_rev1m_alone",
+  "_hypothesis": "Core claim, unadorned: buy the biggest 1-month losers in the liquid universe and hold 10 sessions. If short-horizon reversal exists at all it should show here. No filters, no second factor - anything positive later must beat this.",
+  "factors": {"reversal_1m": 1.0},
+  "filters": {},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {"stop_atr": 2.5, "target_r": null, "max_hold": 10, "trail_atr": null}
+}

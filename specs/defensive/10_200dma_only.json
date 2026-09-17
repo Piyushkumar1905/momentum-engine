@@ -1,0 +1,9 @@
+{
+  "name": "def_200dma_only",
+  "note": "ATTRIBUTION CONTROL: the 200DMA trend filter alone, with NO vol cap. Contains zero defensive content. If this matches def_lowvol_universe out of sample then the defensive filter added nothing and the family is dead.",
+  "factors": {"mom_12m_skip1": 1.0},
+  "filters": {"min_close_over_200dma": 0.0},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {"stop_atr": 2.5, "target_r": null, "max_hold": 40, "trail_atr": 3.5}
+}

@@ -1,0 +1,8 @@
+{
+  "name": "ex4_s4_trail6_h120",
+  "factors": {"mom_12m_skip1": 1.0},
+  "filters": {},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {"stop_atr": 4.0, "target_r": null, "max_hold": 120, "trail_atr": 6.0, "breakeven_r": null}
+}

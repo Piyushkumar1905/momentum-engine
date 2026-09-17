@@ -1,0 +1,9 @@
+{
+  "name": "mr2_rev1w_fast",
+  "_hypothesis": "Reversal decays fast, so test the fastest horizon at its own speed: buy the biggest 1-week losers and hold exactly one rebalance period (5 sessions). Weekly reversal is the Lehmann/Lo-MacKinlay effect; a 10-20 day hold would dilute it.",
+  "factors": {"reversal_1w": 1.0},
+  "filters": {},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {"stop_atr": 2.5, "target_r": null, "max_hold": 5, "trail_atr": null}
+}

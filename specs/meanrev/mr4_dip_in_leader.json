@@ -1,0 +1,9 @@
+{
+  "name": "mr4_dip_in_leader",
+  "_hypothesis": "Momentum-conditional reversal, the best-documented form of the anomaly: the stock is a 63-day leader against its own sector and is in a 200DMA uptrend, but has fallen over the last month. Buy that pullback rather than the outright loser. Sector-relative strength also strips out sector-wide drawdowns.",
+  "factors": {"reversal_1m": 1.0, "rs_vs_sector": 0.75, "above_200dma": 0.5},
+  "filters": {"min_close_over_200dma": 0.0},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {"stop_atr": 2.5, "target_r": null, "max_hold": 10, "trail_atr": null}
+}

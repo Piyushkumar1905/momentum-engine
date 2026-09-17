@@ -1,0 +1,9 @@
+{
+ "name": "regime_h_skipbear_lowvol_only",
+ "note": "REGIME PROBE (batch 2). Spec g plus skip_bear. Confirms whether skip_bear is inert on a purely defensive book as well as on a momentum book. g vs h is the second attribution pair.",
+ "factors": {"low_vol": 1.0},
+ "filters": {},
+ "regime": "skip_bear",
+ "top_n": 20,
+ "exit": {"stop_atr": 3.0, "target_r": null, "max_hold": 60, "trail_atr": 4.0}
+}

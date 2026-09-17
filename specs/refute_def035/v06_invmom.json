@@ -1,0 +1,9 @@
+{
+  "name": "vrf_invmom_cap035",
+  "note": "ATTRIBUTION: identical filters and exits, but the momentum ranking is INVERTED (buy the worst 12m momentum inside the same low-vol/above-200DMA universe). If this also shows a positive edge_vs_control, the reported edge comes from the universe filter (a low-vol tilt vs an unfiltered random control), not from the momentum ranking.",
+  "factors": {"mom_12m_skip1": -1.0},
+  "filters": {"max_vol_ann": 0.35, "min_close_over_200dma": 0.0},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {"stop_atr": 2.5, "target_r": null, "max_hold": 40, "trail_atr": 3.5}
+}

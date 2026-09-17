@@ -1,0 +1,9 @@
+{
+  "name": "rb4_topn40",
+  "_hypothesis": "BREADTH SENSITIVITY of mr5. Same selection, 40 picks per scan instead of 20. A real ranking effect should still be present (weaker) at twice the breadth; an edge that lives only in exactly 20 names is small-sample noise.",
+  "factors": {"reversal_1m": 1.0, "rs_vs_sector": -1.0},
+  "filters": {},
+  "regime": "none",
+  "top_n": 40,
+  "exit": {"stop_atr": 2.5, "target_r": null, "max_hold": 10, "trail_atr": null}
+}

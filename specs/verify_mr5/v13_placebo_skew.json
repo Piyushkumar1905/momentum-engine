@@ -1,0 +1,16 @@
+{
+  "name": "v13_placebo_skew",
+  "_hypothesis": "PLACEBO: unrelated factor on the identical exit/top_n, therefore judged against the identical control draw. If unrelated factors also print positive validate+holdout edges, the control draw - not the signal - is producing them.",
+  "factors": {
+    "skew_126": 1.0
+  },
+  "filters": {},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {
+    "stop_atr": 2.5,
+    "target_r": null,
+    "max_hold": 10,
+    "trail_atr": null
+  }
+}

@@ -1,0 +1,206 @@
+[
+ {
+  "name": "cap035_INVERTED_momentum",
+  "spec": {
+   "name": "cap035_INVERTED_momentum",
+   "factors": {
+    "mom_12m_skip1": -1.0
+   },
+   "filters": {
+    "max_vol_ann": 0.35,
+    "min_close_over_200dma": 0.0
+   },
+   "top_n": 20,
+   "exit": {
+    "stop_atr": 2.5,
+    "target_r": null,
+    "max_hold": 40,
+    "trail_atr": 3.5
+   }
+  },
+  "stats": {
+   "train": {
+    "scan_dates": 149,
+    "mean_edge": -0.01215,
+    "median_edge": -0.01113,
+    "share_positive": 0.295,
+    "naive_t": -5.37,
+    "newey_west_t": -2.89,
+    "independent_cohorts": 19,
+    "cohort_mean_edge": -0.01432,
+    "cohort_share_positive": 0.211,
+    "strategy_mean": 0.01594,
+    "universe_mean": 0.02809
+   },
+   "validate": {
+    "scan_dates": 73,
+    "mean_edge": 0.00791,
+    "median_edge": 0.00495,
+    "share_positive": 0.603,
+    "naive_t": 1.88,
+    "newey_west_t": 1.06,
+    "independent_cohorts": 10,
+    "cohort_mean_edge": -0.00094,
+    "cohort_share_positive": 0.6,
+    "strategy_mean": 0.01133,
+    "universe_mean": 0.00342
+   },
+   "holdout": {
+    "scan_dates": 52,
+    "mean_edge": -0.00556,
+    "median_edge": -0.00748,
+    "share_positive": 0.423,
+    "naive_t": -2.0,
+    "newey_west_t": -1.44,
+    "independent_cohorts": 7,
+    "cohort_mean_edge": -0.00224,
+    "cohort_share_positive": 0.286,
+    "strategy_mean": -0.00411,
+    "universe_mean": 0.00145
+   },
+   "full": {
+    "scan_dates": 274,
+    "mean_edge": -0.00555,
+    "newey_west_t": -1.58,
+    "share_positive": 0.401
+   },
+   "overlap_lag": 8
+  }
+ },
+ {
+  "name": "cap035_ranked_by_lowvol",
+  "spec": {
+   "name": "cap035_ranked_by_lowvol",
+   "factors": {
+    "low_vol": 1.0
+   },
+   "filters": {
+    "max_vol_ann": 0.35,
+    "min_close_over_200dma": 0.0
+   },
+   "top_n": 20,
+   "exit": {
+    "stop_atr": 2.5,
+    "target_r": null,
+    "max_hold": 40,
+    "trail_atr": 3.5
+   }
+  },
+  "stats": {
+   "train": {
+    "scan_dates": 149,
+    "mean_edge": -0.01048,
+    "median_edge": -0.00143,
+    "share_positive": 0.483,
+    "naive_t": -3.86,
+    "newey_west_t": -1.84,
+    "independent_cohorts": 19,
+    "cohort_mean_edge": -0.0114,
+    "cohort_share_positive": 0.526,
+    "strategy_mean": 0.01761,
+    "universe_mean": 0.02809
+   },
+   "validate": {
+    "scan_dates": 73,
+    "mean_edge": -0.00039,
+    "median_edge": 0.0069,
+    "share_positive": 0.589,
+    "naive_t": -0.08,
+    "newey_west_t": -0.05,
+    "independent_cohorts": 10,
+    "cohort_mean_edge": -0.00066,
+    "cohort_share_positive": 0.6,
+    "strategy_mean": 0.00303,
+    "universe_mean": 0.00342
+   },
+   "holdout": {
+    "scan_dates": 52,
+    "mean_edge": 0.00117,
+    "median_edge": 0.00956,
+    "share_positive": 0.673,
+    "naive_t": 0.29,
+    "newey_west_t": 0.15,
+    "independent_cohorts": 7,
+    "cohort_mean_edge": 0.00591,
+    "cohort_share_positive": 0.714,
+    "strategy_mean": 0.00262,
+    "universe_mean": 0.00145
+   },
+   "full": {
+    "scan_dates": 274,
+    "mean_edge": -0.00558,
+    "newey_west_t": -1.34,
+    "share_positive": 0.547
+   },
+   "overlap_lag": 8
+  }
+ },
+ {
+  "name": "cap035_filter_only_topn200",
+  "spec": {
+   "name": "cap035_filter_only_topn200",
+   "factors": {
+    "mom_12m_skip1": 1.0
+   },
+   "filters": {
+    "max_vol_ann": 0.35,
+    "min_close_over_200dma": 0.0
+   },
+   "top_n": 200,
+   "exit": {
+    "stop_atr": 2.5,
+    "target_r": null,
+    "max_hold": 40,
+    "trail_atr": 3.5
+   }
+  },
+  "stats": {
+   "train": {
+    "scan_dates": 124,
+    "mean_edge": -0.00757,
+    "median_edge": -0.00494,
+    "share_positive": 0.363,
+    "naive_t": -6.18,
+    "newey_west_t": -3.11,
+    "independent_cohorts": 16,
+    "cohort_mean_edge": -0.00587,
+    "cohort_share_positive": 0.375,
+    "strategy_mean": 0.02248,
+    "universe_mean": 0.03005
+   },
+   "validate": {
+    "scan_dates": 61,
+    "mean_edge": 0.00527,
+    "median_edge": 0.01004,
+    "share_positive": 0.787,
+    "naive_t": 2.1,
+    "newey_west_t": 1.56,
+    "independent_cohorts": 8,
+    "cohort_mean_edge": 0.00874,
+    "cohort_share_positive": 0.875,
+    "strategy_mean": 0.01077,
+    "universe_mean": 0.0055
+   },
+   "holdout": {
+    "scan_dates": 50,
+    "mean_edge": 0.005,
+    "median_edge": 0.0082,
+    "share_positive": 0.72,
+    "naive_t": 3.48,
+    "newey_west_t": 1.78,
+    "independent_cohorts": 7,
+    "cohort_mean_edge": 0.00577,
+    "cohort_share_positive": 0.714,
+    "strategy_mean": 0.00138,
+    "universe_mean": -0.00361
+   },
+   "full": {
+    "scan_dates": 235,
+    "mean_edge": -0.00156,
+    "newey_west_t": -0.76,
+    "share_positive": 0.549
+   },
+   "overlap_lag": 8
+  }
+ }
+]

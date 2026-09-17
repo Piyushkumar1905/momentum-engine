@@ -1,0 +1,18 @@
+{
+ "name": "cmp_a200_lowbeta_skew",
+ "factors": {
+  "above_200dma": 1.0,
+  "low_beta": 0.5,
+  "skew_126": 0.5
+ },
+ "filters": {},
+ "regime": "none",
+ "top_n": 20,
+ "exit": {
+  "stop_atr": 3.0,
+  "target_r": null,
+  "max_hold": 60,
+  "trail_atr": 4.0
+ },
+ "_hypothesis": "Alternative trend leg (above_200dma had the best train t60/t120) plus two mutually orthogonal defensives (low_beta vs skew_126 corr -0.09)."
+}

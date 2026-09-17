@@ -1,0 +1,17 @@
+{
+ "name": "rb_mom6_lowbeta_50",
+ "factors": {
+  "mom_6m_skip1": 1.0,
+  "low_beta": 0.5
+ },
+ "filters": {},
+ "regime": "none",
+ "top_n": 20,
+ "exit": {
+  "stop_atr": 3.0,
+  "target_r": null,
+  "max_hold": 60,
+  "trail_atr": 4.0
+ },
+ "_hypothesis": "Trend-leg generalisation. Does trend+low_beta work as a PRINCIPLE, or only with the one momentum definition that happens to be the baseline?"
+}

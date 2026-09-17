@@ -1,0 +1,9 @@
+{
+  "name": "ref_d_hold40",
+  "note": "Perturbation: max_hold 60 -> 40.",
+  "factors": {"mom_12m_skip1": 1.0, "low_vol": 0.5},
+  "filters": {},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {"stop_atr": 3.0, "target_r": null, "max_hold": 40, "trail_atr": 4.0}
+}

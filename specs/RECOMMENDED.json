@@ -1,0 +1,9 @@
+{
+  "name": "trend_in_low_risk_universe",
+  "_status": "CANDIDATE - not significant out-of-sample. Read specs/README.md before using.",
+  "factors": {"mom_12m_skip1": 1.0},
+  "filters": {"max_vol_ann": 0.35, "min_close_over_200dma": 0.0},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {"stop_atr": 2.5, "target_r": null, "max_hold": 40, "trail_atr": 3.5}
+}

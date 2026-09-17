@@ -1,0 +1,9 @@
+{
+  "name": "mr5_sector_rel_loser",
+  "_hypothesis": "Sector-relative contrarian, the mirror of mr4: fell last month AND has lagged its own sector over 63 days (negative weight on rs_vs_sector). Isolates idiosyncratic losers rather than stocks dragged down with their whole sector - the classic over-reaction candidate. rs_vs_sector has full coverage on the base universe, so the negative weight introduces no NaN bias.",
+  "factors": {"reversal_1m": 1.0, "rs_vs_sector": -1.0},
+  "filters": {},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {"stop_atr": 2.5, "target_r": null, "max_hold": 10, "trail_atr": null}
+}

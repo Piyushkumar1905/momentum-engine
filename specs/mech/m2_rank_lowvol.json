@@ -1,0 +1,3 @@
+{"name":"cap035_ranked_by_lowvol","factors":{"low_vol":1.0},
+ "filters":{"max_vol_ann":0.35,"min_close_over_200dma":0.0},"top_n":20,
+ "exit":{"stop_atr":2.5,"target_r":null,"max_hold":40,"trail_atr":3.5}}

@@ -1,0 +1,9 @@
+{
+ "name": "regime_k_none_voladjmom",
+ "note": "REPLICATION PROBE (batch 2). The single-factor version of the same idea: 12m momentum divided by realised vol. If 'momentum damped by risk' is the mechanism, this should also clear.",
+ "factors": {"vol_adj_mom_12m": 1.0},
+ "filters": {},
+ "regime": "none",
+ "top_n": 20,
+ "exit": {"stop_atr": 3.0, "target_r": null, "max_hold": 60, "trail_atr": 4.0}
+}

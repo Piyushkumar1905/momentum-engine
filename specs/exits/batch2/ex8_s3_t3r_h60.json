@@ -1,0 +1,8 @@
+{
+  "name": "ex8_s3_t3r_h60",
+  "factors": {"mom_12m_skip1": 1.0},
+  "filters": {},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {"stop_atr": 3.0, "target_r": 3.0, "max_hold": 60, "trail_atr": null, "breakeven_r": null}
+}

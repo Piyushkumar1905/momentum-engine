@@ -1,0 +1,9 @@
+{
+ "name": "regime_g_none_lowvol_only",
+ "note": "REPLICATION PROBE (batch 2). Does momentum contribute anything, or is spec b's edge entirely 'prefer calm stocks'? low_vol alone, regime none.",
+ "factors": {"low_vol": 1.0},
+ "filters": {},
+ "regime": "none",
+ "top_n": 20,
+ "exit": {"stop_atr": 3.0, "target_r": null, "max_hold": 60, "trail_atr": 4.0}
+}

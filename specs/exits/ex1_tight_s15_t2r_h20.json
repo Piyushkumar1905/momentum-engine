@@ -1,0 +1,8 @@
+{
+  "name": "ex1_tight_s15_t2r_h20",
+  "factors": {"mom_12m_skip1": 1.0},
+  "filters": {},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {"stop_atr": 1.5, "target_r": 2.0, "max_hold": 20, "trail_atr": null, "breakeven_r": null}
+}

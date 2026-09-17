@@ -1,0 +1,9 @@
+{
+ "name": "regime_a_skipbear_mom12",
+ "note": "Clean single-variable A/B against the published baseline: identical factors, filters, top_n and exit, with regime=skip_bear as the ONLY change. Tests H1 directly.",
+ "factors": {"mom_12m_skip1": 1.0},
+ "filters": {},
+ "regime": "skip_bear",
+ "top_n": 20,
+ "exit": {"stop_atr": 3.0, "target_r": null, "max_hold": 60, "trail_atr": 4.0}
+}

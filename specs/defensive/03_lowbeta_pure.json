@@ -1,0 +1,9 @@
+{
+  "name": "def_lowbeta_pure",
+  "note": "Betting-against-beta leg. Least correlated with low_vol of the defensive set (rank corr 0.40) and the least negative on train (t60=-1.8), so it is the least ruled-out member of the family. idio_vol is deliberately omitted: it is 0.99 rank-correlated with low_vol and would be a duplicate test.",
+  "factors": {"low_beta": 1.0},
+  "filters": {},
+  "regime": "none",
+  "top_n": 20,
+  "exit": {"stop_atr": 3.0, "target_r": null, "max_hold": 60, "trail_atr": 4.0}
+}

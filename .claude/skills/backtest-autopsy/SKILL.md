@@ -79,6 +79,39 @@ change. **A change must improve both halves to survive.**
 | Better out-of-sample only | Noise — reject |
 | Worse in both | Reject |
 
+### 5. Three ways a harness lies about its own significance
+
+Each of these inflated a result in this repo until it was found. Check all three before
+believing any comparison.
+
+**The benchmark is one draw.** A control of N random picks has sampling error. With
+N=20 its SD was 55-65% of the edges being measured, so the "edge" was mostly which
+control got drawn. Benchmark against the **entire eligible universe** — zero sampling
+noise — or average many draws and report the spread.
+
+**Long holds silently truncate the test window.** If the simulator refuses trades whose
+holding window runs past the end of data, a 120-day hold discards the last ~6 months of
+the holdout while a 20-day hold does not. The amount discarded scales with the very
+parameter being selected, so long holds are structurally flattered. Require a full
+window for every arm and report the dropped dates.
+
+**Overlapping trades are not observations.** Weekly rebalancing with a 60-day hold means
+~12 cohorts open at once and each "trade" shares ~92% of its window with others. 5,000
+trades can be 11 independent bets. Use Newey-West at the overlap lag, and cross-check
+with strictly non-overlapping cohorts. A naive t of 6 became 2.3 under this correction.
+
+### 6. Separate ranking from universe
+
+A screen does two different things: it **constrains** the universe (filters) and it
+**ranks** within it. These can have opposite regime exposures, and reporting only the
+combined number hides which one is working.
+
+Test by inverting the ranking while holding filters fixed. If inverted ranking scores
+the same, the ranking is inert and the result belongs to the filter. Measured here:
+momentum ranking added +0.0151 in a bull window and +0.0002 in a correction, while a
+low-volatility filter did the reverse. Neither was stable; the combination was, and only
+because the two are anti-correlated.
+
 ## Red flags — stop and re-check
 
 - Reporting a hit rate without the universe baseline
@@ -98,6 +131,10 @@ change. **A change must improve both halves to survive.**
 | "It improved in-sample, close enough" | That is the definition of a curve fit. |
 | "Only the last few months are relevant" | The most recent data is the easiest to overfit. |
 | "The sample is small but the edge is obvious" | Obvious small-sample edges are the ones that vanish. |
+| "5,000 trades is plenty of evidence" | Overlapping holds. Count independent cohorts, not trades. |
+| "It beat the random control" | One control draw has SD comparable to the edge. Benchmark the full universe. |
+| "Longer holds performed better" | Check whether long holds silently dropped the end of the test window. |
+| "The composite works, so the factors work" | Invert the ranking. If the score is unchanged, the filter did it. |
 
 ## Reference implementation
 
@@ -123,3 +160,12 @@ Applied to a Nifty 500 momentum screen over 2024-09 to 2026-09:
   gate**, and trade counts moved by 2 of 613 — the rules were never binding
 
 Without checks 1 and 4, the obvious conclusion was "loosen the filters". It was wrong.
+
+A later six-family parallel search over 25 factors produced five candidates that cleared
+a naive out-of-sample bar. Adversarial re-testing refuted **all five** - on control-draw
+noise, window truncation, overlap-inflated trade counts, or an inert ranking. What
+survived was much smaller than any of the original claims: a low-volatility universe
+constraint with trend ranking inside it, +0.7% per 40 sessions against the eligible
+universe, positive in all six calendar years but not individually significant in either
+out-of-sample window. The search found the truth only because the refutation round was
+built in from the start.
