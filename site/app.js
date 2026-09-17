@@ -90,14 +90,15 @@ function renderStamps() {
 
 function renderTiles() {
   const L = state.latest, r = L.regime;
-  const nMom = L.picks.momentum.length, nRev = L.picks.reversal.length;
   const tiles = [
     { k: 'Regime', v: r.label.toUpperCase(), n: 'Nifty vs 50/200 DMA', c: r.label },
     { k: 'Breadth', v: pct(r.breadth_50dma, 0), n: 'above their 50 DMA' },
     { k: 'Nifty', v: Number(r.nifty).toLocaleString('en-IN', { maximumFractionDigits: 0 }), n: 'benchmark close' },
     { k: 'Universe', v: L.universe.symbols, n: `${L.universe.eligible_today} passed hygiene` },
-    { k: 'Momentum', v: `${nMom}/${L.counts.momentum ?? 0}`, n: 'shown / qualified' },
-    { k: 'Reversal', v: `${nRev}/${L.counts.reversal ?? 0}`, n: 'shown / qualified' }
+    // one tile per model actually published, so a new strategy appears without an edit
+    ...Object.keys(L.picks || {}).map(m => ({
+      k: m.replace(/_/g, ' '), v: `${L.picks[m].length}/${L.counts?.[m] ?? 0}`,
+      n: 'shown / qualified' }))
   ];
   $('#tiles').innerHTML = tiles.map(t => `
     <div class="tile ${t.c || ''}">
@@ -171,7 +172,11 @@ function verdictFor(model) {
 }
 
 function renderVerdicts() {
-  const models = [['momentum', 'tag-mom'], ['reversal', 'tag-rev']];
+  // Cover every model that has backtest rows, not a hardcoded pair.
+  const scored = new Set((state.backtest.trades || []).map(r => r.model));
+  const models = Object.keys(state.latest.picks || {})
+    .filter(m => scored.has(m))
+    .map(m => [m, m === 'momentum' ? 'tag-mom' : m === 'reversal' ? 'tag-rev' : 'tag-fac']);
   $('#verdict-cards').innerHTML = models.map(([m, tag]) => {
     const checks = verdictFor(m);
     const passed = checks.filter(c => c.ok).length;
@@ -179,7 +184,7 @@ function renderVerdicts() {
     return `
     <div class="vcard">
       <header>
-        <h3>${m[0].toUpperCase() + m.slice(1)}<span class="tag ${tag}">model</span></h3>
+        <h3>${(m[0].toUpperCase() + m.slice(1)).replace(/_/g, ' ')}<span class="tag ${tag}">model</span></h3>
         <span class="chip ${chip}">${passed}/${checks.length} passed</span>
       </header>
       <ul class="checks">

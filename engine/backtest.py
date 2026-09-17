@@ -79,7 +79,7 @@ def _forward(panel: Panel, horizons) -> dict:
     return {"stock": out, "nifty": nifty}
 
 
-def _simulate(i, j, stop, tgt_r, O, Hh, L, C, max_hold, cost, ca=None):
+def _simulate(i, j, stop, tgt_r, O, Hh, L, C, max_hold, cost, ca=None, trail_atr=None, atr=None):
     T = O.shape[0]
     if i + 1 >= T or np.isnan(O[i + 1, j]):
         return None
@@ -92,7 +92,9 @@ def _simulate(i, j, stop, tgt_r, O, Hh, L, C, max_hold, cost, ca=None):
     risk = entry - stop
     if not np.isfinite(risk) or risk <= 0:
         return None
-    target = entry + tgt_r * risk
+    # tgt_r None means no profit target: the trail or the clock decides the exit.
+    target = entry + tgt_r * risk if tgt_r else np.inf
+    peak = entry
     last = i + max_hold
     if last >= T:
         return None                     # trade would still be open at the end of data
@@ -108,6 +110,9 @@ def _simulate(i, j, stop, tgt_r, O, Hh, L, C, max_hold, cost, ca=None):
             px = max(o, target) if not np.isnan(o) else target
             reason = "target"
             break
+        if trail_atr and atr and np.isfinite(atr):
+            peak = max(peak, c)
+            stop = max(stop, peak - trail_atr * atr)
     else:
         k, px, reason = last, C[last, j], "time"
         if np.isnan(px):
@@ -144,6 +149,7 @@ def run_backtest(panel: Panel, universe: pd.DataFrame, cfg: dict, prep: dict | N
     end = pd.Timestamp(bt["end"]) if bt.get("end") else dates[-1]
     idxs = np.where((dates >= start) & (dates <= end))[0][::int(bt["rebalance_every"])]
     ind = prep["industry"]
+    spec = prep.get("spec")
     reg_arr = regime["regime"].to_numpy()
 
     sig_rows, trades = [], []
@@ -173,8 +179,20 @@ def run_backtest(panel: Panel, universe: pd.DataFrame, cfg: dict, prep: dict | N
                 # trade simulation
                 if bt.get("skip_if_open", True) and open_until.get((model, j), -1) >= i + 1:
                     continue
-                t = _simulate(i, j, rules.stop_price(model, x, cfg), rules.target_r(model, cfg),
-                              O, Hh, L, C, int(bt["max_hold_days"]), float(bt["cost_pct"]), CA)
+                # The spec-driven strategy is simulated under ITS OWN exit policy. Using
+                # the engine default would publish statistics for a configuration that was
+                # never validated.
+                if spec and model == spec["name"]:
+                    ex = spec.get("exit") or {}
+                    st = x["close"] - float(ex.get("stop_atr", 2.5)) * x["atr"]
+                    t = _simulate(i, j, st, ex.get("target_r"), O, Hh, L, C,
+                                  int(ex.get("max_hold", bt["max_hold_days"])),
+                                  float(bt["cost_pct"]), CA,
+                                  ex.get("trail_atr"), x["atr"])
+                else:
+                    t = _simulate(i, j, rules.stop_price(model, x, cfg),
+                                  rules.target_r(model, cfg), O, Hh, L, C,
+                                  int(bt["max_hold_days"]), float(bt["cost_pct"]), CA)
                 if t:
                     open_until[(model, j)] = t.pop("exit_idx")
                     trades.append({"date": dates[i], "model": model, "symbol": syms[j],
