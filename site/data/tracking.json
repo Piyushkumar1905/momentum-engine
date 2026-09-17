@@ -1,0 +1,111 @@
+{
+ "generated_at": "2026-09-17T12:29:34+05:30",
+ "lists": 1,
+ "rows": [
+  {
+   "as_of": "2026-09-17",
+   "model": "momentum",
+   "symbol": "IPCALAB"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "momentum",
+   "symbol": "DIVISLAB"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "momentum",
+   "symbol": "PFOCUS"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "momentum",
+   "symbol": "INDGN"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "momentum",
+   "symbol": "LAURUSLABS"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "momentum",
+   "symbol": "RAINBOW"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "momentum",
+   "symbol": "NEULANDLAB"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "momentum",
+   "symbol": "LALPATHLAB"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "momentum",
+   "symbol": "ANANDRATHI"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "momentum",
+   "symbol": "AJANTPHARM"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "momentum",
+   "symbol": "GLAND"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "momentum",
+   "symbol": "AUROPHARMA"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "momentum",
+   "symbol": "TBOTEK"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "momentum",
+   "symbol": "REDINGTON"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "momentum",
+   "symbol": "SONACOMS"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "momentum",
+   "symbol": "BOSCHLTD"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "momentum",
+   "symbol": "SAILIFE"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "momentum",
+   "symbol": "AEGISLOG"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "momentum",
+   "symbol": "APARINDS"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "momentum",
+   "symbol": "ANTHEM"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "reversal",
+   "symbol": "ECLERX"
+  }
+ ]
+}

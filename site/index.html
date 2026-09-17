@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Momentum &amp; Reversal Engine</title>
+<meta name="description" content="NSE end-of-day momentum and reversal screen with point-in-time backtest evidence.">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='13' font-size='13'>📈</text></svg>">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-in">
+    <div class="brand">
+      <h1>Momentum &amp; Reversal Engine</h1>
+      <p class="sub">NSE end-of-day · rules replayed point-in-time</p>
+    </div>
+    <div class="stamps" id="stamps"><span class="chip chip-mute">loading…</span></div>
+  </div>
+</header>
+
+<nav class="subnav">
+  <div class="wrap subnav-in">
+    <a href="#verdict">Verdict</a>
+    <a href="#lists">Today's lists</a>
+    <a href="#evidence">Evidence</a>
+    <a href="#tracking">Tracking</a>
+    <a href="#freshness">Freshness</a>
+    <a href="#method">Method &amp; limits</a>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+
+  <!-- ══════════ market state ══════════ -->
+  <section class="panel" id="state">
+    <div class="tiles" id="tiles"></div>
+  </section>
+
+  <!-- ══════════ verdict ══════════ -->
+  <section id="verdict">
+    <div class="sec-head">
+      <h2>Does the system pass its own tests?</h2>
+      <p>Computed in your browser from <code>backtest.json</code>, against the pass-marks defined in
+         the project README — set <em>before</em> looking at results, so they can't be moved to fit them.</p>
+    </div>
+    <div id="verdict-cards" class="verdicts"></div>
+  </section>
+
+  <!-- ══════════ today's lists ══════════ -->
+  <section id="lists">
+    <div class="sec-head">
+      <h2>Today's candidates</h2>
+      <p>Ranked at the close of <span class="mono" id="asof-inline">—</span>.
+         Entry reference is the <strong>next session's open</strong>; stop and target are rule
+         outputs, not orders. Click any row for the reasoning and risk flags.</p>
+    </div>
+
+    <div class="controls">
+      <input type="search" id="q" placeholder="Filter by symbol, industry or setup…" aria-label="Filter picks">
+      <div class="seg" role="group" aria-label="Model">
+        <button class="on" data-model="all">All</button>
+        <button data-model="momentum">Momentum</button>
+        <button data-model="reversal">Reversal</button>
+      </div>
+      <span class="count" id="pickcount"></span>
+    </div>
+
+    <div id="picks"></div>
+  </section>
+
+  <!-- ══════════ evidence ══════════ -->
+  <section id="evidence">
+    <div class="sec-head">
+      <h2>Evidence</h2>
+      <p>Frozen snapshot from the last full backtest — <span class="mono" id="bt-window">—</span>,
+         <span class="mono" id="bt-scans">—</span> scan dates. Deliberately not recomputed daily;
+         see <a href="#freshness">Freshness</a> for why.</p>
+    </div>
+    <div class="tabs" id="evtabs" role="tablist">
+      <button class="on" data-tab="forward" role="tab">Forward outcomes</button>
+      <button data-tab="trades" role="tab">Simulated trades</button>
+      <button data-tab="by_period" role="tab">In vs out-of-sample</button>
+      <button data-tab="by_regime" role="tab">By regime</button>
+      <button data-tab="by_year" role="tab">By year</button>
+    </div>
+    <div id="evbody"></div>
+    <p class="note" id="evnote"></p>
+  </section>
+
+  <!-- ══════════ tracking ══════════ -->
+  <section id="tracking">
+    <div class="sec-head">
+      <h2>Forward tracking</h2>
+      <p>Every list this site has published, followed forward from the next open. This is the only
+         table here that is <strong>not</strong> a backtest — it is the live, out-of-sample record,
+         and it is the one that ultimately matters.</p>
+    </div>
+    <div id="trackbody"></div>
+  </section>
+
+  <!-- ══════════ freshness ══════════ -->
+  <section id="freshness">
+    <div class="sec-head">
+      <h2>What refreshes, and what doesn't</h2>
+      <p>There is no backend. A scheduled job runs the rules and commits JSON; this page is flat
+         files. Each layer below refreshes on a different clock, on purpose.</p>
+    </div>
+    <div id="tiers" class="tiers"></div>
+  </section>
+
+  <!-- ══════════ method ══════════ -->
+  <section id="method">
+    <div class="sec-head"><h2>Method &amp; limits</h2></div>
+
+    <div class="cols">
+      <article class="card">
+        <h3>How a pick is produced</h3>
+        <ol class="steps">
+          <li>Filter the universe for liquidity and history — ≥252 sessions, ≥₹10 cr median 20-day traded value, price ≥₹50.</li>
+          <li>Apply the model's eligibility rules using <strong>only</strong> data known at that close.</li>
+          <li>Rank survivors by a weighted score of momentum, relative strength, volume, structure, breakout quality and sector.</li>
+          <li>Take the top 20; derive an ATR-based stop and an R-multiple target.</li>
+        </ol>
+        <p class="fine">In a bear regime the momentum rules tighten automatically: ≥90% of the 52-week
+           high and RS ≥ +5%, instead of the usual 85% / 0%.</p>
+      </article>
+
+      <article class="card">
+        <h3>Why the backtest ignores today's list</h3>
+        <p>Momentum rules select stocks <em>because</em> they already rose. Replaying those same
+           stocks' past gains would measure the selection, not the rule — the result is guaranteed to
+           look good and means nothing.</p>
+        <p>So the engine instead replays the rules on every past scan date using only data available
+           that day, enters at the next open, and measures what happened <em>afterwards</em>.</p>
+      </article>
+
+      <article class="card warn">
+        <h3>Limits you should not forget</h3>
+        <ul class="limits">
+          <li><strong>Survivorship bias.</strong> The universe is today's index list. Companies that
+              were delisted or dropped out are missing, so every backtest number here is optimistic.
+              Dated snapshots are being archived from now on to fix this going forward.</li>
+          <li><strong>No fundamentals.</strong> No delivery %, results dates, pledges or news. Those
+              scoring weights were re-distributed across the price-based components.</li>
+          <li><strong>Execution.</strong> Fills assumed at the next open. Real fills face slippage,
+              circuit limits and gaps. When stop and target are hit the same day, the stop is assumed.</li>
+          <li><strong>Sector strength is derived</strong> from universe members, not official sector indices.</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Not investment advice.</strong> This is the output of a research tool, published for
+      study of the rules themselves. It is not a recommendation to buy or sell any security. Figures
+      are derived statistics computed from third-party end-of-day data and may contain errors —
+      verify against NSE before acting on anything here.
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>Static site · no backend · rules run on a schedule</span>
+    <span class="mono" id="foot-stamp"></span>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

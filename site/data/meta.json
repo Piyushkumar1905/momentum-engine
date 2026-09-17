@@ -1,0 +1,33 @@
+{
+ "generated_at": "2026-09-17T12:29:34+05:30",
+ "as_of": "2026-09-17",
+ "rules_hash": "f487463abe90",
+ "backtest_as_of": "2026-09-17",
+ "backtest_is_stale": false,
+ "thresholds": {
+  "momentum": {
+   "min_dist_52w_high": 0.85,
+   "min_atr_pct": 0.015,
+   "max_atr_pct": 0.06,
+   "max_ext_atr": 3.0,
+   "max_ext_50dma": 0.2,
+   "min_rs_63": 0.0,
+   "stop_atr": 1.5,
+   "target_r": 2.0
+  },
+  "reversal": {
+   "min_drawdown": 0.3,
+   "low_age_min": 20,
+   "low_age_max": 60,
+   "higher_low_atr": 1.0,
+   "min_support_days": 3,
+   "stop_atr_below_low": 0.5,
+   "target_r": 2.5
+  },
+  "filters": {
+   "min_history_days": 252,
+   "min_median_value_cr": 10,
+   "min_price": 50
+  }
+ }
+}

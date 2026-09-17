@@ -1,0 +1,14 @@
+# Price cache: ~36 MB, rebuilt on demand, restored in CI via actions/cache.
+data/cache/
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# Local run artefacts. picks_*.csv is deliberately NOT ignored: the forward-tracking
+# record exists only if every published list is kept.
+output/*.xlsx
+output/signals_*.csv
+output/trades_*.csv
+output/demo/
+output/*.log
