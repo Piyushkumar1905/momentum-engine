@@ -1,11 +1,16 @@
 {
- "generated_at": "2026-09-17T17:23:58+05:30",
+ "generated_at": "2026-09-17T17:26:27+05:30",
  "lists": 1,
  "rows": [
   {
    "as_of": "2026-09-17",
    "model": "momentum",
    "symbol": "IPCALAB"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "momentum",
+   "symbol": "GLAND"
   },
   {
    "as_of": "2026-09-17",
@@ -20,6 +25,11 @@
   {
    "as_of": "2026-09-17",
    "model": "momentum",
+   "symbol": "ACE"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "momentum",
    "symbol": "INDGN"
   },
   {
@@ -30,12 +40,7 @@
   {
    "as_of": "2026-09-17",
    "model": "momentum",
-   "symbol": "RAINBOW"
-  },
-  {
-   "as_of": "2026-09-17",
-   "model": "momentum",
-   "symbol": "NEULANDLAB"
+   "symbol": "ANANDRATHI"
   },
   {
    "as_of": "2026-09-17",
@@ -45,17 +50,7 @@
   {
    "as_of": "2026-09-17",
    "model": "momentum",
-   "symbol": "ANANDRATHI"
-  },
-  {
-   "as_of": "2026-09-17",
-   "model": "momentum",
-   "symbol": "AJANTPHARM"
-  },
-  {
-   "as_of": "2026-09-17",
-   "model": "momentum",
-   "symbol": "GLAND"
+   "symbol": "VIJAYA"
   },
   {
    "as_of": "2026-09-17",
@@ -65,22 +60,7 @@
   {
    "as_of": "2026-09-17",
    "model": "momentum",
-   "symbol": "TBOTEK"
-  },
-  {
-   "as_of": "2026-09-17",
-   "model": "momentum",
-   "symbol": "REDINGTON"
-  },
-  {
-   "as_of": "2026-09-17",
-   "model": "momentum",
-   "symbol": "SONACOMS"
-  },
-  {
-   "as_of": "2026-09-17",
-   "model": "momentum",
-   "symbol": "BOSCHLTD"
+   "symbol": "NEULANDLAB"
   },
   {
    "as_of": "2026-09-17",
@@ -90,7 +70,12 @@
   {
    "as_of": "2026-09-17",
    "model": "momentum",
-   "symbol": "AEGISLOG"
+   "symbol": "AJANTPHARM"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "momentum",
+   "symbol": "SONACOMS"
   },
   {
    "as_of": "2026-09-17",
@@ -104,8 +89,123 @@
   },
   {
    "as_of": "2026-09-17",
+   "model": "momentum",
+   "symbol": "AEGISLOG"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "momentum",
+   "symbol": "PAYTM"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "momentum",
+   "symbol": "BOSCHLTD"
+  },
+  {
+   "as_of": "2026-09-17",
    "model": "reversal",
    "symbol": "ECLERX"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "trend_lowbeta",
+   "symbol": "CHENNPETRO"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "trend_lowbeta",
+   "symbol": "ATHERENERG"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "trend_lowbeta",
+   "symbol": "CPPLUS"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "trend_lowbeta",
+   "symbol": "NATIONALUM"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "trend_lowbeta",
+   "symbol": "ACUTAAS"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "trend_lowbeta",
+   "symbol": "LAURUSLABS"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "trend_lowbeta",
+   "symbol": "AUROPHARMA"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "trend_lowbeta",
+   "symbol": "POWERINDIA"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "trend_lowbeta",
+   "symbol": "ANANDRATHI"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "trend_lowbeta",
+   "symbol": "RADICO"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "trend_lowbeta",
+   "symbol": "RRKABEL"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "trend_lowbeta",
+   "symbol": "MCX"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "trend_lowbeta",
+   "symbol": "GLAND"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "trend_lowbeta",
+   "symbol": "HONASA"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "trend_lowbeta",
+   "symbol": "FEDERALBNK"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "trend_lowbeta",
+   "symbol": "SAILIFE"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "trend_lowbeta",
+   "symbol": "WELCORP"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "trend_lowbeta",
+   "symbol": "NAVINFLUOR"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "trend_lowbeta",
+   "symbol": "KIRLOSENG"
+  },
+  {
+   "as_of": "2026-09-17",
+   "model": "trend_lowbeta",
+   "symbol": "AJANTPHARM"
   }
  ]
 }

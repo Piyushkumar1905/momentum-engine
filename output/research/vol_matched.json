@@ -1,0 +1,12 @@
+{
+ "spec": "trend_lowbeta",
+ "scans": 594,
+ "pick_vol": 0.4171,
+ "universe_vol": 0.359,
+ "vol_ratio": 1.162,
+ "edge_raw": 0.00743,
+ "raw_nw_t": 2.48,
+ "edge_vol_matched": 0.00728,
+ "matched_nw_t": 2.64,
+ "share_retained": 0.98
+}

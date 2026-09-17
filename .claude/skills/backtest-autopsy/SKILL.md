@@ -112,6 +112,44 @@ momentum ranking added +0.0151 in a bull window and +0.0002 in a correction, whi
 low-volatility filter did the reverse. Neither was stable; the combination was, and only
 because the two are anti-correlated.
 
+### 7. Volatility-match before claiming skill
+
+A ranking that quietly prefers volatile names earns a risk premium, not alpha, and that
+premium reverses in a crash. Benchmarking against the whole universe cannot tell the
+difference.
+
+Compare each pick against eligible names in the **same ex-ante volatility decile** on
+the same date. Report the ratio of pick volatility to universe volatility alongside
+both numbers.
+
+- Most of the edge survives matching → the ranking is finding something beyond risk
+- The edge collapses → it is a leveraged beta bet; size it as one, or discard it
+
+Measured here: picks at 1.16x universe volatility, raw edge +0.743% (t=2.48), matched
+edge +0.728% (t=2.64) — 98% retained. An earlier rejected candidate carried 1.34-1.44x
+and did not survive.
+
+### 8. Parameter values: plateau, never peak
+
+Sweep each parameter and look at the SHAPE, not the maximum.
+
+| Shape | Meaning | Action |
+|---|---|---|
+| Smooth, wide, single-peaked | Real | Deploy from the middle |
+| Sharp spike, neighbours collapse | Fitted | Remove the parameter |
+| Monotone to an edge of the range | Untested | Extend the sweep |
+
+Two parameters from the same study, both scoring t≈3.0 at their best value:
+
+```
+volatility cap:  0.30 -> 1.16   0.35 -> 3.02   0.45 -> 1.48     SPIKE -> removed
+low-beta weight: 0.10 -> 2.91   0.25 -> 3.33   0.40 -> 3.13     PLATEAU -> kept
+```
+
+Identical headline t. Opposite verdicts. Removing the spiked parameter improved
+out-of-sample results; the plateau parameter halved dispersion without changing mean
+return, which is the signature of a genuine risk control rather than a fit.
+
 ## Red flags — stop and re-check
 
 - Reporting a hit rate without the universe baseline
@@ -120,6 +158,8 @@ because the two are anti-correlated.
 - Tuning on the most recent months
 - Concluding "the strategy works" from profit factor alone, with no lift computed
 - An edge that appears only after you tried several variants
+- Picks visibly more volatile than the universe, with no volatility-matched comparison
+- A parameter whose neighbours score far worse than the chosen value
 
 ## Rationalizations
 
@@ -135,6 +175,8 @@ because the two are anti-correlated.
 | "It beat the random control" | One control draw has SD comparable to the edge. Benchmark the full universe. |
 | "Longer holds performed better" | Check whether long holds silently dropped the end of the test window. |
 | "The composite works, so the factors work" | Invert the ranking. If the score is unchanged, the filter did it. |
+| "This value tested best, so use it" | Check its neighbours. Best-scoring and robust are different things. |
+| "The picks beat the universe" | Were they riskier? Match on volatility before calling it skill. |
 
 ## Reference implementation
 
