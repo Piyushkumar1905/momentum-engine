@@ -201,9 +201,28 @@ def fetch_yahoo(symbols, start, end, cache_dir, benchmark="^NSEI", chunk=40) -> 
         return df is not None and df.attrs.get("fetched_on") == str(today.date())
 
     def save(ticker, df):
+        """Write the cache, never shrinking it.
+
+        A request for a narrower window (say --end 2020) must not destroy history
+        already on disk. Without this merge, one analysis run bounded to a past date
+        replaced the benchmark and 299 symbols with series ending in 2020, silently
+        truncating every later panel built from them.
+        """
+        p_ = path(ticker)
+        if p_.exists():
+            try:
+                old = pd.read_pickle(p_)
+                if old is not None and len(old):
+                    both = pd.concat([old, df])
+                    df = both[~both.index.duplicated(keep="last")].sort_index()
+                    prev = old.attrs.get("start")
+                    if prev and pd.Timestamp(prev) < start_ts:
+                        df.attrs["start"] = prev      # keep the widest coverage claimed
+            except Exception:
+                pass
+        df.attrs.setdefault("start", str(start_ts.date()))
         df.attrs["fetched_on"] = str(today.date())
-        df.attrs["start"] = str(start_ts.date())      # how far back this cache was asked to go
-        df.to_pickle(path(ticker))
+        df.to_pickle(p_)
 
     def download(tickers, since):
         raw = _retry(lambda: yf.download(

@@ -331,3 +331,33 @@ def test_trailing_stop_reports_the_entry_risk_not_the_trailed_stop():
     assert t["entry"] - t["stop"] > 0, "risk at entry must be positive and sizeable"
     assert t["final_stop"] > t["stop"], "the trail should have ratcheted upward"
     assert t["ret"] > 0
+
+
+def test_cache_is_never_shrunk_by_a_narrower_request(tmp_path, monkeypatch):
+    """Asking for a shorter window must not delete history already cached.
+
+    A run bounded to a past end date once replaced the benchmark and 299 symbols with
+    series ending years early, truncating every panel built afterwards without error.
+    """
+    import sys
+    import types
+    uni = data.synthetic_universe(n=2)
+    server = data.fetch_synthetic(uni, start="2023-01-01", end="2023-12-31")
+    calls = []
+    monkeypatch.setitem(sys.modules, "yfinance",
+                        types.SimpleNamespace(download=_yahoo_stub(server, calls)))
+    syms = list(server.close.columns)
+
+    full = data.fetch_yahoo(syms, "2023-01-01", "2023-12-31", tmp_path)
+    wide_end = full.dates.max()
+
+    # a later run asks for a much narrower window
+    for f in tmp_path.glob("*.pkl"):
+        df = pd.read_pickle(f)
+        df.attrs["fetched_on"] = "1999-01-01"        # force a refetch attempt
+        df.to_pickle(f)
+    data.fetch_yahoo(syms, "2023-01-01", "2023-03-31", tmp_path)
+
+    for f in tmp_path.glob("*.pkl"):
+        kept = pd.read_pickle(f)
+        assert kept.index.max() >= wide_end, f"{f.name} lost history to a narrower request"
