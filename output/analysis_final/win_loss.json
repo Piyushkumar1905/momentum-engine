@@ -1,0 +1,266 @@
+{
+ "model": "trend_lowbeta",
+ "window": [
+  "2024-09-01",
+  "2026-09-18"
+ ],
+ "trades": 444,
+ "winners": 155,
+ "losers": 289,
+ "win_rate": 0.3491,
+ "exits": [
+  {
+   "exit": "stop",
+   "n": 372,
+   "share": 0.8378378378378378,
+   "win_rate": 0.2446236559139785,
+   "avg_ret": -0.042169632591461184,
+   "avg_hold": 23.18548387096774
+  },
+  {
+   "exit": "time",
+   "n": 72,
+   "share": 0.16216216216216217,
+   "win_rate": 0.8888888888888888,
+   "avg_ret": 0.2219528464111676,
+   "avg_hold": 60.0
+  }
+ ],
+ "concentration": {
+  "gross_gains": 25.92,
+  "gross_losses": 25.627,
+  "net": 0.294,
+  "top_5_share_of_gains": 0.155,
+  "top_10_share_of_gains": 0.268,
+  "top_20_share_of_gains": 0.421,
+  "trades_to_cover_all_losses": 130
+ },
+ "features": [
+  {
+   "feature": "mom_6m_skip",
+   "label": "6M momentum at entry",
+   "winners": 0.24572529865648063,
+   "losers": 0.34064321905659,
+   "z": -0.3093609561928463
+  },
+  {
+   "feature": "ret_20",
+   "label": "1M return at entry",
+   "winners": -0.03431777281177073,
+   "losers": -0.028956866015807825,
+   "z": -0.04826323209311783
+  },
+  {
+   "feature": "rs_63",
+   "label": "RS vs Nifty (63d)",
+   "winners": 0.0940513929591753,
+   "losers": 0.10851037453917156,
+   "z": -0.06783937478719114
+  },
+  {
+   "feature": "dist_high",
+   "label": "% of 52-week high",
+   "winners": 0.8720740497209954,
+   "losers": 0.865091153049488,
+   "z": 0.0699545645051447
+  },
+  {
+   "feature": "dist_low",
+   "label": "x above 52-week low",
+   "winners": 1.867045882625492,
+   "losers": 1.895400221012377,
+   "z": -0.03825177841205764
+  },
+  {
+   "feature": "atr_pct",
+   "label": "daily ATR as % of price",
+   "winners": 0.03930913229147795,
+   "losers": 0.041034002527246836,
+   "z": -0.12411688532863921
+  },
+  {
+   "feature": "ext_atr",
+   "label": "ATR above 20DMA",
+   "winners": -0.5961901919510447,
+   "losers": -0.6681354431717573,
+   "z": 0.04704563036091734
+  },
+  {
+   "feature": "ext_50",
+   "label": "% above 50DMA",
+   "winners": 0.0008182114413224362,
+   "losers": 0.010423816317344015,
+   "z": -0.091668679174917
+  },
+  {
+   "feature": "rvol",
+   "label": "relative volume",
+   "winners": 0.7194488752198734,
+   "losers": 0.7692809640074172,
+   "z": -0.047456204205161084
+  },
+  {
+   "feature": "sector_rank",
+   "label": "sector strength percentile",
+   "winners": 0.6,
+   "losers": 0.65,
+   "z": -0.19761724168038006
+  },
+  {
+   "feature": "med_value_cr",
+   "label": "20d median traded value (Rs cr)",
+   "winners": 66.37905424365235,
+   "losers": 73.09359942783813,
+   "z": -0.026144890818085156
+  }
+ ],
+ "regime": [
+  {
+   "regime": "bear",
+   "n": 144,
+   "win_rate": 0.3680555555555556,
+   "avg_ret": 0.018877709658393575,
+   "sum": 2.718390190808675
+  },
+  {
+   "regime": "bull",
+   "n": 247,
+   "win_rate": 0.32388663967611336,
+   "avg_ret": -0.013089018236828587,
+   "sum": -3.232987504496661
+  },
+  {
+   "regime": "neutral",
+   "n": 53,
+   "win_rate": 0.41509433962264153,
+   "avg_ret": 0.015247149646575397,
+   "sum": 0.8080989312684961
+  }
+ ],
+ "by_rank": [
+  {
+   "band": "1-5",
+   "n": 78,
+   "win_rate": 0.38461538461538464,
+   "avg_ret": 0.0005321468880284283
+  },
+  {
+   "band": "6-10",
+   "n": 86,
+   "win_rate": 0.32558139534883723,
+   "avg_ret": -0.01608263097424009
+  },
+  {
+   "band": "11-15",
+   "n": 114,
+   "win_rate": 0.3684210526315789,
+   "avg_ret": 0.003275637312409811
+  },
+  {
+   "band": "16-20",
+   "n": 166,
+   "win_rate": 0.3313253012048193,
+   "avg_ret": 0.007600468496892902
+  }
+ ],
+ "hold": {
+  "winner_mean": 44.21290322580645,
+  "loser_mean": 21.079584775086506,
+  "winner_median": 49.0,
+  "loser_median": 18.0
+ },
+ "worst": [
+  {
+   "date": "2025-04-01",
+   "symbol": "SARDAEN",
+   "industry": "Metals & Mining",
+   "ret": "-0.2501524840857348",
+   "r_multiple": "-2.0052829739881846",
+   "hold_days": "4",
+   "exit_reason": "stop"
+  },
+  {
+   "date": "2025-02-13",
+   "symbol": "ZENTEC",
+   "industry": "Capital Goods",
+   "ret": "-0.22780591998883165",
+   "r_multiple": "-1.0",
+   "hold_days": "2",
+   "exit_reason": "stop"
+  },
+  {
+   "date": "2025-02-13",
+   "symbol": "VIJAYA",
+   "industry": "Healthcare",
+   "ret": "-0.2219093052674342",
+   "r_multiple": "-1.4288595913837319",
+   "hold_days": "2",
+   "exit_reason": "stop"
+  },
+  {
+   "date": "2025-01-17",
+   "symbol": "KALYANKJIL",
+   "industry": "Consumer Durables",
+   "ret": "-0.20450068569077234",
+   "r_multiple": "-0.8166677907319436",
+   "hold_days": "36",
+   "exit_reason": "stop"
+  },
+  {
+   "date": "2025-01-31",
+   "symbol": "ZENTEC",
+   "industry": "Capital Goods",
+   "ret": "-0.2027076378439367",
+   "r_multiple": "-1.0",
+   "hold_days": "9",
+   "exit_reason": "stop"
+  }
+ ],
+ "best": [
+  {
+   "date": "2025-03-17",
+   "symbol": "BSE",
+   "industry": "Financial Services",
+   "ret": "1.0124916629734866",
+   "r_multiple": "5.903637748606036",
+   "hold_days": "59",
+   "exit_reason": "stop"
+  },
+  {
+   "date": "2025-04-08",
+   "symbol": "GVT&D",
+   "industry": "Capital Goods",
+   "ret": "0.7929909931240071",
+   "r_multiple": "4.979904617130756",
+   "hold_days": "60",
+   "exit_reason": "time"
+  },
+  {
+   "date": "2026-03-30",
+   "symbol": "RRKABEL",
+   "industry": "Capital Goods",
+   "ret": "0.789468495895344",
+   "r_multiple": "5.771484882142542",
+   "hold_days": "60",
+   "exit_reason": "time"
+  },
+  {
+   "date": "2026-03-30",
+   "symbol": "KIRLOSENG",
+   "industry": "Capital Goods",
+   "ret": "0.7429223844347208",
+   "r_multiple": "5.348472564995016",
+   "hold_days": "60",
+   "exit_reason": "time"
+  },
+  {
+   "date": "2025-02-20",
+   "symbol": "ZENTEC",
+   "industry": "Capital Goods",
+   "ret": "0.6915010057474988",
+   "r_multiple": "2.394659965986631",
+   "hold_days": "60",
+   "exit_reason": "time"
+  }
+ ]
+}

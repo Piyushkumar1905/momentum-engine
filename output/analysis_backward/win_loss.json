@@ -1,0 +1,266 @@
+{
+ "model": "trend_lowbeta",
+ "window": [
+  "2009-01-01",
+  "2020-03-01"
+ ],
+ "trades": 2284,
+ "winners": 994,
+ "losers": 1290,
+ "win_rate": 0.4352,
+ "exits": [
+  {
+   "exit": "stop",
+   "n": 1741,
+   "share": 0.7622591943957968,
+   "win_rate": 0.29465824238943134,
+   "avg_ret": -0.02164085558314586,
+   "avg_hold": 25.158529580700748
+  },
+  {
+   "exit": "time",
+   "n": 543,
+   "share": 0.23774080560420316,
+   "win_rate": 0.8858195211786372,
+   "avg_ret": 0.16217254068774137,
+   "avg_hold": 60.0
+  }
+ ],
+ "concentration": {
+  "gross_gains": 152.528,
+  "gross_losses": 102.145,
+  "net": 50.383,
+  "top_5_share_of_gains": 0.031,
+  "top_10_share_of_gains": 0.056,
+  "top_20_share_of_gains": 0.099,
+  "trades_to_cover_all_losses": 334
+ },
+ "features": [
+  {
+   "feature": "mom_6m_skip",
+   "label": "6M momentum at entry",
+   "winners": 0.26394985567444484,
+   "losers": 0.2650342617500684,
+   "z": -0.0027420678717819395
+  },
+  {
+   "feature": "ret_20",
+   "label": "1M return at entry",
+   "winners": -0.013167846215130341,
+   "losers": -0.006974861372008367,
+   "z": -0.04742061429379199
+  },
+  {
+   "feature": "rs_63",
+   "label": "RS vs Nifty (63d)",
+   "winners": 0.08589270853600439,
+   "losers": 0.09055081532604947,
+   "z": -0.020486744913077184
+  },
+  {
+   "feature": "dist_high",
+   "label": "% of 52-week high",
+   "winners": 0.8850085236415315,
+   "losers": 0.8965550472825896,
+   "z": -0.11713351663058075
+  },
+  {
+   "feature": "dist_low",
+   "label": "x above 52-week low",
+   "winners": 1.821679321186162,
+   "losers": 1.8219186666393592,
+   "z": -0.00013586981237154484
+  },
+  {
+   "feature": "atr_pct",
+   "label": "daily ATR as % of price",
+   "winners": 0.03813616239261182,
+   "losers": 0.036533355946559806,
+   "z": 0.11111512070453171
+  },
+  {
+   "feature": "ext_atr",
+   "label": "ATR above 20DMA",
+   "winners": -0.5292547846593818,
+   "losers": -0.36985533446328706,
+   "z": -0.0951390443816444
+  },
+  {
+   "feature": "ext_50",
+   "label": "% above 50DMA",
+   "winners": 0.013609716264180616,
+   "losers": 0.02145591583032036,
+   "z": -0.0658846187048532
+  },
+  {
+   "feature": "rvol",
+   "label": "relative volume",
+   "winners": 0.9050466417423277,
+   "losers": 0.9292554476825452,
+   "z": -0.011287317612478172
+  },
+  {
+   "feature": "sector_rank",
+   "label": "sector strength percentile",
+   "winners": 0.65,
+   "losers": 0.65,
+   "z": 0.0
+  },
+  {
+   "feature": "med_value_cr",
+   "label": "20d median traded value (Rs cr)",
+   "winners": 33.26388336555996,
+   "losers": 34.009959456057736,
+   "z": -0.009313657603136807
+  }
+ ],
+ "regime": [
+  {
+   "regime": "bear",
+   "n": 457,
+   "win_rate": 0.45295404814004375,
+   "avg_ret": 0.024707686631830317,
+   "sum": 11.291412790746454
+  },
+  {
+   "regime": "bull",
+   "n": 1435,
+   "win_rate": 0.4236933797909408,
+   "avg_ret": 0.018569788712333807,
+   "sum": 26.647646802199013
+  },
+  {
+   "regime": "neutral",
+   "n": 392,
+   "win_rate": 0.45663265306122447,
+   "avg_ret": 0.03174464395469681,
+   "sum": 12.44390043024115
+  }
+ ],
+ "by_rank": [
+  {
+   "band": "1-5",
+   "n": 447,
+   "win_rate": 0.4429530201342282,
+   "avg_ret": 0.02828068395306217
+  },
+  {
+   "band": "6-10",
+   "n": 433,
+   "win_rate": 0.4133949191685912,
+   "avg_ret": 0.016326547732789957
+  },
+  {
+   "band": "11-15",
+   "n": 528,
+   "win_rate": 0.45454545454545453,
+   "avg_ret": 0.02392142771337338
+  },
+  {
+   "band": "16-20",
+   "n": 876,
+   "win_rate": 0.430365296803653,
+   "avg_ret": 0.02059541700366282
+  }
+ ],
+ "hold": {
+  "winner_mean": 48.925553319919516,
+  "loser_mean": 21.510852713178295,
+  "winner_median": 59.0,
+  "loser_median": 16.0
+ },
+ "worst": [
+  {
+   "date": "2009-06-15",
+   "symbol": "FORTIS",
+   "industry": "Healthcare",
+   "ret": "-0.23564522774206426",
+   "r_multiple": "-1.0",
+   "hold_days": "20",
+   "exit_reason": "stop"
+  },
+  {
+   "date": "2013-05-29",
+   "symbol": "WOCKPHARMA",
+   "industry": "Healthcare",
+   "ret": "-0.2342072375850574",
+   "r_multiple": "-1.0",
+   "hold_days": "38",
+   "exit_reason": "stop"
+  },
+  {
+   "date": "2009-01-19",
+   "symbol": "UNITDSPR",
+   "industry": "Fast Moving Consumer Goods",
+   "ret": "-0.23384990893574115",
+   "r_multiple": "-1.0",
+   "hold_days": "3",
+   "exit_reason": "stop"
+  },
+  {
+   "date": "2009-01-19",
+   "symbol": "ZEEL",
+   "industry": "Media Entertainment & Publication",
+   "ret": "-0.23309809337423398",
+   "r_multiple": "-1.0",
+   "hold_days": "3",
+   "exit_reason": "stop"
+  },
+  {
+   "date": "2016-01-22",
+   "symbol": "GODFRYPHLP",
+   "industry": "Fast Moving Consumer Goods",
+   "ret": "-0.22076246812540162",
+   "r_multiple": "-1.0",
+   "hold_days": "13",
+   "exit_reason": "stop"
+  }
+ ],
+ "best": [
+  {
+   "date": "2009-02-17",
+   "symbol": "M&M",
+   "industry": "Automobile and Auto Components",
+   "ret": "1.1808998561868096",
+   "r_multiple": "7.642546246197684",
+   "hold_days": "60",
+   "exit_reason": "time"
+  },
+  {
+   "date": "2017-07-19",
+   "symbol": "GRAPHITE",
+   "industry": "Capital Goods",
+   "ret": "0.982084952873296",
+   "r_multiple": "7.739249864477059",
+   "hold_days": "45",
+   "exit_reason": "stop"
+  },
+  {
+   "date": "2014-12-22",
+   "symbol": "WOCKPHARMA",
+   "industry": "Healthcare",
+   "ret": "0.981194779127575",
+   "r_multiple": "7.94790290638757",
+   "hold_days": "60",
+   "exit_reason": "time"
+  },
+  {
+   "date": "2016-07-13",
+   "symbol": "JUBLPHARMA",
+   "industry": "Healthcare",
+   "ret": "0.8074446593403406",
+   "r_multiple": "8.141435098390103",
+   "hold_days": "40",
+   "exit_reason": "stop"
+  },
+  {
+   "date": "2014-04-23",
+   "symbol": "BEML",
+   "industry": "Capital Goods",
+   "ret": "0.8014186816908053",
+   "r_multiple": "6.125763342041918",
+   "hold_days": "35",
+   "exit_reason": "stop"
+  }
+ ]
+}
