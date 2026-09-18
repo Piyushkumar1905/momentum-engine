@@ -117,6 +117,65 @@ def chart_gaps(rows, path):
     fig.tight_layout(); fig.savefig(path, bbox_inches="tight"); plt.close(fig)
 
 
+def chart_stop_vs_size(D, path):
+    """Two panels: how wide stops actually are, and why a wider stop is not more risk.
+
+    Replaces a table that paired the 10th percentile of stop distance with the 10th
+    percentile of POSITION SIZE - opposite trades. A 6.5% stop implies a 15.3%
+    position, not a 6.4% one, and the table read as though it implied the latter.
+    """
+    rk = D["risk"]
+    risk_pct = D["risk_pct"]
+    q = rk["stop_distance_pct"]
+    labels = ["widest 10%", "wide 25%", "typical", "tight 25%", "tightest 10%"]
+    stops = [q["p90"], q["p75"], q["p50"], q["p25"], q["p10"]]
+    sizes = [risk_pct / st for st in stops]
+    rupee = D["capital"] * risk_pct
+
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(7.2, 4.6), dpi=200,
+                                   gridspec_kw={"height_ratios": [1.15, 1]})
+
+    # ── panel 1: back-to-back bars, so the trade-off is visible at a glance
+    y = np.arange(len(labels))
+    ax1.barh(y, [-s * 100 for s in stops], color=RED, height=0.6)
+    ax1.barh(y, [s * 100 for s in sizes], color=BLUE, height=0.6)
+    for i, (st, sz) in enumerate(zip(stops, sizes)):
+        ax1.text(-st * 100 - 0.6, i, f"{st*100:.1f}%", ha="right", va="center", fontsize=8.5)
+        ax1.text(sz * 100 + 0.6, i, f"{sz*100:.1f}%", ha="left", va="center", fontsize=8.5)
+    ax1.set_yticks(y); ax1.set_yticklabels(labels, fontsize=8.5)
+    ax1.axvline(0, color=INK, lw=1)
+    ax1.set_xlim(-22, 22)
+    ax1.set_xticks([-20, -15, -10, -5, 0, 5, 10, 15, 20])
+    ax1.set_xticklabels(["20", "15", "10", "5", "0", "5", "10", "15", "20"], fontsize=8)
+    ax1.set_xlabel("<-- stop distance below entry (%)          "
+                   "position size, % of account -->", fontsize=8.5)
+    ax1.set_title(f"A wider stop buys fewer shares. Every row risks the same "
+                  f"Rs {rupee:,.0f}.", fontsize=9.5, loc="left", pad=8)
+    for sp in ("top", "right", "left"):
+        ax1.spines[sp].set_visible(False)
+    ax1.tick_params(axis="y", length=0)
+
+    # ── panel 2: what stop distances actually occur
+    x = np.array(D.get("_hist_stop", []), dtype=float) * 100
+    if len(x):
+        ax2.hist(x, bins=np.arange(0, 26, 0.5), color=GREY, edgecolor="white", linewidth=0.3)
+        med = q["p50"] * 100
+        ax2.axvline(med, color=INK, lw=1.2)
+        ax2.text(med + 0.4, ax2.get_ylim()[1] * 0.85, f"median {med:.1f}%",
+                 fontsize=8, color=INK)
+        ax2.axvspan(q["p10"] * 100, q["p90"] * 100, color=BLUE, alpha=0.08)
+        ax2.text(q["p90"] * 100 + 0.5, ax2.get_ylim()[1] * 0.60,
+                 "80% of trades\nfall in this band", fontsize=7.5, color="#5b6572")
+    ax2.set_xlabel("Stop distance below entry, every trade (%)", fontsize=8.5)
+    ax2.set_ylabel("Trades", fontsize=8)
+    ax2.tick_params(labelsize=8)
+    for sp in ("top", "right"):
+        ax2.spines[sp].set_visible(False)
+
+    fig.tight_layout(h_pad=1.6)
+    fig.savefig(path, bbox_inches="tight"); plt.close(fig)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--facts", default=str(ROOT / "output" / "analysis_final" / "facts.json"))
@@ -248,16 +307,10 @@ def main():
                   ["5. Position value", "shares x entry price", rs(rk["position_value_median"])]],
                  [36 * mm, 58 * mm, 56 * mm])]
 
+    cs = tmp / "stopsize.png"
+    chart_stop_vs_size(D, cs)
     st += [para("How wide the stop actually sits", H2),
-           table([["", "10th pct", "25th pct", "Median", "75th pct", "90th pct"],
-                  ["Stop distance below entry"] +
-                  [pc(rk["stop_distance_pct"][k]) for k in ("p10", "p25", "p50", "p75", "p90")],
-                  ["Position size, % of account",
-                   pc(rk["position_pct_of_capital_p10"]), "-",
-                   pc(rk["position_pct_of_capital_median"]), "-",
-                   pc(rk["position_pct_of_capital_p90"])]],
-                 [54 * mm, 22 * mm, 22 * mm, 22 * mm, 22 * mm, 22 * mm],
-                 [("ALIGN", (1, 0), (-1, -1), "RIGHT")])]
+           Image(str(cs), width=doc.width, height=doc.width * 0.639)]
     st += [para(f"In the actual portfolio run the median position came to "
                 f"{rs(rk.get('actual_position_value_median', 0))} - about "
                 f"{rk.get('actual_qty_median', 0):.0f} shares of a typical pick. Note that a wider "

@@ -208,6 +208,7 @@ def main() -> None:
 
     # data for charts
     facts["_hist_r"] = [round(float(x), 3) for x in tr["r_multiple"].clip(-3, 8)]
+    facts["_hist_stop"] = [round(float(x), 4) for x in tr["risk_frac"].clip(0, 0.30)]
     facts["_hist_hold"] = [int(x) for x in tr["hold_days"]]
 
     Path(a.out).parent.mkdir(parents=True, exist_ok=True)
